@@ -1,6 +1,6 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Pavel Sevostyanov](https://up.htmlacademy.ru/adaptive/18/user/991145).
+* Студент: [Павел Севостьянов](https://up.htmlacademy.ru/adaptive/18/user/991145).
 * Наставник: [Алёна Сиприкова](https://htmlacademy.ru/profile/asiprikova).
 
 ---

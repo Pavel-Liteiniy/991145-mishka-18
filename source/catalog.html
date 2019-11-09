@@ -1,79 +1,113 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <title>HTML Academy: Мишка</title>
-  </head>
-  <body>
-    <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/mishka-logo-mobile.svg" width="86" height="35" title="Текущая страница" alt="Интернет магазин мягких игрушек ручной работы Мишка" />
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__button-sandwich" type="button"><span class="visually-hidden">Навигация по сайту</span></button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active"><a>Каталог товаров</a></li>
-          <li class="site-list__item"><a href="form.html">Вязание на заказ</a></li>
-          <li class="site-list__item site-list__item--searching"><a href="search.html">Поиск по сайту</a></li>
-          <li class="site-list__item site-list__item--shopping"><a href="shopping-cart.html">Корзина: пока пуста</a></li>
-        </ul>
-      </nav>
+
+<head>
+  <meta charset="utf-8" />
+  <title>HTML Academy: Мишка</title>
+</head>
+
+<body>
+  <div class="center">
+    <header class="header">
+      <div class="inner">
+        <a class="header__logo">
+          <img class="header__logo-image" src="img/mishka-logo-mobile.svg" width="86" height="35"
+            title="Текущая страница" alt="Интернет магазин мягких игрушек ручной работы Мишка" />
+        </a>
+        <nav class="nav">
+          <div class="inner">
+            <button class="nav__button" type="button"><span class="visually-hidden">Навигация по сайту</span></button>
+            <ul class="nav__list">
+              <li class="nav__item nav__item--active"><a>Каталог товаров</a></li>
+              <li class="nav__item"><a href="form.html">Вязание на заказ</a></li>
+              <li class="nav__item site-list__item--searching"><a href="search.html">Поиск по сайту</a></li>
+              <!-- может вынести в отдельный список? это же не совсем в том же смысле навигация что и первые две ли? -->
+              <li class="site-list__item site-list__item--shopping"><a href="shopping-cart.html">Корзина: пока пуста</a>
+              </li><!-- и этот вместе с ним -->
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
-    <main class="page-main">
-      <h1 class="page-main__heading">Каталог товаров</h1>
-      <section class="page-main__catalog catalog">
-        <ul class="catalog__list">
-          <li class="catalog__item product-page">
-            <h2 class="product-page__heading"><a href="product-1.html" aria-label="открыть подробное описание товара">Зайчик-попрыгайчик</a></h2>
-            <a class="product-page__image-link" href="product-1.html" aria-label="открыть подробное описание товара"><img src="img/photo-1-mobile.png" alt="Вязанная игрушка в виде зайца" width="260" height="195"/></a>
-            <p class="product-page__profile">Рост 30 см, вес 200 г</p>
-            <b class="product-page__price">1 200 руб.</b><a href="add-to-cart.html" class="product-page__cart" aria-label="добавить товар в корзину"></a>
-          </li>
-          <li class="catalog__item product-page">
-            <h2 class="product-page__heading"><a href="product-2.html" aria-label="открыть подробное описание товара"></a></h2>
-            <a class="product-page__image-link" href="product-2.html" aria-label="открыть подробное описание товара"><img src="img/photo-2-mobile.png" alt="Вязанная корзинка для белья" width="260" height="195"/></a>
-            <p class="product-page__profile"></p>
-            <b class="product-page__price">690 руб.</b><a href="add-to-cart.html" class="product-page__cart" aria-label="добавить товар в корзину"></a>
-          </li>
-          <li class="catalog__item product-page">
-            <h2 class="product-page__heading"><a href="product-3.html" aria-label="открыть подробное описание товара"></a></h2>
-            <a class="product-page__image-link" href="product-3.html" aria-label="открыть подробное описание товара"><img src="img/photo-3-mobile.png" alt="Вязанная большая корзина наполненная игрушками" width="260" height="195"/></a>
-            <p class="product-page__profile"></p>
-            <b class="product-page__price">1 500 руб.</b><a href="add-to-cart.html" class="product-page__cart" aria-label="добавить товар в корзину"></a>
-          </li>
-        </ul>
+    <main>
+      <h1 class="main-heading">Каталог товаров</h1>
+      <section class="catalog">
+        <div class="inner">
+          <ul class="catalog__list">
+            <li class="catalog__item product-page">
+              <h2 class="product-page__heading"><a href="product-1.html"
+                  aria-label="открыть подробное описание товара">Зайчик-попрыгайчик</a></h2>
+              <a class="product-page__link-image" href="product-1.html"
+                aria-label="открыть подробное описание товара"><img src="img/photo-1-mobile.png"
+                  alt="Вязанная игрушка в виде зайца" width="260" height="195" /></a>
+              <p class="product-page__profile">Рост 30 см, вес 200 г</p>
+              <b class="product-page__price">1 200 руб.</b><a href="add-to-cart.html" class="product-page__cart"
+                aria-label="добавить товар в корзину"></a>
+            </li>
+            <li class="catalog__item product-page">
+              <h2 class="product-page__heading"><a href="product-2.html"
+                  aria-label="открыть подробное описание товара"></a></h2>
+              <a class="product-page__link-image" href="product-2.html"
+                aria-label="открыть подробное описание товара"><img src="img/photo-2-mobile.png"
+                  alt="Вязанная корзинка для белья" width="260" height="195" /></a>
+              <p class="product-page__profile"></p>
+              <b class="product-page__price">690 руб.</b><a href="add-to-cart.html" class="product-page__cart"
+                aria-label="добавить товар в корзину"></a>
+            </li>
+            <li class="catalog__item product-page">
+              <h2 class="product-page__heading"><a href="product-3.html"
+                  aria-label="открыть подробное описание товара"></a></h2>
+              <a class="product-page__link-image" href="product-3.html"
+                aria-label="открыть подробное описание товара"><img src="img/photo-3-mobile.png"
+                  alt="Вязанная большая корзина наполненная игрушками" width="260" height="195" /></a>
+              <p class="product-page__profile"></p>
+              <b class="product-page__price">1 500 руб.</b><a href="add-to-cart.html" class="product-page__cart"
+                aria-label="добавить товар в корзину"></a>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer>
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
-      <ul class="socials__list">
-        <li class="socials__item">
-          <a href="https://www.instagram.com/"><span class="visually-hidden">перейти в Инстаграм магазина</span></a>
-        </li>
-        <li class="socials__item">
-          <a href="https://www.facebook.com/"><span class="visually-hidden">перейти на Фейбук магазина</span></a>
-        </li>
-        <li class="socials__item">
-          <a href="https://twitter.com/"><span class="visually-hidden">перейти в Твиттер магазина</span></a>
-        </li>
-      </ul>
+      <section class="social">
+        <div class="inner">
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a href="https://www.instagram.com/"><span class="visually-hidden">перейти в Инстаграм магазина</span></a>
+            </li>
+            <li class="socials__item">
+              <a href="https://www.facebook.com/"><span class="visually-hidden">перейти на Фейбук магазина</span></a>
+            </li>
+            <li class="socials__item">
+              <a href="https://twitter.com/"><span class="visually-hidden">перейти в Твиттер магазина</span></a>
+            </li>
+          </ul>
+        </div>
+      </section>
       <h2 class="visually-hidden">Создатели сайта</h2>
       <p class="copyright">
-        Разработано <a class="copyright__creator" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/htmlacademy-svg.png" width="27" height="34" aria-label="Перейти на сайт разработчика" alt="логотип HTML-Academy"/></a>
+        Разработано <a class="copyright__creator" href="https://htmlacademy.ru/intensive/adaptive"><img
+            src="img/htmlacademy-svg.png" width="27" height="34" aria-label="Перейти на сайт разработчика"
+            alt="логотип HTML-Academy" /></a>
       </p>
     </footer>
     <section class="modal">
-      <h2 class="modal__heading">Добавить в корзину</h2>
-      <form class="modal__form form-size" method="get" action="https://echo.htmlacademy.ru">
-        <legend class="form-size__legend">Выберите размер:</legend>
-        <label class="form-size__description" for="choose-size-s">S</label>
-        <input type="radio" class="form-size__radio" name="choose-size" value="S" id="choose-size-s" />
-        <label class="form-size__description" for="choose-size-m">M</label>
-        <input type="radio" class="form-size__radio" name="choose-size" value="M" id="choose-size-m" />
-        <label class="form-size__description" for="choose-size-l">L</label>
-        <input type="radio" class="form-size__radio" name="choose-size" value="L" id="choose-size-l" />
-        <button class="form-size__button" type="submit">Добавить</button>
-      </form>
+      <div class="inner">
+        <h2 class="modal__heading">Добавить в корзину</h2>
+        <form class="modal__form form-size" method="get" action="https://echo.htmlacademy.ru">
+          <legend class="form-size__legend">Выберите размер:</legend>
+          <label class="form-size__description" for="choose-size-s">S</label>
+          <input class="form-size__radio" type="radio" name="choose-size" value="S" id="choose-size-s" />
+          <label class="form-size__description" for="choose-size-m">M</label>
+          <input class="form-size__radio" type="radio" name="choose-size" value="M" id="choose-size-m" />
+          <label class="form-size__description" for="choose-size-l">L</label>
+          <input class="form-size__radio" type="radio" name="choose-size" value="L" id="choose-size-l" />
+          <button class="form-size__button" type="submit">Добавить</button>
+        </form>
+      </div>
     </section>
-  </body>
+  </div>
+</body>
+
 </html>

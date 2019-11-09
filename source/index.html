@@ -1,12 +1,99 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="img/mishka-logo-mobile.svg" width="86" height="35" title="Текущая страница" alt="Интернет магазин мягких игрушек ручной работы Мишка" />
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__button-sandwich" type="button"><span class="visually-hidden">Навигация по сайту</span></button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="site-list__item"><a href="form.html">Вязание на заказ</a></li>
+          <li class="site-list__item site-list__item--searching"><a href="search.html">Поиск по сайту</a></li>
+          <!-- может вынести в отдельный список? это же не совсем в том же смысле навигация что и первые две ли? -->
+          <li class="site-list__item site-list__item--shopping"><a href="shopping-cart.html">Корзина: пока пуста</a></li>
+          <!-- и этот вместе с ним -->
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="page-main__heading">Милые штуки ручной работы для дома</h1>
+      <ul class="products-group__list">
+        <li class="products-group__item products-group__item--interior"><a href="catalog-interior.html">Предметы интерьера</a></li>
+        <li class="products-group__item products-group__item--toys"><a href="catalog-toys.html">Детские игрушки</a></li>
+      </ul>
+      <section class="best-product">
+        <h2 class="best-product__heading">Товар недели</h2>
+        <h3 class="best-product__naming">Вязаные корзинки</h3>
+        <p class="best-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
+        <table class="best-product__profile profile-table">
+          <th class="visually-hidden">Характеристики товара</th>
+          <tr class="profile-table__row">
+            <td>Цвет:</td>
+            <td>«Тиффани»/серый</td>
+          </tr>
+          <tr class="profile-table__row">
+            <td>Диаметр:</td>
+            <td>25 см</td>
+          </tr>
+          <tr class="profile-table__row">
+            <td>Высота:</td>
+            <td>15 см</td>
+          </tr>
+        </table>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
+        <img class="best-product__image" src="img/triple-set-mobile.png" width="260" height="315" alt="Фото товара - вязаные корзинки" />
+        <b class="best-product__price">Цена: 990 руб.</b>
+        <a class="button-order" href="ordering-triple-set.html">Заказать</a>
+        <!-- Или сюда баттон? Но ведь на случай неработоспобности js лучше ссылку поставить? -->
+      </section>
+      <section class="features">
+        <h2 class="features__heading">Коротко о нас:</h2>
+        <ul class="features__list">
+          <li class="features__item features__item--eco">Экологически чистые материалы</li>
+          <li class="features__item features__item--price">Скандинавский стиль по российской цене</li>
+          <li class="features__item features__item--socials">Увеличивает лайки на фотографиях</li>
+          <li class="features__item features__item--handmade">Связано вручную с любовью и умилением</li>
+          <li class="features__item features__item--patriot">Поддержка отечественного производителя</li>
+          <li class="features__item features__item--packing">Поставляется в подарочной упаковке</li>
+        </ul>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <h2 class="visually-hidden">Мы в социальных сетях</h2>
+      <ul class="socials__list">
+        <li class="socials__item">
+          <a href="https://www.instagram.com/"><span class="visually-hidden">перейти в Инстаграм магазина</span></a>
+        </li>
+        <li class="socials__item">
+          <a href="https://www.facebook.com/"><span class="visually-hidden">перейти на Фейбук магазина</span></a>
+        </li>
+        <li class="socials__item">
+          <a href="https://twitter.com/"><span class="visually-hidden">перейти в Твиттер магазина</span></a>
+        </li>
+      </ul>
+      <h2 class="visually-hidden">Создатели сайта</h2>
+      <p class="copyright">
+        Разработано <a class="copyright__creator" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/htmlacademy-svg.png" width="27" height="34" aria-label="Перейти на сайт разработчика" alt="логотип HTML-Academy"/></a>
+      </p>
+    </footer>
+    <section class="modal">
+      <h2 class="modal__heading">Добавить в корзину</h2>
+      <form class="modal__form form-size" method="get" action="https://echo.htmlacademy.ru">
+        <legend class="form-size__legend">Выберите размер:</legend>
+        <label class="form-size__description" for="choose-size-s">S</label>
+        <input class="form-size__radio" type="radio" name="choose-size" value="S" id="choose-size-s" />
+        <label class="form-size__description" for="choose-size-m">M</label>
+        <input class="form-size__radio" type="radio" name="choose-size" value="M" id="choose-size-m" />
+        <label class="form-size__description" for="choose-size-l">L</label>
+        <input class="form-size__radio" type="radio" name="choose-size" value="L" id="choose-size-l" />
+        <button class="form-size__button" type="submit">Добавить</button>
+      </form>
+    </section>
   </body>
 </html>

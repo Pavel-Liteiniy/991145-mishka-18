@@ -14,7 +14,7 @@
         <button class="header__button" type="button" aria-label="Навигация по сайту"></button>
         <nav class="header__nav nav">
           <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link" href="catalog.html">Каталог товаров</a></li>
+            <li class="nav__item"><a class="nav__link nav__link--active">Каталог товаров</a></li>
             <li class="nav__item"><a class="nav__link" href="form.html">Вязание на заказ</a></li>
             <li class="nav__item nav__item--searching"><a class="nav__link" href="">Поиск по сайту</a></li>
             <li class="nav__item nav__item--cart"><a class="nav__link" href="">Корзина: пока пуста</a></li>
@@ -23,59 +23,32 @@
       </div>
     </header>
     <main>
-      <h1 class="title">Милые штуки ручной работы для дома</h1>
-      <section class="categories">
-        <div class="categories__inner inner">
-          <ul class="categories__list">
-            <li class="categories__item"><a class="categories__link categories__link--interior" href="">Предметы интерьера</a></li>
-            <li class="categories__item"><a class="categories__link categories__link--toys" href="">Детские игрушки</a></li>
-          </ul>
-        </div>
-      </section>
-      <section class="highlight">
-        <div class="highlight__inner inner">
-          <h2 class="highlight__heading">Вязаные корзинки</h2>
-          <p class="highlight__naming">Товар недели</p>
-          <p class="highlight__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
-          <table class="highlight__table">
-            <thead class="visually-hidden">
-              <tr>
-                <th>Название характеристики</th>
-                <th>Значение характеристики</th>
-              </tr>
-            </thead>
-            <tr class="highlight__row">
-              <td>Цвет:</td>
-              <td>«Тиффани»/серый</td>
-            </tr>
-            <tr class="highlight__row">
-              <td>Диаметр:</td>
-              <td>25 см</td>
-            </tr>
-            <tr class="highlight__row">
-              <td>Высота:</td>
-              <td>15 см</td>
-            </tr>
-          </table>
-
-          <div class="highlight__image-wrapper">
-            <img class="highlight__image" src="img/triple-set-mobile.png" width="260" height="315" alt="Фото товара - вязаные корзинки" />
+      <h1 class="title">Каталог товаров</h1>
+      <section class="catalog">
+        <div class="catalog__inner inner">
+          <div class="catalog__list">
+            <article class="catalog__item product">
+              <h2 class="product__heading"><a href="" aria-label="открыть подробное описание товара">Зайчик-попрыгайчик</a></h2>
+              <a class="product__link" href="" aria-label="открыть подробное описание товара"><img class="product__image" src="img/photo-1-mobile.png" alt="Вязанная игрушка в виде зайца" width="260" height="195"/></a>
+              <p class="product__profile">Рост 30 см, вес 200 г</p>
+              <p class="produсt__price">1 200 руб.</p>
+              <a href="" class="product__cart" aria-label="добавить товар в корзину"></a>
+            </article>
+            <article class="catalog__item product">
+              <h2 class="product__heading"><a href="" aria-label="открыть подробное описание товара"></a></h2>
+              <a class="product__link" href="" aria-label="открыть подробное описание товара"><img class="product__image" src="img/photo-2-mobile.png" alt="Вязанная корзинка для белья" width="260" height="195"/></a>
+              <p class="product__profile"></p>
+              <p class="product__price">690 руб.</p>
+              <a href="" class="product__cart" aria-label="добавить товар в корзину"></a>
+            </article>
+            <article class="catalog__item product">
+              <h2 class="product__heading"><a href="" aria-label="открыть подробное описание товара"></a></h2>
+              <a class="product__link" href="" aria-label="открыть подробное описание товара"><img class="product__image" src="img/photo-3-mobile.png" alt="Вязанная большая корзина наполненная игрушками" width="260" height="195"/></a>
+              <p class="product__profile"></p>
+              <p class="product__price">1 500 руб.</p>
+              <a href="" class="product__cart" aria-label="добавить товар в корзину"></a>
+            </article>
           </div>
-          <p class="highlight__price">Цена: 990 руб.</p>
-          <a class="highlight__button button" href="">Заказать</a>
-        </div>
-      </section>
-      <section class="features">
-        <div class="features__inner inner">
-          <h2 class="features__heading">Коротко о нас:</h2>
-          <ul class="features__list">
-            <li class="features__item features__item--eco">Экологически чистые материалы</li>
-            <li class="features__item features__item--price">Скандинавский стиль по российской цене</li>
-            <li class="features__item features__item--socials">Увеличивает лайки на фотографиях</li>
-            <li class="features__item features__item--handmade">Связано вручную с любовью и умилением</li>
-            <li class="features__item features__item--patriot">Поддержка отечественного производителя</li>
-            <li class="features__item features__item--packing">Поставляется в подарочной упаковке</li>
-          </ul>
         </div>
       </section>
     </main>

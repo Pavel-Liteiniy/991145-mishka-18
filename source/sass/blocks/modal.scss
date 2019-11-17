@@ -1,0 +1,40 @@
+@charset 'utf-8';
+
+.modal {
+  .modal__heading {
+    @include font_character($font_size_heading,
+                            $line_height_heading,
+                            $font_weight_heading,
+                            $color_heading);
+  margin: 0;
+  }
+
+  .modal__fieldset {
+    border: none;
+  }
+
+  .modal__query {
+    @include font_character($font_size_modal_query,
+                            $line_height_modal_query,
+                            $font_weight_modal_query,
+                            $color_modal_query);
+    margin: 0;
+  }
+
+  .modal__description {
+    @include font_character($font_size_modal_description,
+                            $line_height_modal_description,
+                            $font_weight_modal_description,
+                            $color_modal_description);
+  }
+
+  .modal__button {
+    @include font_character($font_size_modal_button,
+                            $line_height_modal_button,
+                            $font_weight_modal_button,
+                            $color_modal_button);
+    background-color: #63d1bb;
+    border: none;
+    text-transform: uppercase;
+  }
+}

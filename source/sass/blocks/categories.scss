@@ -1,0 +1,20 @@
+@charset 'utf-8';
+
+.categories {
+  @include font_character($font_size_categories,
+                        $line_height_categories,
+                        $font_weight_categories,
+                        $color_categories);
+
+  .categories__list {
+    @include list_default_remove;
+  }
+
+  .categories__link--interior {
+    background-color: #63d1bb;
+  }
+
+  .categories__link--toys {
+    background-color: #56c3b2;
+  }
+}

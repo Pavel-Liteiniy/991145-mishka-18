@@ -1,0 +1,11 @@
+@charset 'utf-8';
+
+.button {
+  @include font_character($font_size_button,
+                          $line_height_button,
+                          $font_weight_button,
+                          $color_button);
+  text-transform: uppercase;
+  border: 2px solid #444444;
+
+}

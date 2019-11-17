@@ -1,0 +1,35 @@
+@charset 'utf-8';
+
+.comments {
+  .comments__heading {
+    @include font_character($font_size_heading,
+                            $line_height_heading,
+                            $font_weight_heading,
+                            $color_heading);
+    margin: 0;
+  }
+
+  .comments__content {
+    @include font_character($font_size_comments_content,
+                            $line_height_comments_content,
+                            $font_weight_comments_content,
+                            $color_comments_content);
+    margin: 0;
+  }
+
+  .comments__author {
+    @include font_character($font_size_comments_author,
+                            $line_height_comments_author,
+                            $font_weight_comments_author,
+                            $color_comments_author);
+    margin: 0;
+  }
+
+  .comments__login {
+    @include font_character($font_size_comments_login,
+                            $line_height_comments_login,
+                            $font_weight_comments_login,
+                            $color_comments_login);
+    margin: 0;
+  }
+}

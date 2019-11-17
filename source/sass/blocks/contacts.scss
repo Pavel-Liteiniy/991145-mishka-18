@@ -8,8 +8,7 @@
 
   .contacts__list {
     @include list_default_remove;
-
-    @include  font_character($font_size_contacts_list, $line_height_contacts_list, $font_weight_contacts_list, $color_contacts_list);
+    @include font_character($font_size_contacts_list, $line_height_contacts_list, $font_weight_contacts_list, $color_contacts_list);
   }
 
   .contacts__item--email {

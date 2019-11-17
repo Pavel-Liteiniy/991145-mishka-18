@@ -2,15 +2,24 @@
 
 // расширения
 @mixin for-phone-only {
-  @media (width: 320px) { @content; }
+  @media (width: 320px)
+  {
+    @content;
+  }
 }
 
 @mixin for-tablet-up {
-  @media (width: 768px) { @content; }
+  @media (width: 768px)
+  {
+    @content;
+  }
 }
 
 @mixin for-desktop-up {
-  @media (width: 1150px) { @content; }
+  @media (width: 1150px)
+  {
+    @content;
+  }
 }
 
 // базовые характеристики текста

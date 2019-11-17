@@ -2,22 +2,19 @@
 
 // расширения
 @mixin for-phone-only {
-  @media (width: 320px)
-  {
+  @media (width: 320px) {
     @content;
   }
 }
 
 @mixin for-tablet-up {
-  @media (width: 768px)
-  {
+  @media (width: 768px) {
     @content;
   }
 }
 
 @mixin for-desktop-up {
-  @media (width: 1150px)
-  {
+  @media (width: 1150px) {
     @content;
   }
 }

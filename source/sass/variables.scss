@@ -1,0 +1,170 @@
+// Переменная с шрифтами
+$font_family: "Open Sans", "Arial", sans-serif;
+// Переменные для H1
+$font_size_title: 27px;
+$line_height_title: 30px;
+$font_weight_title: bold;
+$color_title: #000000;
+
+// Переменные для заголовков блоков Н2
+$font_size_heading: 25px;
+$line_height_heading: 30px;
+$font_weight_heading: bold;
+$color_heading: #000000;
+
+//Переменные для цветов
+$border_color: #ececec;
+$border_color_socials: #e5e5e5;
+$border_color_product: #ededed;
+$border_color_input: #000000;
+$border_color_textarea: #444444;
+$border_color_button: #444444;
+$border_color_email: #62d1ba;
+$background_white: #ffffff;
+$turquoise: #63d1bb;
+$black: #000000;
+$body_grey: #444444;
+$background_link_interior: #63d1bb;
+$background_link_toys: #56c3b2;
+$background_footer: #f1f1f1;
+
+// Переменные для навигации NAV
+$font_size_nav: 17px;
+$line_height_nav: 24px;
+$font_weight_nav: bold;
+$color_nav: #000000;
+
+// Переменные для Категорий CATEGORIES
+$font_size_categories: 19px;
+$line_height_categories: 24px;
+$font_weight_categories: bold;
+$color_categories: #ffffff;
+
+// Переменные для Товара недели HIGHLIGHT
+// highlight_naming
+$font_size_highlight_naming: 17px;
+$line_height_highlight_naming: 20px;
+$font_weight_highlight_naming: bold;
+$color_highlight_naming: #63d1bb;
+// highlight__description
+$font_size_highlight_description: 15px;
+$line_height_highlight_description: 24px;
+$font_weight_highlight_description: normal;
+$color_highlight_description: #444444;
+// highlight__table
+$font_size_highlight_table: 15px;
+$line_height_highlight_table: 20px;
+$font_weight_highlight_table: normal;
+$color_highlight_table: #444444;
+
+// Переменные для кнопок BUTTON
+$font_size_button: 17px;
+$line_height_button: 20px;
+$font_weight_button: bold;
+$color_button: #000000;
+
+// Переменные для Преимуществ features
+// features__list
+$font_size_features_list: 17px;
+$line_height_features_list: 20px;
+$font_weight_features_list: bold;
+$color_features_list: #000000;
+
+// Переменные для FOOTER
+//footer__copyright
+$font_size_footer_copyright: 19px;
+$line_height_footer_copyright: 18px;
+$font_weight_footer_copyright: bold;
+$color_footer_copyright: #000000;
+
+// Переменные для MODAL
+// query
+$font_size_modal_query: 15px;
+$line_height_modal_query: 30px;
+$font_weight_modal_query: normal;
+$color_modal_query: #444444;
+// description
+$font_size_modal_description: 17px;
+$line_height_modal_description: 16px;
+$font_weight_modal_description: bold;
+$color_modal_description: #444444;
+//modal__button
+$font_size_modal_button: 17px;
+$line_height_modal_button: 16px;
+$font_weight_modal_button: bold;
+$color_modal_button: #ffffff;
+
+// Переменные для каталога CATALOG
+// product__heading
+$font_size_product_heading: 17px;
+$line_height_product_heading: 24px;
+$font_weight_product_heading: bold;
+$color_product_heading: #000000;
+// product__profile
+$font_size_product_profile: 13px;
+$line_height_product_profile: 30px;
+$font_weight_product_profile: normal;
+$color_product_profile: #444444;
+// product_price
+$font_size_product_price: 15px;
+$line_height_product_price: 24px;
+$font_weight_product_price: bold;
+$color_product_price: #000000;
+
+// Переменные для COMMENTS
+// comments__heading
+$font_size_comments_content: 15px;
+$line_height_comments_content: 30px;
+$font_weight_comments_content: normal;
+$color_comments_content: #444444;
+// Переменные для comments__author
+$font_size_comments_author: 17px;
+$line_height_comments_author: 24px;
+$font_weight_comments_author: bold;
+$color_comments_author: #000000;
+// Переменные для comments__heading
+$font_size_comments_login: 17px;
+$line_height_comments_login: 30px;
+$font_weight_comments_login: normal;
+$color_comments_login: #444444;
+
+// Переменные для CONTACTS
+// contacts__list
+$font_size_contacts_list: 15px;
+$line_height_contacts_list: 30px;
+$font_weight_contacts_list: normal;
+$color_contacts_list: #444444;
+
+// Переменные для VIDEOBLOG
+// videoblog__description
+$font_size_videoblog_description: 13px;
+$line_height_videoblog_description: 24px;
+$font_weight_videoblog_description: normal;
+$color_videoblog_description: #444444;
+
+// Переменные для ORDER
+// order__query
+$font_size_order_query: 17px;
+$line_height_order_query: 16px;
+$font_weight_order_query: bold;
+$color_order_query: #63d1bb;
+// order__description
+$font_size_order_description: 17px;
+$line_height_order_description: 18px;
+$font_weight_order_description: bold;
+$color_order_description: #000000;
+// order__input--text
+$font_size_order: 19px;
+$line_height_order: 18px;
+$font_weight_order: normal;
+$color_order: #444444;
+// order__placeholder
+$font_size_order_placeholder: 17px;
+$line_height_order_placeholder: 18px;
+$font_weight_order_placeholder: normal;
+$color_order_placeholder: rgba(68, 68, 68, 0.3);
+// order__footnote
+$font_size_order_footnote: 14px;
+$line_height_order_footnote: 16px;
+$font_weight_order_footnote: normal;
+$color_order_footnote: #444444;

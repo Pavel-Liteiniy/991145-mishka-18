@@ -1,0 +1,9 @@
+.title {
+  @include font-character($font_size_title,
+                          $line_height_title,
+                          $font_weight_title,
+                          $color_title);
+
+  background-color: $background_footer;
+  margin: 0;
+}

@@ -1,0 +1,22 @@
+.categories {
+  @include font_character($font_size_categories,
+                          $line_height_categories,
+                          $font_weight_categories,
+                          $color_categories);
+}
+
+.categories__list {
+  @include list_default_remove;
+}
+
+.categories__link {
+  @include link_default_remove;
+}
+
+.categories__link--interior {
+  background-color: $background_link_interior;
+}
+
+.categories__link--toys {
+  background-color: $background_link_toys;
+}

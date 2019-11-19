@@ -1,0 +1,32 @@
+.product {
+  border: 1px solid $border_color_product;
+}
+
+.product__heading {
+  @include font_character($font_size_product_heading,
+                          $line_height_product_heading,
+                          $font_weight_product_heading,
+                          $color_product_heading);
+  margin: 0;
+}
+
+.product__profile {
+  @include font_character($font_size_product_profile,
+                          $line_height_product_profile,
+                          $font_weight_product_profile,
+                          $color_product_profile);
+  margin: 0;
+  border-bottom: 1px solid $border_color;
+}
+
+.product__link-heading {
+  @include link_default_remove;
+}
+
+.product__price {
+  @include font_character($font_size_product_price,
+                          $line_height_product_price,
+                          $font_weight_product_price,
+                          $color_product_price);
+  margin: 0;
+}

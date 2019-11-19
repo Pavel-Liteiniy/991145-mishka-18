@@ -1,0 +1,76 @@
+.order__explanation {
+  @include font_character($font_size_videoblog_description,
+                          $line_height_videoblog_description,
+                          $font_weight_videoblog_description,
+                          $color_videoblog_description);
+  margin: 0;
+}
+
+.order__fieldset {
+  border: none;
+  padding: 0;
+}
+
+.order__query {
+  @include font_character($font_size_order_query,
+                          $line_height_order_query,
+                          $font_weight_order_query,
+                          $color_order_query);
+  text-transform: uppercase;
+}
+
+.order__list {
+  @include list_default_remove;
+}
+
+.order__description {
+  @include font_character($font_size_order_description,
+                            $line_height_order_description,
+                            $font_weight_order_description,
+                            $color_order_description);
+}
+
+.order__input {
+  &--text,
+  &--tel,
+  &--email {
+    @include font_character($font_size_order,
+                            $line_height_order,
+                            $font_weight_order,
+                            $color_order);
+    border: none;
+    border-bottom: 2px solid $border_color_input;
+
+    &::placeholder {
+      @include font_character($font_size_order_placeholder,
+                              $line_height_order_placeholder,
+                              $font_weight_order_placeholder,
+                              $color_order_placeholder);
+      font-family: $font_family;
+    }
+  }
+
+  &--add {
+    @include font_character($font_size_order,
+                            $line_height_order,
+                            $font_weight_order,
+                            $color_order);
+    border: 2px solid $border_color_textarea;
+
+    &::placeholder {
+      @include font_character($font_size_order_placeholder,
+                              $line_height_order_placeholder,
+                              $font_weight_order_placeholder,
+                              $color_order_placeholder);
+      font-family: $font_family;
+    }
+  }
+}
+
+.order__footnote {
+  @include font_character($font_size_order_footnote,
+                          $line_height_order_footnote,
+                          $font_weight_order_footnote,
+                          $color_order_footnote);
+  margin: 0;
+}

@@ -1,0 +1,19 @@
+.footer {
+  background-color: $background_footer;
+}
+
+.footer__copyright {
+  @include font_character($font_size_footer_copyright,
+                          $line_height_footer_copyright,
+                          $font_weight_footer_copyright,
+                          $color_footer_copyright);
+  margin: 0;
+}
+
+.footer__copyright-link {
+  color: $turquoise;
+}
+
+.footer__copyright-logo {
+  fill: currentColor;
+}

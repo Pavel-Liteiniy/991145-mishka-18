@@ -1,0 +1,15 @@
+.nav {
+  @include font_character($font_size_nav,
+                          $line_height_nav,
+                          $font_weight_nav,
+                          $color_nav);
+}
+
+.nav__list {
+  @include list_default_remove;
+}
+
+.nav__link {
+  @include link_default_remove;
+  border-bottom: 1px solid $border_color;
+}

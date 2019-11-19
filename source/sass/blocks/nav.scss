@@ -10,6 +10,6 @@
 }
 
 .nav__link {
-  border-bottom: 1px solid $border_color;
   @include link_default_remove;
+  border-bottom: 1px solid $border_color;
 }

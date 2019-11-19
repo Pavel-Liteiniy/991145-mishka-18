@@ -20,9 +20,9 @@
 
 .modal__description {
   @include font_character($font_size_modal_description,
-                           $line_height_modal_description,
-                           $font_weight_modal_description,
-                           $color_modal_description);
+                          $line_height_modal_description,
+                          $font_weight_modal_description,
+                          $color_modal_description);
   border: 2px solid $border_color_button;
 }
 

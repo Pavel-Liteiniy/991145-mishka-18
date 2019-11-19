@@ -16,6 +16,6 @@
 }
 
 .contacts__item--email {
-  border-bottom: 1px solid $border_color_email;
   @include link_default_remove;
+  border-bottom: 1px solid $border_color_email;
 }

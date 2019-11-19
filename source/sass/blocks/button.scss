@@ -3,9 +3,9 @@
                           $line_height_button,
                           $font_weight_button,
                           $color_button);
+  @include link_default_remove;
   text-transform: uppercase;
   border: 2px solid $border_color_button;
   background-color: $background_white;
-  @include link_default_remove;
   font-family: $font_family;
 }

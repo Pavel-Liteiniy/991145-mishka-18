@@ -1,5 +1,5 @@
 .order__explanation {
-   @include font_character($font_size_videoblog_description,
+  @include font_character($font_size_videoblog_description,
                           $line_height_videoblog_description,
                           $font_weight_videoblog_description,
                           $color_videoblog_description);
@@ -40,27 +40,29 @@
                             $color_order);
     border: none;
     border-bottom: 2px solid $border_color_input;
+
     &::placeholder {
       @include font_character($font_size_order_placeholder,
                               $line_height_order_placeholder,
                               $font_weight_order_placeholder,
                               $color_order_placeholder);
-    font-family: $font_family;
+      font-family: $font_family;
     }
   }
 
   &--add {
-    border: 2px solid $border_color_textarea;
     @include font_character($font_size_order,
                             $line_height_order,
                             $font_weight_order,
                             $color_order);
+    border: 2px solid $border_color_textarea;
+
     &::placeholder {
       @include font_character($font_size_order_placeholder,
                               $line_height_order_placeholder,
                               $font_weight_order_placeholder,
                               $color_order_placeholder);
-    font-family: $font_family;
+      font-family: $font_family;
     }
   }
 }

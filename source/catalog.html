@@ -11,12 +11,12 @@
   <header class="header">
     <div class="header__inner inner">
       <a class="header__logo" href="index.html">
-        <img class="header__logo-image" src="img/mishka-logo-mobile.svg" width="86" height="35" title="Текущая страница" alt="Интернет магазин мягких игрушек ручной работы Мишка" />
+        <img class="header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет магазин мягких игрушек ручной работы Мишка" />
       </a>
       <button class="header__button" type="button" aria-label="Навигация по сайту"></button>
       <nav class="header__nav nav">
         <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link nav__link--active">Каталог товаров</a></li>
+          <li class="nav__item"><a class="nav__link nav__link--active" title="Текущая страница">Каталог товаров</a></li>
           <li class="nav__item"><a class="nav__link" href="form.html">Вязание на заказ</a></li>
           <li class="nav__item nav__item--searching"><a class="nav__link" href="">Поиск по сайту</a></li>
           <li class="nav__item nav__item--cart"><a class="nav__link" href="">Корзина: пока пуста</a></li>
@@ -30,25 +30,31 @@
       <div class="catalog__inner inner">
         <div class="catalog__list">
           <article class="catalog__item product">
-            <h2 class="product__heading"><a href="" aria-label="открыть подробное описание товара">Зайчик-попрыгайчик</a></h2>
-            <a class="product__link" href="" aria-label="открыть подробное описание товара"><img class="product__image" src="img/photo-1-mobile.png" alt="Вязанная игрушка в виде зайца" width="260" height="195" /></a>
+            <h2 class="product__heading"><a class="product__link-heading" href="" aria-label="открыть подробное описание товара">Зайчик-попрыгайчик</a></h2>
+            <a class="product__link-image" href="" aria-label="открыть подробное описание товара"><img class="product__image" src="img/photo-1-mobile.png" alt="Вязанная игрушка в виде зайца" width="260" height="195" /></a>
             <p class="product__profile">Рост 30 см, вес 200 г</p>
-            <p class="product__price">1 200 руб.</p>
-            <a href="" class="product__cart" aria-label="добавить товар в корзину"></a>
+            <p class="product__price">
+              1 200 руб.
+              <a class="product__cart" href="" aria-label="добавить товар в корзину"></a>
+            </p>
           </article>
           <article class="catalog__item product">
-            <h2 class="product__heading"><a href="" aria-label="открыть подробное описание товара">Корзинка для белья</a></h2>
-            <a class="product__link" href="" aria-label="открыть подробное описание товара"><img class="product__image" src="img/photo-2-mobile.png" alt="Вязанная корзинка для белья" width="260" height="195" /></a>
+            <h2 class="product__heading"><a class="product__link-heading" href="" aria-label="открыть подробное описание товара">Корзинка для белья</a></h2>
+            <a class="product__link-image" href="" aria-label="открыть подробное описание товара"><img class="product__image" src="img/photo-2-mobile.png" alt="Вязанная корзинка для белья" width="260" height="195" /></a>
             <p class="product__profile">Диаметр 15 см, высота 10 см</p>
-            <p class="product__price">690 руб.</p>
-            <a href="" class="product__cart" aria-label="добавить товар в корзину"></a>
+            <p class="product__price">
+              690 руб.
+              <a class="product__cart" href="" aria-label="добавить товар в корзину"></a>
+            </p>
           </article>
           <article class="catalog__item product">
-            <h2 class="product__heading"><a href="" aria-label="открыть подробное описание товара">Большая корзинка для игрушек</a></h2>
-            <a class="product__link" href="" aria-label="открыть подробное описание товара"><img class="product__image" src="img/photo-3-mobile.png" alt="Вязанная большая корзина наполненная игрушками" width="260" height="195" /></a>
+            <h2 class="product__heading"><a class="product__link-heading" href="" aria-label="открыть подробное описание товара">Большая корзинка для игрушек</a></h2>
+            <a class="product__link-image" href="" aria-label="открыть подробное описание товара"><img class="product__image" src="img/photo-3-mobile.png" alt="Вязанная большая корзина наполненная игрушками" width="260" height="195" /></a>
             <p class="product__profile">Диаметр 30 см, высота 30 см</p>
-            <p class="product__price">1 500 руб.</p>
-            <a href="" class="product__cart" aria-label="добавить товар в корзину"></a>
+            <p class="product__price">
+              1 500 руб.
+              <a class="product__cart" href="" aria-label="добавить товар в корзину"></a>
+            </p>
           </article>
         </div>
       </div>
@@ -57,7 +63,9 @@
       <div class="videoblog__inner inner">
         <h2 class="videoblog__heading">Процесс производства</h2>
         <div class="videoblog__content-wrapper">
-          <video class="videoblog__content" controls="controls" poster="img/video-mobile.png" src="https://www.youtube.com/watch?v=F6gnmChf7fM&feature=emb_logo"></video>
+          <video class="videoblog__content" width="260" height="150" poster="img/video-mobile@1x.jpg" controls>
+            <source src="video/review-project.mp4" type="video/mp4">
+          </video>
         </div>
         <p class="videoblog__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="videoblog__button button" href="">Сделать заказ</a>
@@ -115,7 +123,7 @@
           <label class="modal__description" for="choose-size-s">S</label>
           <input class="modal__radio" type="radio" name="choose-size" value="M" id="choose-size-m" />
           <label class="modal__description" for="choose-size-m">M</label>
-          <input class="modal_ _radio" type="radio" name="choose-size" value="L" id="choose-size-l" />
+          <input class="modal__radio" type="radio" name="choose-size" value="L" id="choose-size-l" />
           <label class="modal__description" for="choose-size-l">L</label>
           <button class="modal__button button" type="submit">Добавить</button>
         </fieldset>

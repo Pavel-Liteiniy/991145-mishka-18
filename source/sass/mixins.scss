@@ -1,19 +1,17 @@
-@charset 'utf-8';
-
 // расширения
-@mixin for-phone-only {
+@mixin for-mobile {
   @media (width: 320px) {
     @content;
   }
 }
 
-@mixin for-tablet-up {
+@mixin for-tablet {
   @media (width: 768px) {
     @content;
   }
 }
 
-@mixin for-desktop-up {
+@mixin for-desktop {
   @media (width: 1150px) {
     @content;
   }
@@ -34,28 +32,9 @@
   margin: 0;
 }
 
-@mixin product {
-  .product__heading {
-    @include font_character($font_size_product_heading,
-                            $line_height_product_heading,
-                            $font_weight_product_heading,
-                            $color_product_heading);
-    margin: 0;
-  }
-
-  .product__profile {
-    @include font_character($font_size_product_profile,
-                            $line_height_product_profile,
-                            $font_weight_product_profile,
-                            $color_product_profile);
-    margin: 0;
-  }
-
-  .product__price {
-    @include font_character($font_size_product_price,
-                            $line_height_product_price,
-                            $font_weight_product_price,
-                            $color_product_price);
-    margin: 0;
-  }
+// сброс оформления по умолчанию у ссылок <a>
+@mixin link_default_remove {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
 }

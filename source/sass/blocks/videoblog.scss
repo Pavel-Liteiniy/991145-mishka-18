@@ -1,0 +1,15 @@
+.videoblog__heading {
+  @include font_character($font_size_product_heading,
+                          $line_height_product_heading,
+                          $font_weight_product_heading,
+                          $color_product_heading);
+  margin: 0;
+}
+
+.videoblog__description {
+  @include font_character($font_size_videoblog_description,
+                          $line_height_videoblog_description,
+                          $font_weight_videoblog_description,
+                          $color_videoblog_description);
+  margin: 0;
+}

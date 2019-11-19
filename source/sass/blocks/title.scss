@@ -1,11 +1,9 @@
-@charset 'utf-8';
-
 .title {
   @include font-character($font_size_title,
                           $line_height_title,
                           $font_weight_title,
                           $color_title);
 
-  background-color: #f1f1f1;
+  background-color: $background_footer;
   margin: 0;
 }

@@ -1,44 +1,40 @@
-@charset 'utf-8';
+.highlight__heading {
+  @include font_character($font_size_heading,
+                          $line_height_heading,
+                          $font_weight_heading,
+                          $color_heading);
+  margin: 0;
+}
 
-.highlight {
-  .highlight__heading {
-    @include font_character($font_size_heading,
-                            $line_height_heading,
-                            $font_weight_heading,
-                            $color_heading);
-    margin: 0;
-  }
+.highlight__naming {
+  @include font_character($font_size_highlight_naming,
+                          $line_height_highlight_naming,
+                          $font_weight_highlight_naming,
+                          $color_highlight_naming);
+  margin: 0;
+  text-transform: uppercase;
+}
 
-  .highlight__naming {
-    @include font_character($font_size_highlight_naming,
-                            $line_height_highlight_naming,
-                            $font_weight_highlight_naming,
-                            $color_highlight_naming);
-    margin: 0;
-    text-transform: uppercase;
-  }
+.highlight__description {
+  @include font_character($font_size_highlight_description,
+                          $line_height_highlight_description,
+                          $font_weight_highlight_description,
+                          $color_highlight_description);
+  margin: 0;
+}
 
-  .highlight__description {
-    @include font_character($font_size_highlight_description,
-                            $line_height_highlight_description,
-                            $font_weight_highlight_description,
-                            $color_highlight_description);
-    margin: 0;
-  }
+.highlight__table {
+  @include font_character($font_size_highlight_table,
+                          $line_height_highlight_table,
+                          $font_weight_highlight_table,
+                          $color_highlight_table);
+}
 
-  .highlight__table {
-    @include font_character($font_size_highlight_table,
-                            $line_height_highlight_table,
-                            $font_weight_highlight_table,
-                            $color_highlight_table);
-  }
+.highlight__row {
+  border-bottom: 1px solid $border_color;
+}
 
-  .highlight__row {
-    border-bottom: 1px solid #ececec;
-  }
-
-  .highlight__price {
-    font-weight: bold;
-    margin: 0;
-  }
+.highlight__price {
+  font-weight: bold;
+  margin: 0;
 }

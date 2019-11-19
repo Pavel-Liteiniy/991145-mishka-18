@@ -1,11 +1,11 @@
-@charset 'utf-8';
+.socials__list {
+  @include list_default_remove;
+}
 
-.socials {
-  .socials__list {
-    @include list_default_remove;
-  }
+.socials__link {
+  color: $black;
+}
 
-  .socials__svg {
-    fill: #231f20;
-  }
+.socials__svg {
+  fill: currentColor;
 }

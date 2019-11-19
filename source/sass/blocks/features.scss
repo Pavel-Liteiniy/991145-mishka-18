@@ -1,19 +1,15 @@
-@charset 'utf-8';
+.features__heading {
+  @include font_character($font_size_heading,
+                          $line_height_heading,
+                          $font_weight_heading,
+                          $color_heading);
+  margin: 0;
+}
 
-.features {
-  .features__heading {
-    @include font_character($font_size_heading,
-                            $line_height_heading,
-                            $font_weight_heading,
-                            $color_heading);
-    margin: 0;
-  }
-
-  .features__list {
-    @include list_default_remove;
-    @include font_character($font_size_features_list,
-                            $line_height_features_list,
-                            $font_weight_features_list,
-                            $color_features_list);
-  }
+.features__list {
+  @include list_default_remove;
+  @include font_character($font_size_features_list,
+                          $line_height_features_list,
+                          $font_weight_features_list,
+                          $color_features_list);
 }

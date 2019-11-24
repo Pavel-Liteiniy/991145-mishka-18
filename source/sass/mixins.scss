@@ -1,17 +1,17 @@
 // расширения
-@mixin for-mobile {
+@mixin for_mobile {
   @media (width: 320px) {
     @content;
   }
 }
 
-@mixin for-tablet {
+@mixin for_tablet {
   @media (width: 768px) {
     @content;
   }
 }
 
-@mixin for-desktop {
+@mixin for_desktop {
   @media (width: 1150px) {
     @content;
   }

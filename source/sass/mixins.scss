@@ -1,18 +1,18 @@
 // расширения
-@mixin for-mobile {
-  @media (width: 320px) {
+@mixin for_mobile {
+  @media (width: $breakpoint_mobile) {
     @content;
   }
 }
 
-@mixin for-tablet {
-  @media (width: 768px) {
+@mixin for_tablet {
+  @media (width: $breakpoint_tablet) {
     @content;
   }
 }
 
-@mixin for-desktop {
-  @media (width: 1150px) {
+@mixin for_desktop {
+  @media (width: $breakpoint_desktop) {
     @content;
   }
 }

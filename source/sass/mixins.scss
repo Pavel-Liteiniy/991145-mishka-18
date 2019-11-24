@@ -1,0 +1,40 @@
+// расширения
+@mixin for_mobile {
+  @media (width: $breakpoint_mobile) {
+    @content;
+  }
+}
+
+@mixin for_tablet {
+  @media (width: $breakpoint_tablet) {
+    @content;
+  }
+}
+
+@mixin for_desktop {
+  @media (width: $breakpoint_desktop) {
+    @content;
+  }
+}
+
+// базовые характеристики текста
+@mixin font_character($size, $height, $weight, $color) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+}
+
+// сброс оформления списка поумолчанию
+@mixin list_default_remove {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// сброс оформления по умолчанию у ссылок <a>
+@mixin link_default_remove {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}

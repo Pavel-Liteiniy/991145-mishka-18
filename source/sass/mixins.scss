@@ -38,3 +38,9 @@
   color: inherit;
   outline: none;
 }
+
+// автовыравнивание по горизонтали
+@mixin margin_lr_auto {
+  margin-left: auto;
+  margin-right: auto;
+}

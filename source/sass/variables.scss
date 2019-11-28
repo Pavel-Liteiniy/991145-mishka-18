@@ -11,6 +11,16 @@ $breakpoint_mobile: 320px;
 $breakpoint_tablet: 768px;
 $breakpoint_desktop: 1150px;
 
+// переменные для сетки mobile версии
+$width_mobile: 320px;
+$padding_mobile: 30px;
+// переменные для сетки tablet версии
+$width_tablet: 768px;
+$padding_tablet: 50px;
+// переменные для сетки desktop версии
+$width_desktop: 1150px;
+$padding_desktop: 50px;
+
 // Переменные для заголовков блоков Н2
 $font_size_heading: 25px;
 $line_height_heading: 30px;

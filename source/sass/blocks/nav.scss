@@ -13,3 +13,9 @@
   @include link_default_remove;
   border-bottom: 1px solid $border_color;
 }
+
+@media (min-width: $breakpoint_mobile) {
+  .nav__link {
+    display: block;
+  }
+}

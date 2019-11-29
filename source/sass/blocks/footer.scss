@@ -17,3 +17,20 @@
 .footer__copyright-logo {
   fill: currentColor;
 }
+
+@media (min-width: $breakpoint_mobile) {
+  .footer__inner {
+    @include margin_lr_auto;
+
+    width: $width_mobile;
+    // Временные свойства
+    min-height: 160px;
+  }
+  .footer__copyright {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}

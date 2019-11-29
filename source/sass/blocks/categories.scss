@@ -13,10 +13,25 @@
   @include link_default_remove;
 }
 
-.categories__link--interior {
+.categories__item--interior {
   background-color: $background_link_interior;
 }
 
-.categories__link--toys {
+.categories__item--toys {
   background-color: $background_link_toys;
+}
+
+@media (min-width: $breakpoint_mobile) {
+  .categories__inner {
+    @include margin_lr_auto;
+
+    width: $width_mobile;
+    // Временные свойства
+    min-height: 206px;
+  }
+  .categories__link {
+    display: block;
+    // Временные свойства
+    min-height: 103px;
+  }
 }

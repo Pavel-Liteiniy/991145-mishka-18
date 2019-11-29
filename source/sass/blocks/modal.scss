@@ -35,3 +35,17 @@
   border: none;
   text-transform: uppercase;
 }
+
+@media (min-width: $breakpoint_mobile) {
+  .modal__inner {
+    @include margin_lr_auto;
+
+    width: $width_mobile;
+    text-align: center;
+    // Временные свойства
+    min-height: 337px;
+  }
+  .modal__button {
+    @include margin_lr_auto;
+  }
+}

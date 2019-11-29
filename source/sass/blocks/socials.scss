@@ -9,3 +9,21 @@
 .socials__svg {
   fill: currentColor;
 }
+
+@media (min-width: $breakpoint_mobile) {
+  .socials__inner {
+    @include margin_lr_auto;
+
+    width: $width_mobile;
+    // Временные свойства
+  }
+  .socials__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .socials__link {
+    display: block;
+  }
+}

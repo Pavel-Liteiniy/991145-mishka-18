@@ -9,3 +9,10 @@
   background-color: $background_white;
   font-family: $font_family;
 }
+
+@media (min-width: $breakpoint_mobile) {
+  .button {
+    display: block;
+    text-align: center;
+  }
+}

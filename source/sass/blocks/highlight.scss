@@ -38,3 +38,16 @@
   font-weight: bold;
   margin: 0;
 }
+
+@media (min-width: $breakpoint_mobile) {
+  .highlight__inner {
+    @include margin_lr_auto;
+
+    width: $width_mobile;
+    // Временные свойства
+    min-height: 825px;
+  }
+  .highlight__price {
+    text-align: center;
+  }
+}

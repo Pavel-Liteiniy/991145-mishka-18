@@ -7,3 +7,14 @@
   background-color: $background_footer;
   margin: 0;
 }
+
+@media (min-width: $breakpoint_mobile) {
+  .title__inner {
+    @include margin_lr_auto;
+
+    width: $width_mobile;
+    text-align: center;
+    // Временные свойства
+    min-height: 282px;
+  }
+}

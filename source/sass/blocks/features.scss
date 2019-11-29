@@ -13,3 +13,13 @@
                           $font_weight_features_list,
                           $color_features_list);
 }
+
+@media (min-width: $breakpoint_mobile) {
+  .features__inner {
+    @include margin_lr_auto;
+
+    width: $width_mobile;
+    // Временные свойства
+    min-height: 830px;
+  }
+}

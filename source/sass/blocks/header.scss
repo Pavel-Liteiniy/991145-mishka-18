@@ -10,12 +10,22 @@
     width: $width_mobile;
     display: flex;
     flex-direction: column;
-
+    position: relative;
+    padding-top: 22px;
+    border-top: 1px solid $border_color;
+    border-bottom: 1px solid $border_color;
     // Временные свойства
     min-height: 396px;
   }
   .header__logo {
     @include margin_lr_auto;
+  }
+  .header__button {
+    width: 21px;
+    height: 20px;
+    position: absolute;
+    right: $padding_mobile;
+    top: 29px;
   }
 }
 

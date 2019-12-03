@@ -1,7 +1,21 @@
 .highlight__inner {
-  width: $width_mobile;
   padding-top: $padding_mobile - 4;
   padding-bottom: $padding_mobile + 12;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight__header {
+  @include for_tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include for_desktop {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
 }
 
 .highlight__heading {

@@ -1,10 +1,22 @@
-// Переменная с шрифтами
+ // Переменная с шрифтами
 $font_family: "Open Sans", "Arial", sans-serif;
 // Переменные для H1
 $font_size_title: 27px;
 $line_height_title: 30px;
 $font_weight_title: bold;
 $color_title: #000000;
+
+// Переменные для label
+$font_size_label: 15px;
+$line_height_label: 24px;
+$font_weight_label: normal;
+$color_label: #000000;
+
+// Переменные для topical
+$font_size_topical: 15px;
+$line_height_topical: 24px;
+$font_weight_topical: bold;
+$color_topical: #000000;
 
 // брейкпоинты
 $breakpoint_mobile: 320px;
@@ -20,6 +32,9 @@ $padding_tablet: 50px;
 // переменные для сетки desktop версии
 $width_desktop: 1150px;
 $padding_desktop: 50px;
+
+// Относительные переменные
+$half: 50%;
 
 // Переменные для заголовков блоков Н2
 $font_size_heading: 25px;

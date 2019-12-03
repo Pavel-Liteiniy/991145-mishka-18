@@ -1,0 +1,24 @@
+.topical {
+  @include only_desktop;
+
+  @include list_default_remove;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topical__item {
+  &:not(:first-child) {
+    margin-left: $padding_desktop + 12;
+    // margin-bottom: $padding_desktop / 2;
+  }
+}
+
+.topical__link {
+  @include font-character($font_size_topical,
+                                   $line_height_topical,
+                                   $font_weight_topical,
+                                   $color_topical);
+
+  @include link_default_remove;
+}

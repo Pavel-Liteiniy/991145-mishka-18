@@ -1,38 +1,54 @@
 .header {
   border-top: 1px solid $border_color;
   border-bottom: 1px solid $border_color;
-}
 
-@media (min-width: $breakpoint_mobile) {
-  .header__inner {
-    @include margin_lr_auto;
+  @include for_tablet {
+    border-top: none;
+    height: 89px;
+  }
 
-    width: $width_mobile;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding-top: 22px;
-    border-top: 1px solid $border_color;
-    border-bottom: 1px solid $border_color;
-    // Временные свойства
-    min-height: 396px;
-  }
-  .header__logo {
-    @include margin_lr_auto;
-  }
-  .header__button {
-    width: 21px;
-    height: 20px;
-    position: absolute;
-    right: $padding_mobile;
-    top: 29px;
+  @include for_desktop {
+    border-top: none;
   }
 }
 
-@media (min-width: $breakpoint_tablet) {
+// .header__inner переопределяет отступы блока inner из-за особенностей мобильной версии
+.header__inner {
+  padding-left: 0;
+  padding-right: 0;
 
+  @include for_tablet {
+    padding-left: $padding_tablet;
+    padding-right: $padding_tablet;
+  }
+
+  @include for_desktop {
+    padding-left: $padding_desktop;
+    padding-right: $padding_desktop;
+  }
 }
 
-@media (min-width: $breakpoint_desktop) {
+.header__logo {
+  margin-top: 23px;
+  margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: 67px;
 
+  @include for_tablet {
+    margin-left: -2px;
+    margin-right: auto;
+  }
+
+  @include for_desktop {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.header__button {
+  @include only_mobile;
+
+  width: 21px;
+  height: 20px;
+  align-self: center;
+  margin-right: $padding_mobile;
 }

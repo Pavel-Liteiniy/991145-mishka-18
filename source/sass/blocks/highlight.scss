@@ -1,9 +1,16 @@
+.highlight__inner {
+  width: $width_mobile;
+  padding-top: $padding_mobile - 4;
+  padding-bottom: $padding_mobile + 12;
+}
+
 .highlight__heading {
   @include font_character($font_size_heading,
                           $line_height_heading,
                           $font_weight_heading,
                           $color_heading);
   margin: 0;
+  padding-bottom: $padding_mobile - 25;
 }
 
 .highlight__naming {
@@ -13,6 +20,7 @@
                           $color_highlight_naming);
   margin: 0;
   text-transform: uppercase;
+  padding-bottom: $padding_mobile - 7;
 }
 
 .highlight__description {
@@ -21,6 +29,7 @@
                           $font_weight_highlight_description,
                           $color_highlight_description);
   margin: 0;
+  padding-bottom: $padding_mobile - 8;
 }
 
 .highlight__table {
@@ -28,26 +37,20 @@
                           $line_height_highlight_table,
                           $font_weight_highlight_table,
                           $color_highlight_table);
+  padding-bottom: $padding_mobile - 2;
 }
 
 .highlight__row {
   border-bottom: 1px solid $border_color;
 }
 
+.highlight__image-wrapper {
+  padding-bottom: $padding_mobile - 2;
+}
+
 .highlight__price {
   font-weight: bold;
   margin: 0;
-}
-
-@media (min-width: $breakpoint_mobile) {
-  .highlight__inner {
-    @include margin_lr_auto;
-
-    width: $width_mobile;
-    // Временные свойства
-    min-height: 825px;
-  }
-  .highlight__price {
-    text-align: center;
-  }
+  padding-bottom: $padding_mobile - 2;
+  text-align: center;
 }

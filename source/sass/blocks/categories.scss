@@ -3,14 +3,27 @@
                           $line_height_categories,
                           $font_weight_categories,
                           $color_categories);
-}
 
-.categories__list {
   @include list_default_remove;
+
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+
+  @include for_tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .categories__link {
   @include link_default_remove;
+}
+
+.categories__item {
+  @include for_tablet {
+    width: $half;
+  }
 }
 
 .categories__item--interior {
@@ -23,9 +36,6 @@
 
 @media (min-width: $breakpoint_mobile) {
   .categories__inner {
-    @include margin_lr_auto;
-
-    width: $width_mobile;
     // Временные свойства
     min-height: 206px;
   }
@@ -33,5 +43,9 @@
     display: block;
     // Временные свойства
     min-height: 103px;
+
+    @include for_tablet {
+      min-height: 103px + 16;
+    }
   }
 }

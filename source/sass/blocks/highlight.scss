@@ -7,6 +7,11 @@
     padding-bottom: $padding_tablet + 18;
   }
 
+  @include for_desktop {
+    padding-top: $padding_desktop + $padding_desktop + 17;
+    padding-bottom: $padding_desktop + 46;
+  }
+
   display: flex;
   flex-direction: column;
 }
@@ -21,6 +26,7 @@
   @include for_desktop {
     flex-direction: row-reverse;
     justify-content: flex-end;
+    padding-bottom: $padding_desktop + 2;
   }
 }
 
@@ -56,6 +62,11 @@
     position: relative;
     padding-right: 377px;
   }
+
+  @include for_desktop  {
+    padding-left: $padding_desktop + $padding_desktop + $padding_desktop + 25;
+    padding-right: 583px;
+  }
 }
 
 .highlight__description {
@@ -69,6 +80,10 @@
   @include for_tablet  {
     padding-bottom: $padding_tablet + 5;
   }
+
+  @include for_desktop  {
+    padding-bottom: $padding_desktop + 15;
+  }
 }
 
 .highlight__table {
@@ -80,6 +95,10 @@
 
   @include for_tablet  {
     padding-bottom: $padding_tablet + 10;
+  }
+
+  @include for_desktop  {
+    padding-bottom: $padding_desktop + $padding_desktop + 10;
   }
 }
 
@@ -106,5 +125,9 @@
 
   @include for_tablet  {
     padding-bottom: $padding_tablet - 15;
+  }
+
+  @include for_desktop  {
+    padding-bottom: $padding_desktop - 15;
   }
 }

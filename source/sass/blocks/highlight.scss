@@ -91,6 +91,9 @@
   padding-bottom: $padding_mobile - 2;
 
   @include for_tablet  {
+    position: absolute;
+    top: 0;
+    right: 0;
     padding-bottom: 0;
   }
 }

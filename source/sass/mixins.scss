@@ -1,18 +1,18 @@
 // расширения
 @mixin for_mobile {
-  @media (width: $breakpoint_mobile) {
+  @media (min-width: $breakpoint_mobile) {
     @content;
   }
 }
 
 @mixin for_tablet {
-  @media (width: $breakpoint_tablet) {
+  @media (min-width: $breakpoint_tablet) {
     @content;
   }
 }
 
 @mixin for_desktop {
-  @media (width: $breakpoint_desktop) {
+  @media (min-width: $breakpoint_desktop) {
     @content;
   }
 }
@@ -39,8 +39,24 @@
   outline: none;
 }
 
-// автовыравнивание по горизонтали
-@mixin margin_lr_auto {
-  margin-left: auto;
-  margin-right: auto;
+// отображение только на мобильной версии
+@mixin only_mobile {
+  @media (min-width: $breakpoint_tablet) {
+   display: none;
+  }
+}
+
+// отображение только на планшетной версии
+@mixin only_tablet {
+  @media (max-width: $breakpoint_tablet - 1),
+         (min-width: $breakpoint_desktop) {
+   display: none;
+  }
+}
+
+// отображение только на десктопной версии
+@mixin only_desktop {
+  @media (max-width: $breakpoint_desktop - 1) {
+   display: none;
+  }
 }

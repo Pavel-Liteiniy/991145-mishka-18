@@ -2,35 +2,37 @@
   background-color: $background_footer;
 }
 
+.footer__inner {
+  padding-bottom: $padding_mobile - 7;
+}
+
+.footer__logo {
+  display: none;
+}
+
 .footer__copyright {
   @include font_character($font_size_footer_copyright,
                           $line_height_footer_copyright,
                           $font_weight_footer_copyright,
                           $color_footer_copyright);
   margin: 0;
+  border-top: 1px solid $border_color_copyright;
+  padding-top: $padding_mobile - 15;
 }
 
 .footer__copyright-link {
   color: $turquoise;
+  margin-left:  $padding_mobile;
 }
 
 .footer__copyright-logo {
   fill: currentColor;
 }
 
-@media (min-width: $breakpoint_mobile) {
-  .footer__inner {
-    @include margin_lr_auto;
-
-    width: $width_mobile;
-    // Временные свойства
-    min-height: 160px;
-  }
-  .footer__copyright {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
+.footer__copyright {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }

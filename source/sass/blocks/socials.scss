@@ -4,6 +4,11 @@
   padding-right: $padding_mobile + 12;
   padding-top: $padding_mobile - 5;
   padding-bottom: $padding_mobile - 5;
+
+  @include for_desktop {
+    padding-left: $padding_desktop - 19;
+    padding-right: $padding_desktop - 2;
+  }
 }
 
 .socials__list {

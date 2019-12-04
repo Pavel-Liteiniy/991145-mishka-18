@@ -27,6 +27,11 @@
     margin-left: auto;
     margin-right: $padding_tablet - 31;
   }
+
+  @include for_desktop {
+    margin-left: auto;
+    margin-right: $padding_desktop + $padding_desktop + $padding_desktop + $padding_desktop + 5;
+  }
 }
 
 .footer__copyright {

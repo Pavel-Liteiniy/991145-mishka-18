@@ -1,3 +1,11 @@
+.socials__inner {
+  width: $width_mobile - $padding_mobile - $padding_mobile;
+  padding-left: $padding_mobile + 7;
+  padding-right: $padding_mobile + 12;
+  padding-top: $padding_mobile - 5;
+  padding-bottom: $padding_mobile - 5;
+}
+
 .socials__list {
   @include list_default_remove;
 }
@@ -10,20 +18,14 @@
   fill: currentColor;
 }
 
-@media (min-width: $breakpoint_mobile) {
-  .socials__inner {
-    @include margin_lr_auto;
+.socials__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
 
-    width: $width_mobile;
-    // Временные свойства
-  }
-  .socials__list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  .socials__link {
-    display: block;
-  }
+.socials__link {
+  display: block;
 }

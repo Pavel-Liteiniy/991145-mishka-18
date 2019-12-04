@@ -4,10 +4,29 @@
 
 .footer__inner {
   padding-bottom: $padding_mobile - 7;
+
+  @include for_tablet {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: $padding_tablet - 20;
+    padding-bottom: $padding_tablet - 20;
+  }
 }
 
 .footer__logo {
   display: none;
+
+  @include for_tablet {
+    display: block;
+  }
+}
+
+.footer__socials {
+  @include for_tablet {
+    margin-left: auto;
+    margin-right: $padding_tablet - 31;
+  }
 }
 
 .footer__copyright {
@@ -18,6 +37,11 @@
   margin: 0;
   border-top: 1px solid $border_color_copyright;
   padding-top: $padding_mobile - 15;
+
+  @include for_tablet {
+    border-top: none;
+    padding-top: 0;
+  }
 }
 
 .footer__copyright-link {

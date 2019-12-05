@@ -1,0 +1,30 @@
+.catalog__list {
+  @include for_tablet {
+    padding-top: $padding_tablet - 21;
+  }
+
+  @include for_desktop {
+    padding-top: $padding_desktop + $padding_desktop + 30;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.catalog__item {
+  margin-top: $padding_mobile;
+  margin-bottom: $padding_mobile;
+
+  @include for_tablet {
+    margin-top: $padding_tablet + 4;
+    margin-bottom: $padding_tablet + 4;
+  }
+
+  @include for_desktop {
+    margin-top: 0;
+    margin-bottom: $padding_desktop + 7;
+    width: 315px;
+    &:not(:nth-child(3n)) {
+      margin-right: $padding_desktop;
+    }
+  }
+}

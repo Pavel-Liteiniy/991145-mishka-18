@@ -214,12 +214,14 @@
       <form class="modal__form" method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="modal__fieldset">
           <legend class="modal__query">Выберите размер:</legend>
-          <input class="modal__radio" type="radio" name="choose-size" value="S" id="choose-size-s" />
-          <label class="modal__description" for="choose-size-s">S</label>
-          <input class="modal__radio" type="radio" name="choose-size" value="M" id="choose-size-m" />
-          <label class="modal__description" for="choose-size-m">M</label>
-          <input class="modal__radio" type="radio" name="choose-size" value="L" id="choose-size-l" />
-          <label class="modal__description" for="choose-size-l">L</label>
+          <div class="modal__wrapper">
+            <input class="modal__radio" type="radio" name="choose-size" value="S" id="choose-size-s" />
+            <label class="modal__description" for="choose-size-s">S</label>
+            <input class="modal__radio" type="radio" name="choose-size" value="M" id="choose-size-m" />
+            <label class="modal__description" for="choose-size-m">M</label>
+            <input class="modal__radio" type="radio" name="choose-size" value="L" id="choose-size-l" />
+            <label class="modal__description" for="choose-size-l">L</label>
+          </div>
           <button class="modal__button button" type="submit">Добавить</button>
         </fieldset>
       </form>

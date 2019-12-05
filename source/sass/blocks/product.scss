@@ -1,4 +1,14 @@
 .product {
+  @include for_tablet {
+    position: relative;
+    padding-left: 50%;
+  }
+
+  @include for_desktop {
+    position: static;
+    padding-left: 0;
+  }
+
   border: 1px solid $border_color_product;
 }
 
@@ -21,6 +31,17 @@
 
 .product__link-heading {
   @include link_default_remove;
+}
+
+.product__link-image {
+  @include for_tablet {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  @include for_desktop {
+    position: static;
+  }
 }
 
 .product__price {

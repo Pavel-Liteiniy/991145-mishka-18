@@ -10,9 +10,13 @@
   min-height: 176px;
 
   @include for_tablet {
-    min-height: 745px;
+    min-height: 225px;
     padding-left: $padding_tablet;
     padding-right: $padding_tablet;
+  }
+
+  @include for_desktop {
+    min-height: 254px;
   }
 }
 .title__heading {

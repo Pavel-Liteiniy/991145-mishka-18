@@ -11,12 +11,15 @@
   @include list_default_remove;
 
   width: 100%;
+
   @include for_tablet {
     width: auto;
     display: flex;
+
     &--categories {
       order: 1;
     }
+
     @include for_desktop {
       &--categories {
         order: -1;
@@ -92,7 +95,7 @@
     padding-left: $padding_tablet + 32;
   }
 
-  @include for_desktop{
+  @include for_desktop {
     padding-left: $padding_tablet + 34;
   }
 }

@@ -47,21 +47,19 @@
     border-top: none;
     padding-top: 0;
   }
-}
 
-.footer__copyright-link {
-  color: $turquoise;
-  margin-left:  $padding_mobile;
-}
-
-.footer__copyright-logo {
-  fill: currentColor;
-}
-
-.footer__copyright {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.footer__copyright-link {
+  color: $turquoise;
+  margin-left: $padding_mobile;
+}
+
+.footer__copyright-logo {
+  fill: currentColor;
 }

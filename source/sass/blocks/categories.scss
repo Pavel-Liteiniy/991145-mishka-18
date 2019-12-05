@@ -3,7 +3,6 @@
                           $line_height_categories,
                           $font_weight_categories,
                           $color_categories);
-
   @include list_default_remove;
 
   display: flex;
@@ -39,6 +38,7 @@
     // Временные свойства
     min-height: 206px;
   }
+
   .categories__link {
     display: block;
     // Временные свойства

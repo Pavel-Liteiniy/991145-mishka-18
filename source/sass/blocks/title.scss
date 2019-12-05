@@ -1,6 +1,7 @@
 .title {
   background-color: $background_footer;
 }
+
 .title__inner {
   display: flex;
   flex-direction: column;
@@ -19,6 +20,7 @@
     min-height: 254px;
   }
 }
+
 .title__heading {
   @include font-character($font_size_title,
                           $line_height_title,
@@ -37,6 +39,7 @@
     margin-top: 95px;
   }
 }
+
 .title__label {
   @include font-character($font_size_label,
                           $line_height_label,
@@ -51,6 +54,7 @@
     margin-left: auto;
   }
 }
+
 .title__extra {
   @include for_tablet {
     display: flex;

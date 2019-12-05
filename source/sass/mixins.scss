@@ -42,21 +42,20 @@
 // отображение только на мобильной версии
 @mixin only_mobile {
   @media (min-width: $breakpoint_tablet) {
-   display: none;
+    display: none;
   }
 }
 
 // отображение только на планшетной версии
 @mixin only_tablet {
-  @media (max-width: $breakpoint_tablet - 1),
-         (min-width: $breakpoint_desktop) {
-   display: none;
+  @media (max-width: $breakpoint_tablet - 1), (min-width: $breakpoint_desktop) {
+    display: none;
   }
 }
 
 // отображение только на десктопной версии
 @mixin only_desktop {
   @media (max-width: $breakpoint_desktop - 1) {
-   display: none;
+    display: none;
   }
 }

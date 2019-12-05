@@ -23,6 +23,7 @@
     margin-top: 0;
     margin-bottom: $padding_desktop + 7;
     width: 315px;
+
     &:not(:nth-child(3n)) {
       margin-right: $padding_desktop;
     }

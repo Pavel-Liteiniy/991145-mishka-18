@@ -38,7 +38,7 @@
   margin: 0;
   padding-bottom: $padding_mobile - 25;
 
-  @include for_tablet  {
+  @include for_tablet {
     padding-bottom: 0;
   }
 }
@@ -52,18 +52,18 @@
   text-transform: uppercase;
   padding-bottom: $padding_mobile - 7;
 
-  @include for_tablet  {
+  @include for_tablet {
     padding-bottom: 0;
   }
 }
 
 .highlight__content {
-  @include for_tablet  {
+  @include for_tablet {
     position: relative;
     padding-right: 377px;
   }
 
-  @include for_desktop  {
+  @include for_desktop {
     padding-left: $padding_desktop + $padding_desktop + $padding_desktop + 25;
     padding-right: 583px;
   }
@@ -77,11 +77,11 @@
   margin: 0;
   padding-bottom: $padding_mobile - 8;
 
-  @include for_tablet  {
+  @include for_tablet {
     padding-bottom: $padding_tablet + 5;
   }
 
-  @include for_desktop  {
+  @include for_desktop {
     padding-bottom: $padding_desktop + 15;
   }
 }
@@ -93,11 +93,11 @@
                           $color_highlight_table);
   padding-bottom: $padding_mobile - 2;
 
-  @include for_tablet  {
+  @include for_tablet {
     padding-bottom: $padding_tablet + 10;
   }
 
-  @include for_desktop  {
+  @include for_desktop {
     padding-bottom: $padding_desktop + $padding_desktop + 10;
   }
 }
@@ -109,7 +109,7 @@
 .highlight__image-wrapper {
   padding-bottom: $padding_mobile - 2;
 
-  @include for_tablet  {
+  @include for_tablet {
     position: absolute;
     top: 0;
     right: 0;
@@ -123,11 +123,11 @@
   padding-bottom: $padding_mobile - 2;
   text-align: center;
 
-  @include for_tablet  {
+  @include for_tablet {
     padding-bottom: $padding_tablet - 15;
   }
 
-  @include for_desktop  {
+  @include for_desktop {
     padding-bottom: $padding_desktop - 15;
   }
 }

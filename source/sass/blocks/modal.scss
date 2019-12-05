@@ -4,6 +4,12 @@
 
   padding-top: $padding_mobile + 5;
   padding-bottom: $padding_mobile + 15;
+
+  @include for_tablet {
+    width: $width_tablet - 202;
+    padding-top: $padding_tablet;
+    padding-bottom: $padding_tablet - 5;
+  }
 }
 
 .modal__heading {
@@ -14,6 +20,10 @@
   margin: 0;
   text-transform: uppercase;
   padding-bottom: $padding_mobile - 5;
+
+  @include for_tablet {
+    padding-top: $padding_tablet - 20;
+  }
 }
 
 .modal__fieldset {
@@ -27,6 +37,10 @@
                           $color_modal_query);
   margin: 0;
   padding-bottom: $padding_mobile - 5;
+
+  @include for_tablet {
+    padding-top: $padding_tablet - 25;
+  }
 }
 
 .modal__wrapper {
@@ -44,6 +58,10 @@
   width: 71px;
   &:not(:last-of-type) {
     margin-right: $padding_mobile - 23;
+  }
+
+  @include for_tablet {
+    width: 140px;
   }
 }
 

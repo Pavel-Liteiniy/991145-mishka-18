@@ -1,9 +1,28 @@
+.socials__inner {
+  width: $width_mobile - $padding_mobile - $padding_mobile;
+  padding-left: $padding_mobile + 7;
+  padding-right: $padding_mobile + 12;
+  padding-top: $padding_mobile - 5;
+  padding-bottom: $padding_mobile - 5;
+
+  @include for_desktop {
+    padding-left: $padding_desktop - 19;
+    padding-right: $padding_desktop - 2;
+  }
+}
+
 .socials__list {
   @include list_default_remove;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
 }
 
 .socials__link {
   color: $black;
+  display: block;
 }
 
 .socials__svg {

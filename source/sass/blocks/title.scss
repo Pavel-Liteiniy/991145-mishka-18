@@ -1,9 +1,65 @@
 .title {
+  background-color: $background_footer;
+}
+
+.title__inner {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  padding-right: 0;
+  // временные стили
+  min-height: 176px;
+
+  @include for_tablet {
+    min-height: 225px;
+    padding-left: $padding_tablet;
+    padding-right: $padding_tablet;
+  }
+
+  @include for_desktop {
+    min-height: 254px;
+  }
+}
+
+.title__heading {
   @include font-character($font_size_title,
                           $line_height_title,
                           $font_weight_title,
                           $color_title);
-
-  background-color: $background_footer;
+  text-align: center;
   margin: 0;
+  margin-top: 70px;
+
+  @include for_tablet {
+    @include font-character($font_size_title + 16,
+                            $line_height_title + 20,
+                            $font_weight_title,
+                            $color_title);
+
+    margin-top: 95px;
+  }
+}
+
+.title__label {
+  @include font-character($font_size_label,
+                          $line_height_label,
+                          $font_weight_label,
+                          $color_label);
+
+  display: none;
+  margin: 0;
+
+  @include for_tablet {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.title__extra {
+  @include for_tablet {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 58px;
+  }
 }

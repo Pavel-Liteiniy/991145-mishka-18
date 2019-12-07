@@ -1,9 +1,25 @@
+.features__inner {
+  padding-top: $padding_mobile + 4;
+  padding-bottom: $padding_mobile;
+
+  @include for_tablet {
+    padding-top: $padding_tablet + 10;
+    padding-bottom: $padding_tablet + 20;
+  }
+
+  @include for_desktop {
+    padding-top: $padding_desktop + 20;
+    padding-bottom: $padding_desktop + 30;
+  }
+}
+
 .features__heading {
   @include font_character($font_size_heading,
                           $line_height_heading,
                           $font_weight_heading,
                           $color_heading);
   margin: 0;
+  margin-bottom: $padding_mobile - 27;
 }
 
 .features__list {
@@ -12,4 +28,84 @@
                           $line_height_features_list,
                           $font_weight_features_list,
                           $color_features_list);
+
+  @include for_tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.features__item {
+  padding-top: $padding_mobile + $padding_mobile + 25;
+
+  @include for_tablet {
+    width: $half;
+    padding-top: $padding_tablet + $padding_tablet;
+    margin-bottom: $padding_tablet - 40;
+
+    &--eco {
+      order: 1;
+      padding-right: $padding_tablet + $padding_tablet - 20;
+    }
+
+    &--handmade {
+      order: 2;
+    }
+
+    &--price {
+      order: 3;
+      padding-right: $padding_tablet + $padding_tablet - 20;
+    }
+
+    &--patriot {
+      order: 4;
+    }
+
+    &--socials {
+      order: 5;
+      padding-right: $padding_tablet + $padding_tablet - 20;
+    }
+
+    &--packing {
+      order: 6;
+    }
+  }
+
+  @include for_desktop {
+    width: $half - 20;
+
+    &--eco {
+      order: 1;
+      padding-right: $padding_tablet + $padding_tablet + 20;
+    }
+
+    &--handmade {
+      order: 2;
+      width: $half + 20;
+      padding-right: $half;
+    }
+
+    &--price {
+      order: 3;
+      padding-right: $padding_tablet + $padding_tablet + 15;
+    }
+
+    &--patriot {
+      order: 4;
+      width: $half + 20;
+      padding-right: $half - 5;
+    }
+
+    &--socials {
+      order: 5;
+      padding-right: $padding_tablet + $padding_tablet + 15;
+    }
+
+    &--packing {
+      order: 6;
+      width: $half + 20;
+      padding-right: $half;
+    }
+  }
 }

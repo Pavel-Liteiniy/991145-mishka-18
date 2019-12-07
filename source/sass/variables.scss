@@ -6,10 +6,36 @@ $line_height_title: 30px;
 $font_weight_title: bold;
 $color_title: #000000;
 
+// Переменные для label
+$font_size_label: 15px;
+$line_height_label: 24px;
+$font_weight_label: normal;
+$color_label: #000000;
+
+// Переменные для topical
+$font_size_topical: 15px;
+$line_height_topical: 24px;
+$font_weight_topical: bold;
+$color_topical: #000000;
+
 // брейкпоинты
 $breakpoint_mobile: 320px;
 $breakpoint_tablet: 768px;
 $breakpoint_desktop: 1150px;
+
+// переменные для сетки mobile версии
+$width_mobile: 320px;
+$padding_mobile: 30px;
+// переменные для сетки tablet версии
+$width_tablet: 768px;
+$padding_tablet: 50px;
+// переменные для сетки desktop версии
+$width_desktop: 1150px;
+$padding_desktop: 50px;
+
+// Относительные переменные
+$half: 50%;
+$full: 100%;
 
 // Переменные для заголовков блоков Н2
 $font_size_heading: 25px;
@@ -19,12 +45,13 @@ $color_heading: #000000;
 
 //Переменные для цветов
 $border_color: #ececec;
-$border_color_socials: #e5e5e5;
+$border_color_copyright: #e5e5e5;
 $border_color_product: #ededed;
 $border_color_input: #000000;
 $border_color_textarea: #444444;
 $border_color_button: #444444;
 $border_color_email: #62d1ba;
+$border_color_modal: #c6c6c6;
 $background_white: #ffffff;
 $turquoise: #63d1bb;
 $black: #000000;

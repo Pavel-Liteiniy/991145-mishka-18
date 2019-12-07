@@ -3,13 +3,105 @@
                           $line_height_nav,
                           $font_weight_nav,
                           $color_nav);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .nav__list {
   @include list_default_remove;
+
+  width: 100%;
+
+  @include for_tablet {
+    width: auto;
+    display: flex;
+
+    &--categories {
+      order: 1;
+    }
+
+    @include for_desktop {
+      &--categories {
+        order: -1;
+      }
+    }
+  }
 }
 
 .nav__link {
   @include link_default_remove;
-  border-bottom: 1px solid $border_color;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 79px;
+  padding-left: $padding_mobile + 46;
+  border-top: 1px solid $border_color;
+
+  @include for_tablet {
+    justify-content: center;
+    min-height: 89px;
+    border-top: none;
+    border-left: 1px solid $border_color;
+  }
+}
+
+.nav__list--categories {
+  .nav__item {
+    &:not(:last-child) {
+      @include for_desktop {
+        padding-right: $padding_desktop - 15;
+      }
+    }
+
+    &:not(:first-child) {
+      @include for_desktop {
+        padding-left: $padding_desktop - 15;
+        border-left: 1px solid $border_color;
+      }
+    }
+  }
+
+  .nav__link {
+    @include for_tablet {
+      @include font_character($font_size_nav - 2,
+                              $line_height_nav,
+                              $font_weight_nav,
+                              $color_nav);
+      width: 167px;
+      min-height: 58px;
+      padding-left: 0;
+      border-left: none;
+      justify-content: flex-start;
+
+      @include for_desktop {
+        @include font_character($font_size_nav,
+                              $line_height_nav,
+                              $font_weight_nav,
+                              $color_nav);
+
+        flex-wrap: wrap;
+        align-items: center;
+        min-height: 89px;
+        width: auto;
+        // padding-right: $padding_desktop - 35px;
+      }
+    }
+  }
+}
+
+.nav__list--user-menu .nav__link {
+  @include for_tablet {
+    padding-left: $padding_tablet + 32;
+  }
+
+  @include for_desktop {
+    padding-left: $padding_tablet + 34;
+  }
+}
+
+.nav__item--searching {
+  @include for_tablet {
+    font-size: 0;
+  }
 }

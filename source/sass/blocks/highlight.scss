@@ -1,9 +1,46 @@
+.highlight__inner {
+  padding-top: $padding_mobile - 4;
+  padding-bottom: $padding_mobile + 12;
+
+  @include for_tablet {
+    padding-top: $padding_tablet - 7;
+    padding-bottom: $padding_tablet + 18;
+  }
+
+  @include for_desktop {
+    padding-top: $padding_desktop + $padding_desktop + 17;
+    padding-bottom: $padding_desktop + 46;
+  }
+
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight__header {
+  @include for_tablet {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: $padding_tablet + 5;
+  }
+
+  @include for_desktop {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding-bottom: $padding_desktop + 2;
+  }
+}
+
 .highlight__heading {
   @include font_character($font_size_heading,
                           $line_height_heading,
                           $font_weight_heading,
                           $color_heading);
   margin: 0;
+  padding-bottom: $padding_mobile - 25;
+
+  @include for_tablet {
+    padding-bottom: 0;
+  }
 }
 
 .highlight__naming {
@@ -13,6 +50,23 @@
                           $color_highlight_naming);
   margin: 0;
   text-transform: uppercase;
+  padding-bottom: $padding_mobile - 7;
+
+  @include for_tablet {
+    padding-bottom: 0;
+  }
+}
+
+.highlight__content {
+  @include for_tablet {
+    position: relative;
+    padding-right: 377px;
+  }
+
+  @include for_desktop {
+    padding-left: $padding_desktop + $padding_desktop + $padding_desktop + 25;
+    padding-right: 583px;
+  }
 }
 
 .highlight__description {
@@ -21,6 +75,15 @@
                           $font_weight_highlight_description,
                           $color_highlight_description);
   margin: 0;
+  padding-bottom: $padding_mobile - 8;
+
+  @include for_tablet {
+    padding-bottom: $padding_tablet + 5;
+  }
+
+  @include for_desktop {
+    padding-bottom: $padding_desktop + 15;
+  }
 }
 
 .highlight__table {
@@ -28,13 +91,43 @@
                           $line_height_highlight_table,
                           $font_weight_highlight_table,
                           $color_highlight_table);
+  padding-bottom: $padding_mobile - 2;
+
+  @include for_tablet {
+    padding-bottom: $padding_tablet + 10;
+  }
+
+  @include for_desktop {
+    padding-bottom: $padding_desktop + $padding_desktop + 10;
+  }
 }
 
 .highlight__row {
   border-bottom: 1px solid $border_color;
 }
 
+.highlight__image-wrapper {
+  padding-bottom: $padding_mobile - 2;
+
+  @include for_tablet {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-bottom: 0;
+  }
+}
+
 .highlight__price {
   font-weight: bold;
   margin: 0;
+  padding-bottom: $padding_mobile - 2;
+  text-align: center;
+
+  @include for_tablet {
+    padding-bottom: $padding_tablet - 15;
+  }
+
+  @include for_desktop {
+    padding-bottom: $padding_desktop - 15;
+  }
 }

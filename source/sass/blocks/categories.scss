@@ -3,20 +3,49 @@
                           $line_height_categories,
                           $font_weight_categories,
                           $color_categories);
-}
-
-.categories__list {
   @include list_default_remove;
+
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+
+  @include for_tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .categories__link {
   @include link_default_remove;
 }
 
-.categories__link--interior {
+.categories__item {
+  @include for_tablet {
+    width: $half;
+  }
+}
+
+.categories__item--interior {
   background-color: $background_link_interior;
 }
 
-.categories__link--toys {
+.categories__item--toys {
   background-color: $background_link_toys;
+}
+
+@media (min-width: $breakpoint_mobile) {
+  .categories__inner {
+    // Временные свойства
+    min-height: 206px;
+  }
+
+  .categories__link {
+    display: block;
+    // Временные свойства
+    min-height: 103px;
+
+    @include for_tablet {
+      min-height: 103px + 16;
+    }
+  }
 }

@@ -1,9 +1,29 @@
+.modal__inner {
+  text-align: center;
+  border: 1px solid $border_color_modal;
+
+  padding-top: $padding_mobile + 5;
+  padding-bottom: $padding_mobile + 15;
+
+  @include for_tablet {
+    width: $width_tablet - 202;
+    padding-top: $padding_tablet;
+    padding-bottom: $padding_tablet - 5;
+  }
+}
+
 .modal__heading {
   @include font_character($font_size_heading,
                           $line_height_heading,
                           $font_weight_heading,
                           $color_heading);
   margin: 0;
+  text-transform: uppercase;
+  padding-bottom: $padding_mobile - 5;
+
+  @include for_tablet {
+    padding-top: $padding_tablet - 20;
+  }
 }
 
 .modal__fieldset {
@@ -16,6 +36,16 @@
                           $font_weight_modal_query,
                           $color_modal_query);
   margin: 0;
+  padding-bottom: $padding_mobile - 5;
+
+  @include for_tablet {
+    padding-top: $padding_tablet - 25;
+  }
+}
+
+.modal__wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .modal__description {
@@ -23,7 +53,21 @@
                           $line_height_modal_description,
                           $font_weight_modal_description,
                           $color_modal_description);
-  border: 2px solid $border_color_button;
+  border: 2px solid $border_color;
+  display: block;
+  width: 71px;
+
+  &:not(:last-of-type) {
+    margin-right: $padding_mobile - 23;
+  }
+
+  @include for_tablet {
+    width: 140px;
+  }
+}
+
+.modal__radio {
+  display: none;
 }
 
 .modal__button {
@@ -32,6 +76,8 @@
                           $font_weight_modal_button,
                           $color_modal_button);
   background-color: $turquoise;
+  margin-top: $padding_mobile;
+  width: $full;
   border: none;
   text-transform: uppercase;
 }

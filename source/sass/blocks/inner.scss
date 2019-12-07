@@ -1,0 +1,20 @@
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: $width_mobile;
+  padding-left: $padding_mobile;
+  padding-right: $padding_mobile;
+
+  @media (min-width: $breakpoint_tablet) {
+    width: $width_tablet;
+    padding-left: $padding_tablet;
+    padding-right: $padding_tablet;
+  }
+
+  @media (min-width: $breakpoint_desktop) {
+    width: $width_desktop;
+    padding-left: $padding_desktop;
+    padding-right: $padding_desktop;
+  }
+}

@@ -30,11 +30,23 @@
   margin: 0;
 }
 
+.comments__controls {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .comments__button {
+  display: block;
+  width: $half;
+  padding: 0;
   border: 1px solid $border_color;
   background-color: $background_white;
   font-size: $font_size_button + 1;
   color: $black;
+}
+
+.comments__button--prev {
+  border-right: none;
 }
 
 .comments__arrow {

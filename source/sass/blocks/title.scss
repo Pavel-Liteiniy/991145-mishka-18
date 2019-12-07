@@ -60,6 +60,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    width: $half;
     min-height: 58px;
+    margin-left: auto;
   }
 }

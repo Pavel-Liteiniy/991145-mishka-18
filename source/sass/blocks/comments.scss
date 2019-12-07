@@ -1,6 +1,11 @@
 .comments__inner {
   padding-top: $padding_mobile;
   padding-bottom: $padding_mobile + 21;
+
+  @include for_tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .comments__heading {
@@ -10,6 +15,10 @@
                           $color_heading);
   margin: 0;
   padding-bottom: $padding_mobile + 5;
+
+  @include for_tablet {
+    order: -2;
+  }
 }
 
 .comments__content {
@@ -46,6 +55,10 @@
   display: flex;
   flex-wrap: wrap;
   padding-bottom: $padding_mobile + 8;
+
+  @include for_tablet {
+    margin-left: auto;
+  }
 }
 
 .comments__button {
@@ -64,4 +77,11 @@
 
 .comments__arrow {
   fill: currentColor;
+}
+
+.comments__review {
+  @include for_tablet {
+    order: -1;
+    margin-left: auto;
+  }
 }

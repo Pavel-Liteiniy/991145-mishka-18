@@ -64,4 +64,8 @@
     min-height: 58px;
     margin-left: auto;
   }
+
+  @include for_desktop {
+    width: $half + $half;
+  }
 }

@@ -8,6 +8,11 @@
     padding-top: $padding_tablet + 29;
     padding-bottom: $padding_tablet + 35;
   }
+
+  @include for_desktop {
+    padding-left: $padding_desktop + $padding_desktop + $padding_desktop + 25;
+    padding-bottom: $padding_desktop + 40;
+  }
 }
 
 .comments__heading {
@@ -35,6 +40,10 @@
   @include for_tablet {
     padding-bottom: $padding_tablet + 15;
   }
+
+  @include for_desktop {
+    padding-bottom: $padding_desktop;
+  }
 }
 
 .comments__author {
@@ -42,6 +51,10 @@
 
   @include for_tablet {
     padding-bottom: $padding_tablet;
+  }
+
+  @include for_desktop {
+    padding-bottom: $padding_desktop + $padding_desktop;
   }
 }
 
@@ -103,5 +116,6 @@
   @include for_tablet {
     order: -1;
     margin-left: auto;
+    align-self: flex-start;
   }
 }

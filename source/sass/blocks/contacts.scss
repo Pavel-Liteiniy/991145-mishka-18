@@ -6,6 +6,14 @@
     padding-top: $padding_tablet + 10;
     padding-bottom: $padding_tablet + 7;
   }
+
+  @include for_desktop {
+    position: relative;
+    padding-top: $padding_desktop + $padding_desktop + 40;
+    padding-bottom: $padding_desktop + $padding_desktop + 5;
+    padding-left: $padding_desktop + $padding_desktop + $padding_desktop + 25;
+    padding-right: $half;
+  }
 }
 
 .contacts__heading {
@@ -39,6 +47,10 @@
     flex-wrap: wrap;
     padding-bottom: $padding_tablet;
   }
+
+  @include for_desktop {
+    padding-bottom: $padding_desktop + 30;
+  }
 }
 
 .contacts__item--email {
@@ -53,6 +65,14 @@
     width: $half;
     padding-right: $padding_tablet - 40;
     padding-bottom: $padding_tablet - 45;
+  }
+
+  @include for_desktop {
+    width: auto;
+
+    &:not(:last-child) {
+      padding-bottom: $padding_desktop - 15;
+    }
   }
 }
 
@@ -72,6 +92,14 @@
   @include for_tablet {
     padding-bottom: $padding_tablet + 5;
   }
+
+  @include for_desktop {
+    position: absolute;
+    top: 71px;
+    right: 0;
+    width: $half;
+    padding: 0;
+  }
 }
 
 .contacts__button {
@@ -79,5 +107,9 @@
     width: $padding_tablet * 4 + 30;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @include for_desktop {
+    margin: 0;
   }
 }

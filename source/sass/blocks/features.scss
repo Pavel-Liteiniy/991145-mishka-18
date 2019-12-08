@@ -10,6 +10,7 @@
   @include for_desktop {
     padding-top: $padding_desktop + 20;
     padding-bottom: $padding_desktop + 30;
+    padding-left: $padding_desktop + $padding_desktop + $padding_desktop + 25px;
   }
 }
 

@@ -5,6 +5,14 @@
   padding-bottom: $padding_mobile + 2;
   border: 1px solid $border_color_product;
   margin-bottom: $padding_mobile + $padding_mobile - 2;
+
+  @include for_tablet {
+    position: relative;
+    padding-top: $padding_tablet * 9 + 5;
+    padding-bottom: $padding_tablet - 5;
+    margin-bottom: $padding_tablet + 13;
+    width: $width_tablet - $padding_tablet - $padding_tablet;
+  }
 }
 
 .videoblog__heading {
@@ -17,6 +25,17 @@
   padding-right: $padding_mobile - 15;
   padding-top: $padding_mobile - 10;
   padding-bottom: $padding_mobile - 10;
+
+  @include for_tablet {
+    border: 1px solid $border_color_product;
+    border-bottom: none;
+    width: $width_tablet - $padding_tablet - $padding_tablet;
+    margin-left: -1px;
+    padding-top: $padding_tablet - 15;
+    padding-bottom: $padding_tablet - 15;
+    padding-left: $padding_tablet + $padding_tablet + 6;
+    padding-right: $padding_tablet - 10;
+  }
 }
 
 .videoblog__description {
@@ -28,14 +47,37 @@
   padding-left: $padding_mobile + 3;
   padding-right: $padding_mobile + 3;
   padding-bottom: $padding_mobile - 5;
+
+  @include for_tablet {
+    padding-left: $padding_tablet - 10;
+    padding-right: $padding_tablet - 10;
+  }
 }
 
 .videoblog__content-wrapper {
   margin-left: $padding_mobile - 31;
   padding-bottom: $padding_mobile;
+
+  @include for_tablet {
+    position: absolute;
+    top: -1px;
+    left: 0;
+  }
+}
+
+.videoblog__content {
+  @include for_tablet {
+    width: $width_tablet - $padding_tablet - $padding_tablet;
+    height: 455px;
+  }
 }
 
 .videoblog__button {
   margin-left: $padding_mobile + 3;
   margin-right: $padding_mobile + 3;
+
+  @include for_tablet {
+    margin-left: $padding_tablet - 9;
+    margin-right: $padding_tablet - 9;
+  }
 }

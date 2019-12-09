@@ -1,14 +1,24 @@
+.order__inner {
+  padding-top: $padding_mobile - 5;
+  padding-bottom: $padding_mobile + 25;
+}
+
 .order__explanation {
   @include font_character($font_size_videoblog_description,
                           $line_height_videoblog_description,
                           $font_weight_videoblog_description,
                           $color_videoblog_description);
   margin: 0;
+  padding-bottom: $padding_mobile - 5;
 }
 
 .order__fieldset {
   border: none;
   padding: 0;
+
+  &:not(:last-of-type) {
+    padding-bottom: $padding_mobile - 5;
+  }
 }
 
 .order__query {
@@ -17,6 +27,7 @@
                           $font_weight_order_query,
                           $color_order_query);
   text-transform: uppercase;
+  padding-bottom: $padding_mobile - 10;
 }
 
 .order__list {
@@ -40,6 +51,7 @@
                             $color_order);
     border: none;
     border-bottom: 2px solid $border_color_input;
+    width: 100%;
 
     &::placeholder {
       @include font_character($font_size_order_placeholder,
@@ -56,6 +68,7 @@
                             $font_weight_order,
                             $color_order);
     border: 2px solid $border_color_textarea;
+    width: 100%;
 
     &::placeholder {
       @include font_character($font_size_order_placeholder,
@@ -73,4 +86,9 @@
                           $font_weight_order_footnote,
                           $color_order_footnote);
   margin: 0;
+  padding-bottom: $padding_mobile;
+}
+
+.order__button {
+  width: 100%;
 }

@@ -36,12 +36,14 @@
 .product__link-image {
   @include for_tablet {
     position: absolute;
+    max-width: $half;
     top: 0;
     left: 0;
   }
 
   @include for_desktop {
     position: static;
+    width: auto;
   }
 }
 

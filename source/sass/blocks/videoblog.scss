@@ -1,9 +1,20 @@
+.videoblog__inner {
+  width: $width_mobile - $padding_mobile - $padding_mobile;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: $padding_mobile + 2;
+  border: 1px solid $border_color_product;
+  margin-bottom: $padding_mobile + $padding_mobile - 2;
+}
+
 .videoblog__heading {
   @include font_character($font_size_product_heading,
                           $line_height_product_heading,
                           $font_weight_product_heading,
                           $color_product_heading);
   margin: 0;
+  padding-left: $padding_mobile + $padding_mobile + $padding_mobile;
+  padding-right: $padding_mobile - 15;
 }
 
 .videoblog__description {
@@ -12,4 +23,17 @@
                           $font_weight_videoblog_description,
                           $color_videoblog_description);
   margin: 0;
+  padding-left: $padding_mobile + 3;
+  padding-right: $padding_mobile + 3;
+  padding-bottom: $padding_mobile - 5;
+}
+
+.videoblog__content-wrapper {
+  margin-left: $padding_mobile - 31;
+  padding-bottom: $padding_mobile;
+}
+
+.videoblog__button {
+  margin-left: $padding_mobile + 3;
+  margin-right: $padding_mobile + 3;
 }

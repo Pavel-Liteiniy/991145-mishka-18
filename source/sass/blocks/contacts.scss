@@ -11,7 +11,7 @@
     position: relative;
     padding-top: $padding_desktop + $padding_desktop + 40;
     padding-bottom: $padding_desktop + $padding_desktop + 5;
-    padding-left: $padding_desktop + $padding_desktop + $padding_desktop + 25;
+    padding-left: $padding_desktop * 4 + 25px;
     padding-right: $half;
   }
 }

@@ -1,6 +1,16 @@
 .order__inner {
-  padding-top: $padding_mobile - 5;
-  padding-bottom: $padding_mobile + 25;
+  padding-top: $padding_mobile - 15;
+  padding-bottom: $padding_mobile - 15;
+
+  &--induction {
+    padding-top: $padding_mobile - 5;
+    padding-bottom: $padding_mobile - 20;
+  }
+
+  &--button {
+    padding-top: 0;
+    padding-bottom: $padding_mobile + 25;
+  }
 }
 
 .order__explanation {
@@ -9,16 +19,11 @@
                           $font_weight_videoblog_description,
                           $color_videoblog_description);
   margin: 0;
-  padding-bottom: $padding_mobile - 5;
 }
 
 .order__fieldset {
   border: none;
   padding: 0;
-
-  &:not(:last-of-type) {
-    padding-bottom: $padding_mobile - 5;
-  }
 }
 
 .order__query {

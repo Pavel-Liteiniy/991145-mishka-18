@@ -99,23 +99,27 @@
         <fieldset class="order__fieldset">
           <div class="order__inner inner">
             <legend class="order__query">ФИО</legend>
-            <label class="order__description order__description--text" for="user-name">Имя:</label>
-            <input class="order__input order__input--text" type="text" placeholder="Введите ваше имя*" name="user-name" id="user-name" />
-            <label class="order__description order__description--text" for="user-surname">Фамилия:</label>
-            <input class="order__input order__input--text" type="text" placeholder="Укажите фамилию*" name="user-surname" id="user-surname" />
-            <label class="order__description order__description--text" for="user-patronymic">Отчество:</label>
-            <input class="order__input order__input--text" type="text" placeholder="Отчество, если желаете" name="user-patronymic" id="user-patronymic" />
+            <ul class="order__list">
+              <li class="order__item">
+                <label class="order__description order__description--text" for="user-name">Имя:</label>
+                <input class="order__input order__input--text" type="text" placeholder="Введите ваше имя*" name="user-name" id="user-name" />
+              </li>
+              <li class="order__item">
+                <label class="order__description order__description--text" for="user-surname">Фамилия:</label>
+                <input class="order__input order__input--text" type="text" placeholder="Укажите фамилию*" name="user-surname" id="user-surname" />
+              </li>
+              <li class="order__item">
+                <label class="order__description order__description--text" for="user-patronymic">Отчество:</label>
+                <input class="order__input order__input--text" type="text" placeholder="Отчество, если желаете" name="user-patronymic" id="user-patronymic" />
+              </li>
           </div>
         </fieldset>
         <fieldset class="order__fieldset">
           <div class="order__inner order__inner--tel inner">
-            <legend class="order__query">Тел</legend>
+            <legend class="visually-hidden">Контактные данные</legend>
+            <p class="order__query">Тел</p>
             <input class="order__input order__input--tel" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" name="telnumber" id="user-number" aria-label="Введите Ваш номер телефона" />
-          </div>
-        </fieldset>
-        <fieldset class="order__fieldset">
-          <div class="order__inner order__inner--email inner">
-            <legend class="order__query">E-mail</legend>
+            <p class="order__query">E-mail</p>
             <input class="order__input order__input--email" type="email" placeholder="Ваш Email*" name="email" id="user-email" aria-label="Укажите адрес Вашей электронной почты" />
           </div>
         </fieldset>

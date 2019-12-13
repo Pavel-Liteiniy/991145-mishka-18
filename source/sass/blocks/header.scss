@@ -29,10 +29,10 @@
 }
 
 .header__logo {
-  margin-top: 23px;
+  margin-top: 21px;
   margin-bottom: 16px;
   margin-left: auto;
-  margin-right: 67px;
+  margin-right: 66px;
 
   @include for_tablet {
     margin-left: -2px;
@@ -48,8 +48,83 @@
 .header__button {
   @include only_mobile;
 
+  position: relative;
   width: 21px;
   height: 20px;
   align-self: center;
-  margin-right: $padding_mobile;
+  margin-right: 31px;
+  background-color: transparent;
+  border: none;
+}
+
+.header__nav--closed {
+  .nav__list {
+    display: none;
+
+    @include for_tablet {
+      display: flex;
+    }
+  }
+
+  .header__button::before {
+    content: "";
+
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 21px;
+    height: 2px;
+    background-color: black;
+    box-shadow: 0 6px 0 0 black, 0 12px 0 0 black;
+  }
+}
+
+.header__nav--opened {
+  .nav__list {
+    display: block;
+
+    @include for_tablet {
+      display: flex;
+    }
+  }
+
+  .header__button::before {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: -2px;
+    width: 26px;
+    height: 2px;
+    background-color: black;
+    box-shadow: none;
+    transform: rotate(44deg);
+  }
+
+  .header__button::after {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: -2px;
+    width: 26px;
+    height: 2px;
+    background-color: black;
+    box-shadow: none;
+    transform: rotate(-44deg);
+  }
+}
+
+.header__nav--nojs {
+  .header__button {
+    display: none;
+  }
+
+  .nav__list {
+    display: block;
+  }
+
+  .header__logo {
+    margin-right: 118px;
+  }
 }

@@ -12,8 +12,8 @@
 <body>
   <header class="header">
     <div class="header__inner inner">
-      <nav class="header__nav nav">
-        <a class="header__logo" aria-label="Текущая страница">
+      <nav class="header__nav nav header__nav--closed header__nav--nojs">
+        <a class="header__logo" aria-label="Домашняя страница">
           <img class="header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет магазин мягких игрушек ручной работы Мишка" />
         </a>
         <button class="header__button" type="button" aria-label="Навигация по сайту"></button>
@@ -227,6 +227,24 @@
       </form>
     </div>
   </section>
+
+  <script>
+    var nav = document.querySelector('.header__nav');
+    var button = document.querySelector('.header__button');
+
+    nav.classList.remove('header__nav--nojs');
+
+    button.addEventListener('click', function () {
+      if (nav.classList.contains('header__nav--closed')) {
+        nav.classList.remove('header__nav--closed');
+        nav.classList.add('header__nav--opened');
+      } else {
+        nav.classList.add('header__nav--closed');
+        nav.classList.remove('header__nav--opened');
+      }
+    });
+  </script>
+
 </body>
 
 </html>

@@ -10,6 +10,8 @@
   @include for_desktop {
     padding-top: $padding_desktop + 20;
     padding-bottom: $padding_desktop + 30;
+    padding-left: $padding_desktop * 4 + 25px;
+    padding-right: $padding_desktop * 4 + 25px;
   }
 }
 
@@ -43,10 +45,10 @@
     width: $half;
     padding-top: $padding_tablet + $padding_tablet;
     margin-bottom: $padding_tablet - 40;
+    padding-right: $padding_tablet - 40;
 
     &--eco {
       order: 1;
-      padding-right: $padding_tablet + $padding_tablet - 20;
     }
 
     &--handmade {
@@ -55,7 +57,6 @@
 
     &--price {
       order: 3;
-      padding-right: $padding_tablet + $padding_tablet - 20;
     }
 
     &--patriot {
@@ -64,7 +65,6 @@
 
     &--socials {
       order: 5;
-      padding-right: $padding_tablet + $padding_tablet - 20;
     }
 
     &--packing {
@@ -73,39 +73,31 @@
   }
 
   @include for_desktop {
-    width: $half - 20;
+    width: $half;
+    padding-right: $padding_desktop - 40;
 
     &--eco {
       order: 1;
-      padding-right: $padding_tablet + $padding_tablet + 20;
     }
 
     &--handmade {
       order: 2;
-      width: $half + 20;
-      padding-right: $half;
     }
 
     &--price {
       order: 3;
-      padding-right: $padding_tablet + $padding_tablet + 15;
     }
 
     &--patriot {
       order: 4;
-      width: $half + 20;
-      padding-right: $half - 5;
     }
 
     &--socials {
       order: 5;
-      padding-right: $padding_tablet + $padding_tablet + 15;
     }
 
     &--packing {
       order: 6;
-      width: $half + 20;
-      padding-right: $half;
     }
   }
 }

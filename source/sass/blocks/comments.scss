@@ -1,9 +1,32 @@
+.comments__inner {
+  padding-top: $padding_mobile;
+  padding-bottom: $padding_mobile + 21;
+
+  @include for_tablet {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: $padding_tablet + 29;
+    padding-bottom: $padding_tablet + 35;
+  }
+
+  @include for_desktop {
+    padding-left: $padding_desktop * 4 + 25px;
+    padding-bottom: $padding_desktop + 40;
+  }
+}
+
 .comments__heading {
   @include font_character($font_size_heading,
                           $line_height_heading,
                           $font_weight_heading,
                           $color_heading);
   margin: 0;
+  padding-bottom: $padding_mobile + 5;
+
+  @include for_tablet {
+    order: -2;
+    padding-bottom: $padding_tablet;
+  }
 }
 
 .comments__content {
@@ -12,14 +35,36 @@
                           $font_weight_comments_content,
                           $color_comments_content);
   margin: 0;
+  padding-bottom: $padding_mobile + 5;
+
+  @include for_tablet {
+    padding-bottom: $padding_tablet + 15;
+  }
+
+  @include for_desktop {
+    padding-bottom: $padding_desktop;
+  }
 }
 
 .comments__author {
+  padding-bottom: $padding_mobile + 5;
+
+  @include for_tablet {
+    padding-bottom: $padding_tablet;
+  }
+
+  @include for_desktop {
+    padding-bottom: $padding_desktop + $padding_desktop;
+  }
+}
+
+.comments__name {
   @include font_character($font_size_comments_author,
                           $line_height_comments_author,
                           $font_weight_comments_author,
                           $color_comments_author);
   margin: 0;
+  padding-bottom: $padding_mobile - 15;
 }
 
 .comments__login {
@@ -30,13 +75,47 @@
   margin: 0;
 }
 
+.comments__controls {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: $padding_mobile + 8;
+
+  @include for_tablet {
+    margin-left: auto;
+    padding-bottom: 0;
+    padding-top: $padding_tablet - 35;
+    align-self: flex-start;
+  }
+}
+
 .comments__button {
+  display: block;
+  width: $half;
+  padding: 0;
   border: 1px solid $border_color;
   background-color: $background_white;
   font-size: $font_size_button + 1;
   color: $black;
+
+  @include for_tablet {
+    border: none;
+    padding-left: $padding_tablet - 31;
+    padding-right: $padding_tablet - 31;
+  }
+}
+
+.comments__button--prev {
+  border-right: none;
 }
 
 .comments__arrow {
   fill: currentColor;
+}
+
+.comments__review {
+  @include for_tablet {
+    order: -1;
+    margin-left: auto;
+    align-self: flex-start;
+  }
 }

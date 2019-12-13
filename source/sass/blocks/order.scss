@@ -1,14 +1,68 @@
+.order__inner {
+  padding-top: $padding_mobile - 15;
+  padding-bottom: $padding_mobile - 15;
+
+  @include for_tablet {
+    padding-top: $padding_tablet;
+    padding-bottom: $padding_tablet;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  &--induction {
+    padding-top: $padding_mobile - 5;
+    padding-bottom: $padding_mobile - 20;
+
+    @include for_tablet {
+      padding-top: $padding_tablet + 25;
+    }
+
+    @include for_desktop {
+      padding-top: $padding_desktop + $padding_desktop + 20;
+    }
+  }
+
+  &--button {
+    padding-top: 0;
+    padding-bottom: $padding_mobile + 25;
+
+    @include for_tablet {
+      padding-top: $padding_tablet - 47;
+      padding-bottom: $padding_tablet;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    @include for_desktop {
+      padding-left: $padding_desktop + $padding_desktop + $padding_desktop + $padding_desktop + 25;
+      padding-right: $padding_desktop + $padding_desktop + $padding_desktop + $padding_desktop + 25;
+    }
+  }
+}
+
 .order__explanation {
   @include font_character($font_size_videoblog_description,
                           $line_height_videoblog_description,
                           $font_weight_videoblog_description,
                           $color_videoblog_description);
   margin: 0;
+
+  @include for_desktop {
+    padding-left: $padding_desktop + $padding_desktop + $padding_desktop + 25;
+    padding-right: $padding_desktop + $padding_desktop + $padding_desktop + 25;
+  }
 }
 
 .order__fieldset {
   border: none;
   padding: 0;
+
+  @include for_tablet {
+    &:nth-of-type(2n) {
+      background-color: $background_footer;
+    }
+  }
 }
 
 .order__query {
@@ -17,10 +71,31 @@
                           $font_weight_order_query,
                           $color_order_query);
   text-transform: uppercase;
+  margin: 0;
+
+  @include for_tablet {
+    width: $padding_tablet + $padding_tablet + $padding_tablet + 17;
+  }
+
+  @include for_desktop {
+    width: $padding_desktop + $padding_desktop + $padding_desktop + 25;
+  }
 }
 
 .order__list {
   @include list_default_remove;
+
+  @include for_tablet {
+    width: $padding_tablet * 10 + 1;
+  }
+
+  @include for_desktop {
+    width: $padding_tablet * 14;
+
+    &--color {
+      width: $padding_tablet * 17 + 25;
+    }
+  }
 }
 
 .order__description {
@@ -40,6 +115,17 @@
                             $color_order);
     border: none;
     border-bottom: 2px solid $border_color_input;
+    width: 100%;
+    background-color: inherit;
+
+    @include for_tablet {
+      width: $padding_tablet * 10 + 1;
+    }
+
+    @include for_desktop {
+      width: $padding_tablet * 14;
+      margin-right: $padding_tablet + $padding_tablet + $padding_tablet + 25;
+    }
 
     &::placeholder {
       @include font_character($font_size_order_placeholder,
@@ -56,6 +142,15 @@
                             $font_weight_order,
                             $color_order);
     border: 2px solid $border_color_textarea;
+    width: 100%;
+
+    @include for_tablet {
+      width: $padding_tablet * 10 + 1;
+    }
+
+    @include for_desktop {
+      width: $padding_tablet * 14;
+    }
 
     &::placeholder {
       @include font_character($font_size_order_placeholder,
@@ -73,4 +168,13 @@
                           $font_weight_order_footnote,
                           $color_order_footnote);
   margin: 0;
+  padding-bottom: $padding_mobile;
+}
+
+.order__button {
+  width: 100%;
+
+  @include for_tablet {
+    width: $padding_tablet * 4 + 29;
+  }
 }

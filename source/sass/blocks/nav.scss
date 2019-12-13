@@ -35,7 +35,8 @@
   flex-wrap: wrap;
   align-items: center;
   min-height: 79px;
-  padding-left: $padding_mobile + 46;
+  padding-left: 75px;
+  padding-bottom: 2px;
   border-top: 1px solid $border_color;
 
   @include for_tablet {

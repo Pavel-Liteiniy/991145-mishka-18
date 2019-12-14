@@ -17,9 +17,15 @@
 
 .categories__link {
   @include link_default_remove;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .categories__item {
+  padding-left: 29px;
+  padding-right: $padding_mobile;
+
   @include for_tablet {
     width: $half;
   }
@@ -43,6 +49,7 @@
     display: block;
     // Временные свойства
     min-height: 103px;
+    padding-right: $half;
 
     @include for_tablet {
       min-height: 103px + 16;

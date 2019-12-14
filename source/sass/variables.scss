@@ -85,9 +85,14 @@ $font_weight_categories_tablet: bold;
 $color_categories_tablet: #ffffff;
 
 // Переменные для Товара недели HIGHLIGHT
+// highlight_heading
+$font_size_highlight_heading: 43px;
+$line_height_highlight_heading: 50px;
+$font_weight_highlight_heading: bold;
+$color_highlight_heading: #000000;
 // highlight_naming
 $font_size_highlight_naming: 17px;
-$line_height_highlight_naming: 20px;
+$line_height_highlight_naming: 17px;
 $font_weight_highlight_naming: bold;
 $color_highlight_naming: #63d1bb;
 // highlight__description
@@ -95,11 +100,21 @@ $font_size_highlight_description: 15px;
 $line_height_highlight_description: 24px;
 $font_weight_highlight_description: normal;
 $color_highlight_description: #444444;
+// highlight__description_tablet
+$font_size_highlight_description_tablet: 17px;
+$line_height_highlight_description_tablet: 30px;
+$font_weight_highlight_description_tablet: normal;
+$color_highlight_description_tablet: #444444;
 // highlight__table
 $font_size_highlight_table: 15px;
 $line_height_highlight_table: 20px;
 $font_weight_highlight_table: normal;
 $color_highlight_table: #444444;
+// highlight__table
+$font_size_highlight_price_tablet: 20px;
+$line_height_highlight_price_tablet: 24px;
+$font_weight_highlight_price_tablet: bold;
+$color_highlight_price_tablet: #444444;
 
 // Переменные для кнопок BUTTON
 $font_size_button: 17px;

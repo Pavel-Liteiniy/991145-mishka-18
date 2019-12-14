@@ -83,6 +83,7 @@
                               $font_weight_nav,
                               $color_nav);
 
+        padding-bottom: 4px;
         flex-wrap: wrap;
         align-items: center;
         min-height: 89px;
@@ -99,7 +100,8 @@
   }
 
   @include for_desktop {
-    padding-left: $padding_tablet + 34;
+    padding-left: 82px;
+    padding-right: 2px;
   }
 }
 

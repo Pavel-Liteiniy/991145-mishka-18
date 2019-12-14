@@ -39,6 +39,10 @@
     padding-bottom: 28px;
     padding-left: 36px;
   }
+
+  @include for_desktop {
+    padding-right: 66.67%;
+  }
 }
 
 .categories__item {

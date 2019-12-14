@@ -21,14 +21,25 @@
   }
 }
 
+.title__inner--categories {
+  min-height: 488px;
+
+  .title__heading {
+    padding-top: 7px;
+    padding-bottom: 0;
+  }
+}
+
 .title__heading {
   @include font-character($font_size_title,
                           $line_height_title,
                           $font_weight_title,
                           $color_title);
   text-align: center;
-  margin: 0;
-  margin-top: 70px;
+  margin: auto;
+  padding-left: $padding_mobile;
+  padding-right: $padding_mobile;
+  padding-bottom: 7px;
 
   @include for_tablet {
     @include font-character($font_size_title + 16,

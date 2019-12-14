@@ -57,6 +57,13 @@
 
     margin-top: 36px;
   }
+
+  @include for_desktop {
+    @include font-character($font_size_title_desktop,
+                            $line_height_title_desktop,
+                            $font_weight_title_desktop,
+                            $color_title_desktop);
+  }
 }
 
 .title__label {

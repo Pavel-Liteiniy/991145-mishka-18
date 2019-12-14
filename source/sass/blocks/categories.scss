@@ -10,16 +10,35 @@
   margin-top: auto;
 
   @include for_tablet {
+    @include font_character($font_size_categories_tablet,
+                          $line_height_categories_tablet,
+                          $font_weight_categories_tablet,
+                          $color_categories_tablet);
+
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
 
+.categories__inner {
+  min-height: 206px;
+}
+
 .categories__link {
   @include link_default_remove;
 
+  display: block;
+  min-height: 103px;
+  padding-right: $half;
   padding-top: 25px;
   padding-bottom: 25px;
+
+  @include for_tablet {
+    min-height: 117px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 36px;
+  }
 }
 
 .categories__item {
@@ -28,6 +47,8 @@
 
   @include for_tablet {
     width: $half;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -37,22 +58,4 @@
 
 .categories__item--toys {
   background-color: $background_link_toys;
-}
-
-@media (min-width: $breakpoint_mobile) {
-  .categories__inner {
-    // Временные свойства
-    min-height: 206px;
-  }
-
-  .categories__link {
-    display: block;
-    // Временные свойства
-    min-height: 103px;
-    padding-right: $half;
-
-    @include for_tablet {
-      min-height: 103px + 16;
-    }
-  }
 }

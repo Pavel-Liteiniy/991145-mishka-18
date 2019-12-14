@@ -3,7 +3,7 @@
   padding-bottom: $padding_mobile + 12;
 
   @include for_tablet {
-    padding-top: $padding_tablet - 7;
+    padding-top: 47px;
     padding-bottom: $padding_tablet + 18;
   }
 
@@ -20,7 +20,8 @@
   @include for_tablet {
     display: flex;
     justify-content: space-between;
-    padding-bottom: $padding_tablet + 5;
+    padding-bottom: 49px;
+    margin-left: -3px;
   }
 
   @include for_desktop {
@@ -39,6 +40,11 @@
   padding-bottom: 6px;
 
   @include for_tablet {
+    @include font_character($font_size_highlight_heading,
+                            $line_height_highlight_heading,
+                            $font_weight_highlight_heading,
+                            $color_highlight_heading);
+
     padding-bottom: 0;
   }
 }
@@ -51,10 +57,16 @@
   margin: 0;
   margin-left: -1px;
   text-transform: uppercase;
-  padding-bottom: $padding_mobile - 7;
+  padding-bottom: 26px;
 
   @include for_tablet {
+    width: 126px;
+    align-self: center;
+    text-align: center;
     padding-bottom: 0;
+    padding-top: 6px;
+    padding-right: 27px;
+    padding-left: 27px;
   }
 }
 
@@ -79,7 +91,12 @@
   padding-bottom: 18px;
 
   @include for_tablet {
-    padding-bottom: $padding_tablet + 5;
+    @include font_character($font_size_highlight_description_tablet,
+                            $line_height_highlight_description_tablet,
+                            $font_weight_highlight_description_tablet,
+                            $color_highlight_description_tablet);
+
+    padding-bottom: 36px;
   }
 
   @include for_desktop {
@@ -115,6 +132,10 @@
 
   &:first-child {
     width: 37.69%;
+
+    @include for_tablet {
+      width: 33.33%;
+    }
   }
 }
 
@@ -129,9 +150,15 @@
 
   @include for_tablet {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 8px;
+    right: 1px;
     padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    // временные стили
+    width: 333px;
+    height: 404px;
   }
 }
 
@@ -143,7 +170,14 @@
   text-align: center;
 
   @include for_tablet {
-    padding-bottom: $padding_tablet - 15;
+    @include font_character($font_size_highlight_price_tablet,
+                            $line_height_highlight_price_tablet,
+                            $font_weight_highlight_price_tablet,
+                            $color_highlight_price_tablet);
+
+    padding-top: 55px;
+    padding-bottom: 35px;
+    margin: 0;
   }
 
   @include for_desktop {
@@ -156,4 +190,8 @@
   min-height: 52px;
   padding-top: 14px;
   padding-bottom: 14px;
+
+  @include for_tablet {
+    margin-left: -2px;
+  }
 }

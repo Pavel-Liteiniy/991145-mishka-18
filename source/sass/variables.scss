@@ -73,10 +73,16 @@ $font_weight_nav: bold;
 $color_nav: #000000;
 
 // Переменные для Категорий CATEGORIES
+// мобильная версия
 $font_size_categories: 19px;
 $line_height_categories: 24px;
 $font_weight_categories: bold;
 $color_categories: #ffffff;
+// планшетная версия
+$font_size_categories_tablet: 20px;
+$line_height_categories_tablet: 30px;
+$font_weight_categories_tablet: bold;
+$color_categories_tablet: #ffffff;
 
 // Переменные для Товара недели HIGHLIGHT
 // highlight_naming

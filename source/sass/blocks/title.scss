@@ -24,9 +24,17 @@
 .title__inner--categories {
   min-height: 488px;
 
+  @include for_tablet {
+    min-height: 743px;
+  }
+
   .title__heading {
     padding-top: 7px;
     padding-bottom: 0;
+
+    @include for_tablet {
+      margin-top: 87px;
+    }
   }
 }
 
@@ -47,7 +55,7 @@
                             $font_weight_title,
                             $color_title);
 
-    margin-top: $padding_tablet - 12;
+    margin-top: 36px;
   }
 }
 

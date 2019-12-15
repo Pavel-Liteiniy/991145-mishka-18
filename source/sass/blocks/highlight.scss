@@ -8,7 +8,7 @@
   }
 
   @include for_desktop {
-    padding-top: $padding_desktop + $padding_desktop + 17;
+    padding-top: 125px;
     padding-bottom: $padding_desktop + 46;
   }
 
@@ -27,7 +27,7 @@
   @include for_desktop {
     flex-direction: row-reverse;
     justify-content: flex-end;
-    padding-bottom: $padding_desktop + 2;
+    padding-bottom: 49px;
   }
 }
 
@@ -40,12 +40,20 @@
   padding-bottom: 6px;
 
   @include for_tablet {
-    @include font_character($font_size_highlight_heading,
-                            $line_height_highlight_heading,
-                            $font_weight_highlight_heading,
-                            $color_highlight_heading);
+    @include font_character($font_size_highlight_heading_tablet,
+                            $line_height_highlight_heading_tablet,
+                            $font_weight_highlight_heading_tablet,
+                            $color_highlight_heading_tablet);
 
     padding-bottom: 0;
+  }
+
+  @include for_desktop{
+    @include font_character($font_size_highlight_heading_desktop,
+                            $line_height_highlight_heading_desktop,
+                            $font_weight_highlight_heading_desktop,
+                            $color_highlight_heading_desktop);
+
   }
 }
 
@@ -67,6 +75,12 @@
     padding-top: 6px;
     padding-right: 27px;
     padding-left: 27px;
+  }
+
+  @include for_desktop{
+    width: 175px;
+    padding-right: 30px;
+    padding-top: 9px;
   }
 }
 
@@ -100,7 +114,7 @@
   }
 
   @include for_desktop {
-    padding-bottom: $padding_desktop + 15;
+    padding-bottom: 52px;
   }
 }
 
@@ -137,6 +151,11 @@
       width: 33.33%;
     }
   }
+
+  @include for_desktop {
+    padding-top: 7px;
+    padding-bottom: 12px;
+  }
 }
 
 .highlight__image-wrapper {
@@ -160,6 +179,16 @@
     width: 333px;
     height: 404px;
   }
+
+  @include for_desktop {
+    z-index: -1;
+    top: -158px;
+    right: 0;
+
+    // временные стили
+    width: 525px;
+    height: 636px;
+  }
 }
 
 .highlight__price {
@@ -181,7 +210,9 @@
   }
 
   @include for_desktop {
-    padding-bottom: $padding_desktop - 15;
+    padding-right: 0;
+    padding-top: 108px;
+    padding-bottom: 34px;
   }
 }
 
@@ -193,5 +224,10 @@
 
   @include for_tablet {
     margin-left: -2px;
+  }
+
+  @include for_desktop {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

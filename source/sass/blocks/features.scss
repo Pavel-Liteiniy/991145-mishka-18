@@ -3,7 +3,7 @@
   padding-bottom: 25px;
 
   @include for_tablet {
-    padding-top: $padding_tablet + 10;
+    padding-top: 50px;
     padding-bottom: $padding_tablet + 20;
   }
 
@@ -23,6 +23,14 @@
   margin: 0;
   margin-left: -2px;
   padding-bottom: 3px;
+
+  @include for_tablet {
+    @include font_character($font_size_features_heading_tablet,
+                            $line_height_features_heading_tablet,
+                            $font_weight_features_heading_tablet,
+                            $color_features_heading_tablet);
+  margin-left: -4px;
+  }
 }
 
 .features__list {
@@ -33,6 +41,11 @@
                           $color_features_list);
 
   @include for_tablet {
+    @include font_character($font_size_features_list_tablet,
+                            $line_height_features_list_tablet,
+                            $font_weight_features_list_tablet,
+                            $color_features_list_tablet);
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -44,7 +57,7 @@
 
   @include for_tablet {
     width: $half;
-    padding-top: $padding_tablet + $padding_tablet;
+    padding-top: 101px;
     margin-bottom: $padding_tablet - 40;
     padding-right: $padding_tablet - 40;
 

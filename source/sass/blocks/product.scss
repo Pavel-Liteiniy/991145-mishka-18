@@ -5,9 +5,10 @@
   padding-right: 27px;
 
   @include for_tablet {
-    display: block;
+    min-height: 334px;
     position: relative;
     padding-left: 50%;
+    padding-right: 32px;
   }
 
   @include for_desktop {
@@ -25,6 +26,20 @@
                           $color_product_heading);
   margin: 0;
   padding-bottom: 5px;
+
+  @include for_tablet {
+    @include font_character($font_size_product_heading_tablet,
+                            $line_height_product_heading_tablet,
+                            $font_weight_product_heading_tablet,
+                            $color_product_heading_tablet);
+    margin-left: 26px;
+    margin-top: 25px;
+    margin-right: 44px;
+  }
+}
+
+.product__link-heading {
+  @include link_default_remove;
 }
 
 .product__profile {
@@ -34,12 +49,15 @@
                           $color_product_profile);
   margin: 0;
   padding-bottom: 19px;
-  margin-bottom: 21px;
-  border-bottom: 1px solid $border_color;
-}
 
-.product__link-heading {
-  @include link_default_remove;
+  @include for_tablet {
+    @include font_character($font_size_product_profile_tablet,
+                            $line_height_product_profile_tablet,
+                            $font_weight_product_profile_tablet,
+                            $color_product_profile_tablet);
+    margin-left: 26px;
+    margin-bottom: auto;
+  }
 }
 
 .product__link-image {
@@ -50,7 +68,13 @@
   margin-left: -28px;
   margin-bottom: 26px;
   background-color: $border_color_copyright;
+
   @include for_tablet {
+    width: 334px;
+    height: 334px;
+    margin-top: -1px;
+    margin-left: -1px;
+    margin-bottom: 0;
     position: absolute;
     max-width: $half;
     top: 0;
@@ -71,7 +95,19 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0;
+  padding-top: 21px;
   padding-bottom: 27px;
+  border-top: 1px solid $border_color;
+
+  @include for_tablet {
+    @include font_character($font_size_product_price_tablet,
+                            $line_height_product_price_tablet,
+                            $font_weight_product_price_tablet,
+                            $color_product_price_tablet);
+    margin-left: 31px;
+    padding-top: 22px;
+    padding-bottom: 26px;
+  }
 }
 
 .product__cart {
@@ -79,4 +115,9 @@
   width: 20px;
   height: 19px;
   margin-left: auto;
+
+  @include for_tablet {
+    width: 21px;
+    height: 18px;
+  }
 }

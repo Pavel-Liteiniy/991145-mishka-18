@@ -1,6 +1,6 @@
 .features__inner {
-  padding-top: $padding_mobile + 4;
-  padding-bottom: $padding_mobile;
+  padding-top: 27px;
+  padding-bottom: 25px;
 
   @include for_tablet {
     padding-top: $padding_tablet + 10;
@@ -21,7 +21,8 @@
                           $font_weight_heading,
                           $color_heading);
   margin: 0;
-  margin-bottom: $padding_mobile - 27;
+  margin-left: -2px;
+  padding-bottom: 3px;
 }
 
 .features__list {
@@ -39,7 +40,7 @@
 }
 
 .features__item {
-  padding-top: $padding_mobile + $padding_mobile + 25;
+  padding-top: 83px;
 
   @include for_tablet {
     width: $half;

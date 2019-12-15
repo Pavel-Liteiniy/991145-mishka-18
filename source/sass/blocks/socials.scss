@@ -1,9 +1,14 @@
 .socials__inner {
-  width: $width_mobile - $padding_mobile - $padding_mobile;
+  width: 260px;
   // padding-left: $padding_mobile + 7;
   // padding-right: $padding_mobile + 12;
   // padding-top: 27px;
   // padding-bottom: 21px;
+  @include for_tablet {
+    width: 141px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   @include for_desktop {
     padding-left: $padding_desktop - 19;
@@ -23,28 +28,27 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-end;
+
+  @include for_tablet {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: space-between;
+  }
 }
 
 .socials__item {
   min-height: 28px;
   padding-top: 15px;
   padding-bottom: 23px;
+
+  @include for_tablet {
+    padding-bottom: 16px;
+  }
 }
 
 .socials__link {
-  // min-height: 28px;
   color: $black;
   display: block;
-
-  // &--in {
-  //   margin-left: 5px;
-  //   margin-top: 7px;
-  // }
-
-  // &--fb {
-  //   margin-left: 5px;
-  //   margin-top: 7px;
-  // }
 }
 
 .socials__svg {

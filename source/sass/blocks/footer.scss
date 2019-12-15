@@ -40,8 +40,9 @@
                           $font_weight_footer_copyright,
                           $color_footer_copyright);
   margin: 0;
+  margin-top: -4px;
   border-top: 1px solid $border_color_copyright;
-  padding-top: $padding_mobile - 15;
+  padding-top: 15px;
 
   @include for_tablet {
     border-top: none;
@@ -57,7 +58,8 @@
 
 .footer__copyright-link {
   color: $turquoise;
-  margin-left: $padding_mobile;
+  margin-left: 29px;
+  margin-top: 6px;
 }
 
 .footer__copyright-logo {

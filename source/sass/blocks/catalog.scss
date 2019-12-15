@@ -1,6 +1,6 @@
 .catalog__list {
   @include for_tablet {
-    padding-top: $padding_tablet - 21;
+    padding-top: 27px;
   }
 
   @include for_desktop {

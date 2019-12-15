@@ -8,7 +8,7 @@
   }
 
   @include for_desktop {
-    padding-top: $padding_desktop + 20;
+    padding-top: 57px;
     padding-bottom: $padding_desktop + 30;
     padding-left: $padding_desktop * 4 + 25px;
     padding-right: $padding_desktop * 4 + 25px;
@@ -30,6 +30,14 @@
                             $font_weight_features_heading_tablet,
                             $color_features_heading_tablet);
   margin-left: -4px;
+  }
+
+  @include for_desktop{
+    @include font_character($font_size_features_heading_desktop,
+                            $line_height_features_heading_desktop,
+                            $font_weight_features_heading_desktop,
+                            $color_features_heading_desktop);
+    padding-bottom: 2px;
   }
 }
 

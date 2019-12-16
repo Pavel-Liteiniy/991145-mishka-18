@@ -4,7 +4,7 @@
   }
 
   @include for_desktop {
-    padding-top: $padding_desktop + $padding_desktop + 30;
+    padding-top: 128px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -22,7 +22,6 @@
   @include for_desktop {
     margin-top: 0;
     margin-bottom: $padding_desktop + 7;
-    width: 315px;
 
     &:not(:nth-child(3n)) {
       margin-right: $padding_desktop;

@@ -157,11 +157,21 @@ $font_weight_footer_copyright: bold;
 $color_footer_copyright: #000000;
 
 // Переменные для MODAL
+//heading_tablet
+$font_size_heading_tablet: 30px;
+$line_height_heading_tablet: 57px;
+$font_weight_heading_tablet: bold;
+$color_heading_tablet: #000000;
 // query
 $font_size_modal_query: 15px;
 $line_height_modal_query: 30px;
 $font_weight_modal_query: normal;
 $color_modal_query: #444444;
+// query_tablet
+$font_size_modal_query_tablet: 17px;
+$line_height_modal_query_tablet: 30px;
+$font_weight_modal_query_tablet: normal;
+$color_modal_query_tablet: #444444;
 // description
 $font_size_modal_description: 17px;
 $line_height_modal_description: 16px;

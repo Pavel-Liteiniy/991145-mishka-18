@@ -1,9 +1,13 @@
+.modal {
+  border: 1px solid $border_color_modal;
+  box-shadow: 0px 5px 10px 0 rgba(0, 1, 1, 0.25);
+}
+
 .modal__inner {
   text-align: center;
-  border: 1px solid $border_color_modal;
 
-  padding-top: $padding_mobile + 5;
-  padding-bottom: $padding_mobile + 15;
+  padding-top: 30px;
+  padding-bottom: 46px;
 
   @include for_tablet {
     width: $width_tablet - 202;
@@ -18,8 +22,10 @@
                           $font_weight_heading,
                           $color_heading);
   margin: 0;
+  margin-left: 50px;
+  margin-right: 50px;
   text-transform: uppercase;
-  padding-bottom: $padding_mobile - 5;
+  padding-bottom: 12px;
 
   @include for_tablet {
     padding-top: $padding_tablet - 20;
@@ -28,6 +34,8 @@
 
 .modal__fieldset {
   border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .modal__query {
@@ -36,7 +44,7 @@
                           $font_weight_modal_query,
                           $color_modal_query);
   margin: 0;
-  padding-bottom: $padding_mobile - 5;
+  padding-bottom: 23px;
 
   @include for_tablet {
     padding-top: $padding_tablet - 25;
@@ -46,6 +54,7 @@
 .modal__wrapper {
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 21px;
 }
 
 .modal__description {
@@ -54,11 +63,15 @@
                           $font_weight_modal_description,
                           $color_modal_description);
   border: 2px solid $border_color;
-  display: block;
-  width: 71px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 82px;
+  min-height: 52px;
+  margin-bottom: 10px;
 
-  &:not(:last-of-type) {
-    margin-right: $padding_mobile - 23;
+  &:not(:nth-of-type(3n)) {
+    margin-right: 7px;
   }
 
   @include for_tablet {
@@ -76,8 +89,9 @@
                           $font_weight_modal_button,
                           $color_modal_button);
   background-color: $turquoise;
-  margin-top: $padding_mobile;
   width: $full;
+  min-height: 52px;
+  vertical-align: middle;
   border: none;
   text-transform: uppercase;
 }

@@ -8,9 +8,10 @@
   padding-right: 29px;
 
   @include for_tablet {
-    width: $width_tablet - 202;
-    padding-top: $padding_tablet;
-    padding-bottom: $padding_tablet - 5;
+    width: 568px;
+    padding-top: 33px;
+    padding-left: 106px;
+    padding-right: 106px;
   }
 }
 
@@ -26,7 +27,12 @@
   padding-bottom: 12px;
 
   @include for_tablet {
-    padding-top: $padding_tablet - 20;
+    @include font_character($font_size_heading_tablet,
+                            $line_height_heading_tablet,
+                            $font_weight_heading_tablet,
+                            $color_heading_tablet);
+    margin: 0;
+    padding-bottom: 14px;
   }
 }
 
@@ -34,6 +40,11 @@
   border: none;
   padding: 0;
   margin: 0;
+
+  @include for_tablet {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
 }
 
 .modal__query {
@@ -45,7 +56,13 @@
   padding-bottom: 23px;
 
   @include for_tablet {
+    @include font_character($font_size_modal_query_tablet,
+                            $line_height_modal_query_tablet,
+                            $font_weight_modal_query_tablet,
+                            $color_modal_query_tablet);
     padding-top: $padding_tablet - 25;
+    padding-top: 0;
+    padding-bottom: 21px;
   }
 }
 
@@ -73,7 +90,7 @@
   }
 
   @include for_tablet {
-    width: 140px;
+    width: 112px;
   }
 }
 

@@ -32,6 +32,28 @@
   padding-right: $half;
   padding-top: 25px;
   padding-bottom: 25px;
+  outline: none;
+
+  &--interior {
+    background-color: $background_link_interior;
+  }
+
+  &--toys {
+    background-color: $background_link_toys;
+  }
+
+  &--interior:hover,
+  &--toys:hover,
+  &--interior:focus,
+  &--toys:focus {
+    position: relative;
+    top: -5px;
+  }
+
+  &--interior:active,
+  &--toys:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 
   @include for_tablet {
     min-height: 117px;

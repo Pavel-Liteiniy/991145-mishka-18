@@ -48,6 +48,17 @@
 
 .product__link-heading {
   @include link_default_remove;
+
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: rgba($color: #000000, $alpha: 0.6);
+  }
+
+  &:active {
+    color: rgba($color: #000000, $alpha: 0.3);
+  }
 }
 
 .product__profile {

@@ -10,4 +10,15 @@
   font-family: $font_family;
   display: block;
   text-align: center;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: $border_color_button;
+    color: #ffffff;
+  }
+
+  &:active {
+    color: rgba($color: #ffffff, $alpha: 0.3);
+  }
 }

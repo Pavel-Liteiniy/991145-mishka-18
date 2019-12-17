@@ -9,14 +9,24 @@
 .topical__item {
   &:not(:first-child) {
     margin-left: $padding_desktop + 12;
-    // margin-bottom: $padding_desktop / 2;
   }
 }
 
 .topical__link {
+  @include link_default_remove;
   @include font-character($font_size_topical,
                           $line_height_topical,
                           $font_weight_topical,
                           $color_topical);
-  @include link_default_remove;
+
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }

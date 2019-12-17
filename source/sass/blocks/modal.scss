@@ -96,6 +96,20 @@
 
 .modal__radio {
   display: none;
+
+  &:checked + .modal__description {
+    border: 2px solid rgba($color: $border_color, $alpha: 0.1);
+  }
+
+  &:hover + .modal__description,
+  &:focus + .modal__description, {
+    border: 2px solid rgba($color: $border_color, $alpha: 0.3);
+  }
+
+  &:active + .modal__description,
+  &:checked + .modal__description {
+    border: 2px solid rgba($color: #62d1ba, $alpha: 1);
+  }
 }
 
 .modal__button {

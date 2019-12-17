@@ -49,6 +49,17 @@
 .socials__link {
   color: $black;
   display: block;
+  outline: none;
+  color: #000000;
+
+  &:hover,
+  &:focus {
+    color: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .socials__svg {

@@ -71,7 +71,11 @@ $font_size_nav: 17px;
 $line_height_nav: 24px;
 $font_weight_nav: bold;
 $color_nav: #000000;
-
+// tablet
+$font_size_nav_tablet: 15px;
+$line_height_nav_tablet: 24px;
+$font_weight_nav_tablet: bold;
+$color_nav_tablet: #000000;
 // Переменные для Категорий CATEGORIES
 // мобильная версия
 $font_size_categories: 19px;
@@ -272,3 +276,7 @@ $font_size_order_footnote: 14px;
 $line_height_order_footnote: 16px;
 $font_weight_order_footnote: normal;
 $color_order_footnote: #444444;
+
+// styleguide
+$hover_opacity: 0.6; // :hover
+$active_opacity: 0.3; // :active

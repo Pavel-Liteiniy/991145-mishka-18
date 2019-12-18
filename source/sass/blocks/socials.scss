@@ -1,18 +1,9 @@
 .socials__inner {
   width: 260px;
-  // padding-left: $padding_mobile + 7;
-  // padding-right: $padding_mobile + 12;
-  // padding-top: 27px;
-  // padding-bottom: 21px;
   @include for_tablet {
     width: 141px;
     padding-left: 0;
     padding-right: 0;
-  }
-
-  @include for_desktop {
-    // padding-left: $padding_desktop - 19;
-    // padding-right: $padding_desktop - 2;
   }
 }
 

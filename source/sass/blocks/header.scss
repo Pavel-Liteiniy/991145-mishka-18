@@ -1,10 +1,53 @@
+// Частные переменные блока header
+// header
+// tablet
+$header_h_tablet: 89px;  //h - height
+// header__logo
+// mobile
+$logo_mt_mobile: 21px; //mt - margin-top
+$logo_mb_mobile: 16px; //mb - margin-bottom
+$logo_mr_mobile: 66px; //mr - margin-right
+// tablet
+$logo_w_tablet: 113px; //w - width
+$logo_h_tablet: 46px; //h - height
+$logo_ml_tablet: -2px; //ml - margin-left
+// desktop
+$logo_w_desktop: 149px; //w - width
+$logo_h_desktop: 72px; //h - height
+$logo_mt_desktop: 9px; //mt - margin-top
+$logo_mb_desktop: 6px; //mb - margin-bottom
+// header__button
+// mobile
+$button_w_mobile: 21px; //w - width
+$button_h_mobile: 20px; //h - height
+$button_mr_mobile: 31px; //mr - margin-right
+//nav--closed button::before
+$button_closed_t_before: 2px; //t - top
+$button_closed_w_before: 21px; //w - width
+$button_closed_h_before: 2px; //h - height
+$button_closed_bgc_before: #000000; //bgc - background-color
+$button_closed_bxshdw_before: 0 6px 0 0 #000000, 0 12px 0 0 #000000; // bxshdw - box-shadow
+//nav--opened button::before button::after
+$button_opened_t_before_after: 8px; //t - top
+$button_opened_l_before_after: -2px; //l - left
+$button_opened_w_before_after: 26px; //w - width
+$button_opened_h_before_after: 2px; //h - height
+$button_opened_bgc_before_after: #000000; //bgc - background-color
+//nav--opened button::before
+$button_opened_rotate_before: 44deg; //transform: rotate($);
+//nav--opened button::after
+$button_opened_rotate_after: -44deg; //transform: rotate($);
+// header__nav--nojs
+// header__logo
+$logo_mr_nojs: 118px; //mr - margin-right
+
 .header {
   border-top: 1px solid $border_color;
   border-bottom: 1px solid $border_color;
 
   @include for_tablet {
     border-top: none;
-    height: 89px;
+    height: $header_h_tablet;
   }
 
   @include for_desktop {
@@ -29,35 +72,35 @@
 }
 
 .header__logo {
-  margin-top: 21px;
-  margin-bottom: 16px;
+  margin-top: $logo_mt_mobile;
+  margin-bottom: $logo_mb_mobile;
   margin-left: auto;
-  margin-right: 66px;
+  margin-right: $logo_mr_mobile;
   outline: none;
 
   &:hover,
   &:focus {
-    opacity: 0.6;
+    opacity: $hover_opacity;
   }
 
   &:active {
-    opacity: 0.3;
+    opacity: $active_opacity;
   }
 
   @include for_tablet {
-    width: 113px;
-    height: 46px;
-    margin-left: -2px;
+    width: $logo_w_tablet;
+    height: $logo_h_tablet;
+    margin-left: $logo_ml_tablet;
     margin-right: auto;
   }
 
   @include for_desktop {
-    width: 149px;
-    height: 72px;
+    width: $logo_w_desktop;
+    height: $logo_h_desktop;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 9px;
-    margin-bottom: 6px;
+    margin-top: $logo_mt_desktop;
+    margin-bottom: $logo_mb_desktop;
   }
 }
 
@@ -65,21 +108,21 @@
   @include only_mobile;
 
   position: relative;
-  width: 21px;
-  height: 20px;
+  width: $button_w_mobile;
+  height: $button_h_mobile;
   align-self: center;
-  margin-right: 31px;
+  margin-right: $button_mr_mobile;
   background-color: transparent;
   border: none;
   outline: none;
 
   &:hover,
   &:focus {
-    opacity: 0.6;
+    opacity: $hover_opacity;
   }
 
   &:active {
-    opacity: 0.3;
+    opacity: $active_opacity;
   }
 }
 
@@ -96,12 +139,12 @@
     content: "";
 
     position: absolute;
-    top: 2px;
+    top: $button_closed_t_before;
     left: 0;
-    width: 21px;
-    height: 2px;
-    background-color: black;
-    box-shadow: 0 6px 0 0 black, 0 12px 0 0 black;
+    width: $button_closed_w_before;
+    height: $button_closed_h_before;
+    background-color: $button_closed_bgc_before;
+    box-shadow: $button_closed_bxshdw_before;
   }
 }
 
@@ -114,30 +157,25 @@
     }
   }
 
-  .header__button::before {
-    content: "";
-
-    position: absolute;
-    top: 8px;
-    left: -2px;
-    width: 26px;
-    height: 2px;
-    background-color: black;
-    box-shadow: none;
-    transform: rotate(44deg);
-  }
-
+  .header__button::before,
   .header__button::after {
     content: "";
 
     position: absolute;
-    top: 8px;
-    left: -2px;
-    width: 26px;
-    height: 2px;
-    background-color: black;
+    top: $button_opened_t_before_after;
+    left: $button_opened_l_before_after;
+    width: $button_opened_w_before_after;
+    height: $button_opened_h_before_after;
+    background-color: $button_opened_bgc_before_after;
     box-shadow: none;
-    transform: rotate(-44deg);
+  }
+
+  .header__button::before {
+    transform: rotate($button_opened_rotate_before);
+  }
+
+  .header__button::after {
+    transform: rotate($button_opened_rotate_after);
   }
 }
 
@@ -151,6 +189,6 @@
   }
 
   .header__logo {
-    margin-right: 118px;
+    margin-right: $logo_mr_nojs;
   }
 }

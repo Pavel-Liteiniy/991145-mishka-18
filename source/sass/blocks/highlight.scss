@@ -48,12 +48,11 @@
     padding-bottom: 0;
   }
 
-  @include for_desktop{
+  @include for_desktop {
     @include font_character($font_size_highlight_heading_desktop,
                             $line_height_highlight_heading_desktop,
                             $font_weight_highlight_heading_desktop,
                             $color_highlight_heading_desktop);
-
   }
 }
 
@@ -77,7 +76,7 @@
     padding-left: 27px;
   }
 
-  @include for_desktop{
+  @include for_desktop {
     width: 175px;
     padding-right: 30px;
     padding-top: 9px;

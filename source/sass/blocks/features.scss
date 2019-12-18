@@ -29,10 +29,10 @@
                             $line_height_features_heading_tablet,
                             $font_weight_features_heading_tablet,
                             $color_features_heading_tablet);
-  margin-left: -4px;
+    margin-left: -4px;
   }
 
-  @include for_desktop{
+  @include for_desktop {
     @include font_character($font_size_features_heading_desktop,
                             $line_height_features_heading_desktop,
                             $font_weight_features_heading_desktop,

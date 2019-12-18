@@ -1,5 +1,6 @@
 .socials__inner {
   width: 260px;
+
   @include for_tablet {
     width: 141px;
     padding-left: 0;
@@ -38,10 +39,9 @@
 }
 
 .socials__link {
-  color: $black;
   display: block;
   outline: none;
-  color: #000000;
+  color: $black;
 
   &:hover,
   &:focus {

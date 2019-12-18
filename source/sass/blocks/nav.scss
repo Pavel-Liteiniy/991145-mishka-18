@@ -1,3 +1,34 @@
+// Частные переменные блока nav
+// nav__link
+// mobile
+$link_mh_mobile: 79px; //mh - min-height
+$link_pl_mobile: 75px; //pl - padding-left
+$link_pb_mobile: 2px; //pb - padding-bottom
+//tablet
+$link_mh_tablet: 89px; //mh - min-height
+$link_pb_tablet: 4px; //pb - padding-bottom
+// nav__link:hover
+$link_clr_hover: #000000; //clr - color
+// nav__link:active
+$link_clr_active: #000000; //clr - color
+// nav__list--categories
+// nav__item
+$categories_nav_item_pr: 35px; //pr - padding-right
+$categories_nav_item_pl: 35px; //pl - padding-left
+// nav__link
+// tablet
+$categories_nav_link_w_tablet: 167px; //w - width
+$categories_nav_link_mh_tablet: 58px; //mh - min-height
+// desktop
+$categories_nav_link_pb_desktop: 4px; //pb - padding-bottom
+$categories_nav_link_mh_desktop: 89px; //mh - min-height
+// nav__list--user-menu nav__link
+// tablet
+$usermenu_nav_link_pl_tablet: 83px; //pl - padding-left
+// desktop
+$usermenu_nav_link_pl_desktop: 82px; //pl - padding-left
+$usermenu_nav_link_pr_desktop: 2px; //pr - padding-right
+
 .nav {
   @include font_character($font_size_nav,
                           $line_height_nav,
@@ -34,24 +65,24 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  min-height: 79px;
-  padding-left: 75px;
-  padding-bottom: 2px;
+  min-height: $link_mh_mobile;
+  padding-left: $link_pl_mobile;
+  padding-bottom: $link_pb_mobile;
   border-top: 1px solid $border_color;
 
   &:hover,
   &:focus {
-    color: rgba($color: #000000, $alpha: 0.6)
+    color: rgba($color: $link_clr_hover, $alpha: $hover_opacity);
   }
 
   &:active {
-    color: rgba($color: #000000, $alpha: 0.3)
+    color: rgba($color: $link_clr_active, $alpha: $active_opacity);
   }
 
   @include for_tablet {
     justify-content: center;
-    min-height: 89px;
-    padding-bottom: 4px;
+    min-height: $link_mh_tablet;
+    padding-bottom: $link_pb_tablet;
     border-top: none;
     border-left: 1px solid $border_color;
   }
@@ -61,13 +92,13 @@
   .nav__item {
     &:not(:last-child) {
       @include for_desktop {
-        padding-right: $padding_desktop - 15;
+        padding-right: $categories_nav_item_pr;
       }
     }
 
     &:not(:first-child) {
       @include for_desktop {
-        padding-left: $padding_desktop - 15;
+        padding-left: $categories_nav_item_pl;
         border-left: 1px solid $border_color;
       }
     }
@@ -76,49 +107,49 @@
   .nav__link {
     &:hover:not(.nav__link--active),
     &:focus:not(.nav__link--active) {
-      color: rgba($color: #000000, $alpha: 0.6)
+      color: rgba($color: $link_clr_hover, $alpha: $hover_opacity);
     }
 
     &:active:not(.nav__link--active) {
-      color: rgba($color: #000000, $alpha: 0.3)
+      color: rgba($color: $link_clr_active, $alpha: $active_opacity);
     }
 
     @include for_tablet {
-      @include font_character($font_size_nav - 2,
-                              $line_height_nav,
-                              $font_weight_nav,
-                              $color_nav);
-      width: 167px;
-      min-height: 58px;
+      @include font_character($font_size_nav_tablet,
+                              $line_height_nav_tablet,
+                              $font_weight_nav_tablet,
+                              $color_nav_tablet);
+      width: $categories_nav_link_w_tablet;
+      min-height: $categories_nav_link_mh_tablet;
       padding-left: 0;
       padding-bottom: 0;
       border-left: none;
       justify-content: flex-start;
+    }
 
-      @include for_desktop {
-        @include font_character($font_size_nav,
-                              $line_height_nav,
-                              $font_weight_nav,
-                              $color_nav);
+    @include for_desktop {
+      @include font_character($font_size_nav,
+                            $line_height_nav,
+                            $font_weight_nav,
+                            $color_nav);
 
-        padding-bottom: 4px;
-        flex-wrap: wrap;
-        align-items: center;
-        min-height: 89px;
-        width: auto;
-      }
+      padding-bottom: $categories_nav_link_pb_desktop;
+      flex-wrap: wrap;
+      align-items: center;
+      min-height: $categories_nav_link_mh_desktop;
+      width: auto;
     }
   }
 }
 
 .nav__list--user-menu .nav__link {
   @include for_tablet {
-    padding-left: 83px;
+    padding-left: $usermenu_nav_link_pl_tablet;
   }
 
   @include for_desktop {
-    padding-left: 82px;
-    padding-right: 2px;
+    padding-left: $usermenu_nav_link_pl_desktop;
+    padding-right: $usermenu_nav_link_pr_desktop;
   }
 }
 

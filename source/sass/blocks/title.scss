@@ -27,15 +27,6 @@
   @include for_tablet {
     min-height: 743px;
   }
-
-  .title__heading {
-    padding-top: 7px;
-    padding-bottom: 0;
-
-    @include for_tablet {
-      margin-top: 87px;
-    }
-  }
 }
 
 .title__heading {
@@ -47,7 +38,8 @@
   margin: auto;
   padding-left: $padding_mobile;
   padding-right: $padding_mobile;
-  padding-bottom: 7px;
+  padding-top: 7px;
+  padding-bottom: 0;
 
   @include for_tablet {
     @include font-character($font_size_title + 16,
@@ -55,7 +47,7 @@
                             $font_weight_title,
                             $color_title);
 
-    margin-top: 36px;
+    margin-top: 87px;
   }
 
   @include for_desktop {
@@ -63,6 +55,8 @@
                             $line_height_title_desktop,
                             $font_weight_title_desktop,
                             $color_title_desktop);
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 

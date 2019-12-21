@@ -1,3 +1,8 @@
+// Локальные переменные блока categories
+$bgc_link_interior: #63d1bb; // bgc - background-color
+$bgc_link_toys: #56c3b2; // bgc - background-color
+$clr_link_active: #000000; // clr - color
+
 .categories {
   @include font_character($font_size_categories,
                           $line_height_categories,
@@ -36,11 +41,11 @@
   outline: none;
 
   &--interior {
-    background-color: $background_link_interior;
+    background-color: $bgc_link_interior;
   }
 
   &--toys {
-    background-color: $background_link_toys;
+    background-color: $bgc_link_toys;
   }
 
   &--interior:hover,
@@ -53,7 +58,7 @@
 
   &--interior:active,
   &--toys:active {
-    color: rgba($color: #000000, $alpha: 0.3);
+    color: rgba($color: $clr_link_active, $alpha: $active_opacity);
   }
 
   @include for_tablet {
@@ -75,9 +80,9 @@
 }
 
 .categories__item--interior {
-  background-color: $background_link_interior;
+  background-color: $bgc_link_interior;
 }
 
 .categories__item--toys {
-  background-color: $background_link_toys;
+  background-color: $bgc_link_toys;
 }

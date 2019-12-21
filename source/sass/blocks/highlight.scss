@@ -1,15 +1,18 @@
+// Локальные переменные для блока highlight
+$bgc_image-wrapper: #f1f1f1 // bgc - background-color
+
 .highlight__inner {
-  padding-top: $padding_mobile - 4;
-  padding-bottom: $padding_mobile + 12;
+  padding-top: 26px;
+  padding-bottom: 42px;
 
   @include for_tablet {
     padding-top: 47px;
-    padding-bottom: $padding_tablet + 18;
+    padding-bottom: 68px;
   }
 
   @include for_desktop {
     padding-top: 125px;
-    padding-bottom: $padding_desktop + 46;
+    padding-bottom: 106px;
   }
 
   display: flex;
@@ -90,7 +93,7 @@
   }
 
   @include for_desktop {
-    padding-left: $padding_desktop + $padding_desktop + $padding_desktop + 25;
+    padding-left: 175px;
     padding-right: 583px;
   }
 }
@@ -126,11 +129,11 @@
   border-collapse: collapse;
 
   @include for_tablet {
-    padding-bottom: $padding_tablet + 10;
+    padding-bottom: 60px;
   }
 
   @include for_desktop {
-    padding-bottom: $padding_desktop + $padding_desktop + 10;
+    padding-bottom: 110px;
   }
 }
 
@@ -158,7 +161,7 @@
 }
 
 .highlight__image-wrapper {
-  background-color: $background_footer;
+  background-color: $bgc_image-wrapper;
   margin-top: 28px;
   margin-bottom: 24px;
 

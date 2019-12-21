@@ -4,6 +4,8 @@
                           $font_weight_button,
                           $color_button);
   @include link_default_remove;
+
+  min-height: 52px;
   text-transform: uppercase;
   border: 2px solid $border_color_button;
   background-color: $background_white;

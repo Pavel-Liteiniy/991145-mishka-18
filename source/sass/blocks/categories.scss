@@ -35,7 +35,7 @@ $clr_link_active: #000000; // clr - color
   display: block;
   min-height: 103px;
   padding-left: 29px;
-  padding-right: $half;
+  padding-right: 50%;
   padding-top: 25px;
   padding-bottom: 25px;
   outline: none;
@@ -75,7 +75,7 @@ $clr_link_active: #000000; // clr - color
 
 .categories__item {
   @include for_tablet {
-    width: $half;
+    width: 50%;
   }
 }
 

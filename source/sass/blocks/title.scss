@@ -43,10 +43,6 @@
   &--index {
     padding-top: 8px;
     padding-bottom: 0;
-
-    @include for_tablet {
-      margin-top: 86px;
-    }
   }
 
   @include for_tablet {
@@ -56,6 +52,10 @@
                             $color_title);
 
     margin-top: 36px;
+
+    &--index {
+      margin-top: 86px;
+    }
   }
 
   @include for_desktop {
@@ -65,6 +65,11 @@
                             $color_title_desktop);
     padding-left: 60px;
     padding-right: 60px;
+    margin-top: 35px;
+
+    &--index {
+      margin-top: 87px;
+    }
   }
 }
 

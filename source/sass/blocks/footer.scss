@@ -1,15 +1,23 @@
+// Локальные переменные блока footer
+$bgc_footer: #f1f1f1; // bgc -background-color
+$clr_logo: #000000; // clr - color
+$clr_logo_hover: #46c1ae; // clr - color
+$brd-clr_copyright: #e5e5e5; // brd-clr - border-color
+$clr_copyright-link: #7ae7d1; // clr - color
+$clr_copyright-link_hover: #46c1ae; // clr - color
+
 .footer {
-  background-color: $background_footer;
+  background-color: $bgc_footer;
 }
 
 .footer__inner {
-  padding-bottom: $padding_mobile - 7;
+  padding-bottom: 23px;
 
   @include for_tablet {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding-top: $padding_tablet - 20;
+    padding-top: 30px;
     padding-bottom: 33px;
   }
 }
@@ -21,15 +29,15 @@
 .footer__logo {
   display: none;
   outline: none;
-  color: #000000;
+  color: $clr_logo;
 
   &:hover,
   &:focus {
-    color: #46c1ae;
+    color: $clr_logo_hover;
   }
 
   &:active {
-    opacity: 0.3;
+    opacity: $active_opacity;
   }
 
   @include for_tablet {
@@ -55,7 +63,7 @@
                           $color_footer_copyright);
   margin: 0;
   margin-top: -4px;
-  border-top: 1px solid $border_color_copyright;
+  border-top: 1px solid $brd-clr_copyright;
   padding-top: 15px;
   display: flex;
   flex-direction: row;
@@ -71,18 +79,18 @@
 }
 
 .footer__copyright-link {
-  color: $turquoise;
+  color: $clr_copyright-link;
   margin-left: 29px;
   margin-top: 6px;
   outline: none;
 
   &:hover,
   &:focus {
-    color: #46c1ae;
+    color: $clr_copyright-link_hover;
   }
 
   &:active {
-    opacity: 0.3;
+    opacity: $active_opacity;
   }
 }
 

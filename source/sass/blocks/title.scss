@@ -38,8 +38,12 @@
   margin: auto;
   padding-left: $padding_mobile;
   padding-right: $padding_mobile;
-  padding-top: 7px;
-  padding-bottom: 0;
+  padding-bottom: 7px;
+
+  &--index {
+    padding-top: 8px;
+    padding-bottom: 0;
+  }
 
   @include for_tablet {
     @include font-character($font_size_title + 16,

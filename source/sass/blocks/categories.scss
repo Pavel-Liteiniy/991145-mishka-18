@@ -29,6 +29,7 @@
 
   display: block;
   min-height: 103px;
+  padding-left: 29px;
   padding-right: $half;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -68,13 +69,8 @@
 }
 
 .categories__item {
-  padding-left: 29px;
-  padding-right: $padding_mobile;
-
   @include for_tablet {
     width: $half;
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 

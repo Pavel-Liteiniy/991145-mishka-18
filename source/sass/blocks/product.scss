@@ -1,3 +1,15 @@
+// Локальные переменные блока product
+$brdr_clr_product: #ededed; // brdr_clr - border-color
+
+$clr_link-heading_hover: #000000; // clr - color
+$clr_link-heading_active: #000000; // clr - color
+
+$bgc_link-image: #e5e5e5; // bgc - background-color
+
+$brdr_clr_link-image: #ececec; // brdr_clr - border-color
+
+$brdr_clr_price: #ececec; // brdr_clr - border-color
+
 .product {
   display: flex;
   flex-direction: column;
@@ -18,7 +30,7 @@
     padding-right: 33px;
   }
 
-  border: 1px solid $border_color_product;
+  border: 1px solid $brdr_clr_product;
 }
 
 .product__heading {
@@ -53,11 +65,11 @@
 
   &:hover,
   &:focus {
-    color: rgba($color: #000000, $alpha: 0.6);
+    color: rgba($color: $clr_link-heading_hover, $alpha: $hover_opacity);
   }
 
   &:active {
-    color: rgba($color: #000000, $alpha: 0.3);
+    color: rgba($color: $clr_link-heading_active, $alpha: $active_opacity);
   }
 }
 
@@ -91,7 +103,7 @@
   height: 195px;
   margin-left: -28px;
   margin-bottom: 26px;
-  background-color: $border_color_copyright;
+  background-color: $bgc_link-image;
 
   @include for_tablet {
     width: 334px;
@@ -100,7 +112,7 @@
     margin-left: -1px;
     margin-bottom: 0;
     position: absolute;
-    max-width: $half;
+    max-width: 50%;
     top: 0;
     left: 0;
   }
@@ -111,7 +123,7 @@
     width: 316px;
     height: 462px;
     margin-left: -27px;
-    border-bottom: 1px solid $border_color;
+    border-bottom: 1px solid $brdr_clr_link-image;
   }
 }
 
@@ -125,7 +137,7 @@
   margin: 0;
   padding-top: 21px;
   padding-bottom: 27px;
-  border-top: 1px solid $border_color;
+  border-top: 1px solid $brdr_clr_price;
 
   @include for_tablet {
     @include font_character($font_size_product_price_tablet,

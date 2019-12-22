@@ -72,12 +72,11 @@
   margin-left: -3px;
 
   @include for_tablet {
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 
 .contacts__item--list {
-
   &:not(:last-child) {
     padding-bottom: $padding_mobile;
   }
@@ -102,7 +101,6 @@
 }
 
 .contacts__item--list .contacts__item {
-
   &:first-child {
     width: 67px;
     padding-right: 10px;

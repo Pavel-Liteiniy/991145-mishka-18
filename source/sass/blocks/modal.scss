@@ -139,7 +139,6 @@ $bgc_button: #63d1bb; // bgc - background-color
 }
 
 .modal__radio {
-
   &:checked + .modal__description {
     border: 2px solid rgba($color: $brdr_clr_radio_checked, $alpha: $alpha_radio_checked);
   }

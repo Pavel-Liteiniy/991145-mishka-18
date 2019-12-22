@@ -1,3 +1,7 @@
+// Локальные переменные блока topical
+$clr_link_hover: #000000; // clr - color
+$clr_link_active: #000000; // clr - color
+
 .topical {
   @include only_desktop;
   @include list_default_remove;
@@ -8,7 +12,7 @@
 
 .topical__item {
   &:not(:first-child) {
-    margin-left: $padding_desktop + 12;
+    margin-left: 62px;
   }
 }
 
@@ -23,10 +27,10 @@
 
   &:hover,
   &:focus {
-    color: rgba($color: #000000, $alpha: 0.6);
+    color: rgba($color: $clr_link_hover, $alpha: $hover_opacity);
   }
 
   &:active {
-    color: rgba($color: #000000, $alpha: 0.3);
+    color: rgba($color: $clr_link_active, $alpha: $active_opacity);
   }
 }

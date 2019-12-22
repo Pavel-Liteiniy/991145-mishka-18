@@ -34,6 +34,6 @@ body {
   margin: 0;
   padding: 0;
 
-  color: $body_grey;
-  background-color: $background_white;
+  color: $clr_body; // clr - color
+  background-color: $bgc_body; // bgc - background-color
 }

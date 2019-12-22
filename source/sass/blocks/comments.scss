@@ -1,6 +1,6 @@
 .comments__inner {
-  padding-top: $padding_mobile;
-  padding-bottom: $padding_mobile + 21;
+  padding-top: 29px;
+  padding-bottom: 51px;
 
   @include for_tablet {
     display: flex;
@@ -21,7 +21,8 @@
                           $font_weight_heading,
                           $color_heading);
   margin: 0;
-  padding-bottom: $padding_mobile + 5;
+  margin-left: -2px;
+  padding-bottom: 25px;
 
   @include for_tablet {
     order: -2;
@@ -35,7 +36,7 @@
                           $font_weight_comments_content,
                           $color_comments_content);
   margin: 0;
-  padding-bottom: $padding_mobile + 5;
+  padding-bottom: 27px;
 
   @include for_tablet {
     padding-bottom: $padding_tablet + 15;
@@ -47,7 +48,7 @@
 }
 
 .comments__author {
-  padding-bottom: $padding_mobile + 5;
+  padding-bottom: 29px;
 
   @include for_tablet {
     padding-bottom: $padding_tablet;
@@ -64,7 +65,7 @@
                           $font_weight_comments_author,
                           $color_comments_author);
   margin: 0;
-  padding-bottom: $padding_mobile - 15;
+  padding-bottom: 3px;
 }
 
 .comments__login {
@@ -91,7 +92,10 @@
 .comments__button {
   display: block;
   width: $half;
+  min-height: 52px;
   padding: 0;
+  padding-right: 4px;
+  padding-top: 2px;
   border: 1px solid $border_color;
   background-color: $background_white;
   font-size: $font_size_button + 1;
@@ -113,6 +117,12 @@
 }
 
 .comments__review {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  min-height: 52px;
+
   @include for_tablet {
     order: -1;
     margin-left: auto;

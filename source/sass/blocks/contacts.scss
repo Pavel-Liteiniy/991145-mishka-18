@@ -3,8 +3,8 @@
   padding-bottom: 40px;
 
   @include for_tablet {
-    padding-top: $padding_tablet + 10;
-    padding-bottom: $padding_tablet + 7;
+    padding-top: 61px;
+    padding-bottom: 57px;
   }
 
   @include for_desktop {
@@ -26,8 +26,14 @@
   padding-bottom: 26px;
 
   @include for_tablet {
-    padding-right: $padding_tablet + $padding_tablet;
-    padding-bottom: $padding_tablet + 10;
+    @include font_character($font_size_heading_tablet,
+                            $line_height_heading_tablet,
+                            $font_weight_heading_tablet,
+                            $color_heading_tablet);
+
+    padding-right: 100px;
+    padding-bottom: 50px;
+    margin-left: -5px;
   }
 }
 
@@ -37,6 +43,13 @@
                           $line_height_contacts_list,
                           $font_weight_contacts_list,
                           $color_contacts_list);
+
+  @include for_tablet {
+    @include font_character($font_size_contacts_list_tablet,
+                            $line_height_contacts_list_tablet,
+                            $font_weight_contacts_list_tablet,
+                            $color_contacts_list_tablet);
+  }
 }
 
 .contacts__inner > .contacts__list {
@@ -45,7 +58,7 @@
   @include for_tablet {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: $padding_tablet;
+    padding-bottom: 51px;
   }
 
   @include for_desktop {
@@ -57,6 +70,10 @@
   @include link_default_remove;
   border-bottom: 1px solid $border_color_email;
   margin-left: -3px;
+
+  @include for_tablet {
+    margin-left: 0px;
+  }
 }
 
 .contacts__item--list {
@@ -93,18 +110,25 @@
 
   &:not(:first-child) {
     padding-left: 13px;
+
+    @include for_tablet {
+      padding-left: 11px;
+    }
   }
 }
 
 .contacts__map-wrapper {
   width: 320px;
   height: 457px;
-  margin-left: -30px;
+  margin-left: -padding_mobile;
   margin-bottom: 39px;
   background-color: #dfdfdf;
 
   @include for_tablet {
-    padding-bottom: $padding_tablet + 5;
+    width: 768px;
+    height: 457px;
+    margin-left: -$padding_tablet;
+    margin-bottom: 55px;
   }
 
   @include for_desktop {

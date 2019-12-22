@@ -1,3 +1,20 @@
+// Локальные переменные блока modal
+$bgc_overlay: #ffffff; // bgc - background-color
+$alpha_overlay: 0.9; // alpha - alpha from rgba
+
+$bxshdw_inner: 0 5px 10px 0 rgba($color: #000101, $alpha: 0.25); // bxshdw - box-shadow
+
+$brdr_clr_radio_checked: #ececec; // brdr_clr - border-color
+$alpha_radio_checked: 0.1; // alpha - alpha from rgba
+
+$brdr_clr_radio_hover: #ececec; // brdr_clr - border-color
+$alpha_radio_hover: 0.3; // alpha - alpha from rgba
+
+$brdr_clr_radio_active: #62d1ba; // brdr_clr - border-color
+$alpha_radio_active: 1; // alpha - alpha from rgba
+
+$bgc_button: #63d1bb; // bgc - background-color
+
 .modal {
   display: none;
 }
@@ -16,7 +33,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba($color: #ffffff, $alpha: 0.9);
+  background-color: rgba($color: $bgc_overlay, $alpha: $alpha_overlay);
 }
 
 .modal__inner {
@@ -27,7 +44,7 @@
   transform: translate(-50%, -50%);
 
   border: 1px solid $border_color_modal;
-  box-shadow: 0 5px 10px 0 rgba($color: #000101, $alpha: 0.25);
+  box-shadow: $bxshdw_inner;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 46px;
@@ -124,17 +141,17 @@
 .modal__radio {
 
   &:checked + .modal__description {
-    border: 2px solid rgba($color: $border_color, $alpha: 0.1);
+    border: 2px solid rgba($color: $brdr_clr_radio_checked, $alpha: $alpha_radio_checked);
   }
 
   &:hover + .modal__description,
   &:focus + .modal__description {
-    border: 2px solid rgba($color: $border_color, $alpha: 0.3);
+    border: 2px solid rgba($color: $brdr_clr_radio_hover, $alpha: $alpha_radio_hover);
   }
 
   &:active + .modal__description,
   &:checked + .modal__description {
-    border: 2px solid rgba($color: #62d1ba, $alpha: 1);
+    border: 2px solid rgba($color: $brdr_clr_radio_active, $alpha: $alpha_radio_active);
   }
 }
 
@@ -143,8 +160,8 @@
                           $line_height_modal_button,
                           $font_weight_modal_button,
                           $color_modal_button);
-  background-color: $turquoise;
-  width: $full;
+  background-color: $bgc_button;
+  width: 100%;
   vertical-align: middle;
   border: none;
   text-transform: uppercase;

@@ -72,10 +72,10 @@ $bgc_button: #63d1bb; // bgc - background-color
   padding-bottom: 12px;
 
   @include for_tablet {
-    @include font_character($font_size_heading_tablet,
-                            $line_height_heading_tablet,
-                            $font_weight_heading_tablet,
-                            $color_heading_tablet);
+    @include font_character($font_size_heading_modal_tablet,
+                            $line_height_heading_modal_tablet,
+                            $font_weight_heading_modal_tablet,
+                            $color_heading_modal_tablet);
     margin: 0;
     padding-bottom: 14px;
   }

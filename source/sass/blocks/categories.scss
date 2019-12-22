@@ -48,21 +48,18 @@ $clr_link_active: #000000; // clr - color
     background-color: $bgc_link_toys;
   }
 
-  &--interior:hover,
-  &--toys:hover,
-  &--interior:focus,
-  &--toys:focus {
+  &:hover,
+  &:focus {
     position: relative;
     top: -5px;
   }
 
-  &--interior:active,
-  &--toys:active {
+  &:active {
     color: rgba($color: $clr_link_active, $alpha: $active_opacity);
   }
 
   @include for_tablet {
-    min-height: 117px;
+    min-height: 119px;
     padding-top: 28px;
     padding-bottom: 28px;
     padding-left: 36px;

@@ -6,8 +6,8 @@ $bgc_image-wrapper: #f1f1f1; // bgc - background-color
   padding-bottom: 42px;
 
   @include for_tablet {
-    padding-top: 47px;
-    padding-bottom: 68px;
+    padding-top: 45px;
+    padding-bottom: 69px;
   }
 
   @include for_desktop {

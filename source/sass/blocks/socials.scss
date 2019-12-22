@@ -1,3 +1,7 @@
+// Локальные переменные блока socials
+$clr_link: #000000; // clr - color
+$clr_link_hover: #46c1ae; // clr - color
+
 .socials__inner {
   width: 260px;
 
@@ -41,15 +45,15 @@
 .socials__link {
   display: block;
   outline: none;
-  color: $black;
+  color: $clr_link;
 
   &:hover,
   &:focus {
-    color: #46c1ae;
+    color: $clr_link_hover;
   }
 
   &:active {
-    opacity: 0.3;
+    opacity: $active_opacity;
   }
 }
 

@@ -14,13 +14,14 @@ $bgc_hover: #444444; //bgc -  background-color
                           $color_button);
   @include link_default_remove;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: $mh;
   text-transform: uppercase;
   border: 2px solid $border_color_button;
   background-color: $bgc;
   font-family: $font_family;
-  display: block;
-  text-align: center;
   outline: none;
 
   &:hover,

@@ -1,6 +1,6 @@
 .contacts__inner {
-  padding-top: $padding_mobile + 10;
-  padding-bottom: $padding_mobile + 9;
+  padding-top: 35px;
+  padding-bottom: 40px;
 
   @include for_tablet {
     padding-top: $padding_tablet + 10;
@@ -17,13 +17,13 @@
 }
 
 .contacts__heading {
-  @include font_character($font_size_heading,
-                          $line_height_heading,
-                          $font_weight_heading,
-                          $color_heading);
+  @include font_character($font_size_contacts_heading,
+                          $line_height_contacts_heading,
+                          $font_weight_contacts_heading,
+                          $color_contacts_heading);
   margin: 0;
-  font-size: $font_size_heading - 7;
-  padding-bottom: $padding_mobile + 10;
+  margin-left: -2px;
+  padding-bottom: 26px;
 
   @include for_tablet {
     padding-right: $padding_tablet + $padding_tablet;
@@ -40,7 +40,7 @@
 }
 
 .contacts__inner > .contacts__list {
-  padding-bottom: $padding_mobile + 10;
+  padding-bottom: 36px;
 
   @include for_tablet {
     display: flex;
@@ -56,10 +56,14 @@
 .contacts__item--email {
   @include link_default_remove;
   border-bottom: 1px solid $border_color_email;
+  margin-left: -3px;
 }
 
 .contacts__item--list {
-  padding-bottom: $padding_mobile + 5;
+
+  &:not(:last-child) {
+    padding-bottom: $padding_mobile;
+  }
 
   @include for_tablet {
     width: $half;
@@ -80,13 +84,24 @@
   display: flex;
 }
 
-.contacts__item--list .contacts__item:first-child {
-  width: $padding_mobile + $padding_mobile + 7;
-  padding-right: $padding_mobile - 20;
+.contacts__item--list .contacts__item {
+
+  &:first-child {
+    width: 67px;
+    padding-right: 10px;
+  }
+
+  &:not(:first-child) {
+    padding-left: 13px;
+  }
 }
 
 .contacts__map-wrapper {
-  padding-bottom: $padding_mobile + 9;
+  width: 320px;
+  height: 457px;
+  margin-left: -30px;
+  margin-bottom: 39px;
+  background-color: #dfdfdf;
 
   @include for_tablet {
     padding-bottom: $padding_tablet + 5;

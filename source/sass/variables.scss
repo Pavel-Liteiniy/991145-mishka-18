@@ -49,10 +49,16 @@ $half: 50%;
 $full: 100%;
 
 // Переменные для заголовков блоков Н2
+// for_mobile
 $font_size_heading: 25px;
 $line_height_heading: 30px;
 $font_weight_heading: bold;
 $color_heading: #000000;
+// for_tablet
+$font_size_heading_tablet: 43px;
+$line_height_heading_tablet: 50px;
+$font_weight_heading_tablet: bold;
+$color_heading_tablet: #000000;
 
 //Переменные для цветов
 $border_color: #ececec;
@@ -168,10 +174,10 @@ $color_footer_copyright: #000000;
 
 // Переменные для MODAL
 //heading_tablet
-$font_size_heading_tablet: 30px;
-$line_height_heading_tablet: 57px;
-$font_weight_heading_tablet: bold;
-$color_heading_tablet: #000000;
+$font_size_heading_modal_tablet: 30px;
+$line_height_heading_modal_tablet: 57px;
+$font_weight_heading_modal_tablet: bold;
+$color_heading_modal_tablet: #000000;
 // query
 $font_size_modal_query: 15px;
 $line_height_modal_query: 30px;
@@ -231,11 +237,21 @@ $font_size_comments_content: 15px;
 $line_height_comments_content: 30px;
 $font_weight_comments_content: normal;
 $color_comments_content: #444444;
+// tablet
+$font_size_comments_content_tablet: 17px;
+$line_height_comments_content_tablet: 30px;
+$font_weight_comments_content_tablet: normal;
+$color_comments_content_tablet: #444444;
 // Переменные для comments__author
 $font_size_comments_author: 17px;
 $line_height_comments_author: 24px;
 $font_weight_comments_author: bold;
 $color_comments_author: #000000;
+// tablet
+$font_size_comments_author_tablet: 18px;
+$line_height_comments_author_tablet: 24px;
+$font_weight_comments_author_tablet: bold;
+$color_comments_author_tablet: #000000;
 // Переменные для comments__heading
 $font_size_comments_login: 17px;
 $line_height_comments_login: 30px;

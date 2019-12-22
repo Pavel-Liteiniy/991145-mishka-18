@@ -6,6 +6,11 @@ $line_height_title: 30px;
 $font_weight_title: bold;
 $color_title: #000000;
 
+// Переменные для H1 в tablet
+$font_size_title_tablet: 43px;
+$line_height_title_tablet: 50px;
+$font_weight_title_tablet: bold;
+$color_title_tablet: #000000;
 // Переменные для H1 в desktop
 $font_size_title_desktop: 53px;
 $line_height_title_desktop: 57px;
@@ -59,9 +64,10 @@ $border_color_button: #444444;
 $border_color_email: #62d1ba;
 $border_color_modal: #c6c6c6;
 $background_white: #ffffff;
+$bgc_body: #ffffff; // bgc - background-color
+$clr_body: #444444; // clr - color
 $turquoise: #63d1bb;
 $black: #000000;
-$body_grey: #444444;
 $background_link_interior: #63d1bb;
 $background_link_toys: #56c3b2;
 $background_footer: #f1f1f1;

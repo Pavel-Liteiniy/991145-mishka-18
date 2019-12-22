@@ -10,8 +10,9 @@
   }
 
   @include for_desktop {
-    padding-left: $padding_desktop * 4 + 25px;
-    padding-bottom: $padding_desktop + 40;
+    padding-top: 70px;
+    padding-left: 225px;
+    padding-bottom: 85px;
   }
 }
 
@@ -32,7 +33,14 @@
 
     order: -2;
     margin-left: -4px;
-    padding-bottom: $padding_tablet;
+    padding-bottom: 49px;
+  }
+
+  @include for_desktop {
+    @include font_character($font_size_heading_desktop,
+                            $line_height_heading_desktop,
+                            $font_weight_heading_desktop,
+                            $color_heading_desktop);
   }
 }
 
@@ -54,7 +62,8 @@
   }
 
   @include for_desktop {
-    padding-bottom: $padding_desktop;
+    padding-bottom: 38px;
+    padding-right: 100px;
   }
 }
 
@@ -112,7 +121,7 @@
 
 .comments__button {
   display: block;
-  width: $half;
+  width: 50%;
   min-height: 52px;
   padding: 0;
   padding-right: 4px;
@@ -150,5 +159,9 @@
     margin-top: 3px;
     align-self: flex-start;
     min-width: 175px;
+  }
+
+  @include for_desktop {
+    margin-top: 9px;
   }
 }

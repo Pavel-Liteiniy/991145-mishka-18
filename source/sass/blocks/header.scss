@@ -2,6 +2,9 @@
 // header
 // tablet
 $header_h_tablet: 89px;  //h - height
+// logo
+$clr_logo_hover: #000000; // clr - color
+$clr_logo_active: #000000; // clr - color
 //nav--closed button::before
 $button_closed_bgc_before: #000000; //bgc - background-color
 $button_closed_bxshdw_before: 0 6px 0 0 #000000, 0 12px 0 0 #000000; // bxshdw - box-shadow
@@ -49,12 +52,12 @@ $button_opened_rotate_after: -44deg; //transform: rotate($);
   margin-right: 66px;
   outline: none;
 
-  &:hover,
-  &:focus {
+  &:hover:not(.header__logo--active),
+  &:focus:not(.header__logo--active) {
     opacity: $hover_opacity;
   }
 
-  &:active {
+  &:active:not(.header__logo--active) {
     opacity: $active_opacity;
   }
 

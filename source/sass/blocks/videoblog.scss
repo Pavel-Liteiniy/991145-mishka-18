@@ -8,10 +8,10 @@
 
   @include for_tablet {
     position: relative;
-    padding-top: $padding_tablet * 9 + 5;
-    padding-bottom: $padding_tablet - 5;
-    margin-bottom: $padding_tablet + 13;
-    width: $width_tablet - $padding_tablet - $padding_tablet;
+    padding-top: 454px;
+    padding-bottom: 45px;
+    margin-bottom: 63px;
+    width: 668px;
   }
 
   @include for_desktop {
@@ -36,14 +36,17 @@
   padding-bottom: 24px;
 
   @include for_tablet {
+    @include font_character($font_size_product_heading_tablet,
+                            $line_height_product_heading_tablet,
+                            $font_weight_product_heading_tablet,
+                            $color_product_heading_tablet);
     border: 1px solid $border_color_product;
     border-bottom: none;
-    // width: $width_tablet - $padding_tablet - $padding_tablet;
-    margin-left: -1px;
-    padding-top: $padding_tablet - 15;
-    padding-bottom: $padding_tablet - 15;
-    padding-left: $padding_tablet + $padding_tablet + 6;
-    padding-right: $padding_tablet - 10;
+    margin-left: -2px;
+    padding-top: 37px;
+    padding-bottom: 32px;
+    padding-left: 106px;
+    padding-right: 40px;
   }
 
   @include for_desktop {
@@ -58,14 +61,21 @@
                           $line_height_videoblog_description,
                           $font_weight_videoblog_description,
                           $color_videoblog_description);
+
   margin: 0;
   padding-left: 33px;
   padding-right: 33px;
   padding-bottom: 25px;
 
   @include for_tablet {
-    padding-left: $padding_tablet - 10;
-    padding-right: $padding_tablet - 10;
+    @include font_character($font_size_videoblog_description_tablet,
+                            $line_height_videoblog_description_tablet,
+                            $font_weight_videoblog_description_tablet,
+                            $color_videoblog_description_tablet);
+
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 35px;
   }
 
   @include for_desktop {
@@ -76,13 +86,18 @@
 }
 
 .videoblog__content-wrapper {
+  width: 260px;
+  height: 150px;
   margin-left: -1px;
-  padding-bottom: 21px;
+  margin-bottom: 27px;
+  background-color: #e5e5e5;
 
   @include for_tablet {
     position: absolute;
     top: -1px;
     left: 0;
+    width: 668px;
+    height: 455px;
   }
 
   @include for_desktop {
@@ -99,8 +114,8 @@
   margin-right: 33px;
 
   @include for_tablet {
-    margin-left: $padding_tablet - 9;
-    margin-right: $padding_tablet - 9;
+    margin-left: 41px;
+    margin-right: 41px;
   }
 
   @include for_desktop {

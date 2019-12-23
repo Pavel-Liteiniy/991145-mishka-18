@@ -1,3 +1,8 @@
+// Локальные переменные блока categories
+$bgc_link_interior: #63d1bb; // bgc - background-color
+$bgc_link_toys: #56c3b2; // bgc - background-color
+$clr_link_active: #000000; // clr - color
+
 .categories {
   @include font_character($font_size_categories,
                           $line_height_categories,
@@ -10,42 +15,71 @@
   margin-top: auto;
 
   @include for_tablet {
+    @include font_character($font_size_categories_tablet,
+                          $line_height_categories_tablet,
+                          $font_weight_categories_tablet,
+                          $color_categories_tablet);
+
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
 
+.categories__inner {
+  min-height: 206px;
+}
+
 .categories__link {
   @include link_default_remove;
+
+  display: block;
+  min-height: 103px;
+  padding-left: 29px;
+  padding-right: 50%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  outline: none;
+
+  &--interior {
+    background-color: $bgc_link_interior;
+  }
+
+  &--toys {
+    background-color: $bgc_link_toys;
+  }
+
+  &:hover,
+  &:focus {
+    position: relative;
+    top: -5px;
+  }
+
+  &:active {
+    color: rgba($color: $clr_link_active, $alpha: $active_opacity);
+  }
+
+  @include for_tablet {
+    min-height: 119px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 36px;
+  }
+
+  @include for_desktop {
+    padding-right: 66.67%;
+  }
 }
 
 .categories__item {
   @include for_tablet {
-    width: $half;
+    width: 50%;
   }
 }
 
 .categories__item--interior {
-  background-color: $background_link_interior;
+  background-color: $bgc_link_interior;
 }
 
 .categories__item--toys {
-  background-color: $background_link_toys;
-}
-
-@media (min-width: $breakpoint_mobile) {
-  .categories__inner {
-    // Временные свойства
-    min-height: 206px;
-  }
-
-  .categories__link {
-    display: block;
-    // Временные свойства
-    min-height: 103px;
-
-    @include for_tablet {
-      min-height: 103px + 16;
-    }
-  }
+  background-color: $bgc_link_toys;
 }

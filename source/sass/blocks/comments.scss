@@ -1,17 +1,18 @@
 .comments__inner {
-  padding-top: $padding_mobile;
-  padding-bottom: $padding_mobile + 21;
+  padding-top: 29px;
+  padding-bottom: 51px;
 
   @include for_tablet {
     display: flex;
     flex-wrap: wrap;
-    padding-top: $padding_tablet + 29;
-    padding-bottom: $padding_tablet + 35;
+    padding-top: 76px;
+    padding-bottom: 85px;
   }
 
   @include for_desktop {
-    padding-left: $padding_desktop * 4 + 25px;
-    padding-bottom: $padding_desktop + 40;
+    padding-top: 70px;
+    padding-left: 225px;
+    padding-bottom: 85px;
   }
 }
 
@@ -21,11 +22,25 @@
                           $font_weight_heading,
                           $color_heading);
   margin: 0;
-  padding-bottom: $padding_mobile + 5;
+  margin-left: -2px;
+  padding-bottom: 25px;
 
   @include for_tablet {
+    @include font_character($font_size_heading_tablet,
+                            $line_height_heading_tablet,
+                            $font_weight_heading_tablet,
+                            $color_heading_tablet);
+
     order: -2;
-    padding-bottom: $padding_tablet;
+    margin-left: -4px;
+    padding-bottom: 49px;
+  }
+
+  @include for_desktop {
+    @include font_character($font_size_heading_desktop,
+                            $line_height_heading_desktop,
+                            $font_weight_heading_desktop,
+                            $color_heading_desktop);
   }
 }
 
@@ -35,22 +50,29 @@
                           $font_weight_comments_content,
                           $color_comments_content);
   margin: 0;
-  padding-bottom: $padding_mobile + 5;
+  padding-bottom: 27px;
 
   @include for_tablet {
-    padding-bottom: $padding_tablet + 15;
+    @include font_character($font_size_comments_content_tablet,
+                            $line_height_comments_content_tablet,
+                            $font_weight_comments_content_tablet,
+                            $color_comments_content_tablet);
+
+    padding-bottom: 57px;
   }
 
   @include for_desktop {
-    padding-bottom: $padding_desktop;
+    padding-bottom: 38px;
+    padding-right: 100px;
   }
 }
 
 .comments__author {
-  padding-bottom: $padding_mobile + 5;
+  padding-bottom: 29px;
 
   @include for_tablet {
-    padding-bottom: $padding_tablet;
+    padding-bottom: 46px;
+    margin-left: -1px;
   }
 
   @include for_desktop {
@@ -64,7 +86,16 @@
                           $font_weight_comments_author,
                           $color_comments_author);
   margin: 0;
-  padding-bottom: $padding_mobile - 15;
+  padding-bottom: 3px;
+
+  @include for_tablet {
+    @include font_character($font_size_comments_author_tablet,
+                          $line_height_comments_author_tablet,
+                          $font_weight_comments_author_tablet,
+                          $color_comments_author_tablet);
+
+    padding-bottom: 4px;
+  }
 }
 
 .comments__login {
@@ -78,20 +109,23 @@
 .comments__controls {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: $padding_mobile + 8;
+  padding-bottom: 38px;
 
   @include for_tablet {
     margin-left: auto;
     padding-bottom: 0;
-    padding-top: $padding_tablet - 35;
+    padding-top: 3px;
     align-self: flex-start;
   }
 }
 
 .comments__button {
   display: block;
-  width: $half;
+  width: 50%;
+  min-height: 52px;
   padding: 0;
+  padding-right: 4px;
+  padding-top: 2px;
   border: 1px solid $border_color;
   background-color: $background_white;
   font-size: $font_size_button + 1;
@@ -99,8 +133,8 @@
 
   @include for_tablet {
     border: none;
-    padding-left: $padding_tablet - 31;
-    padding-right: $padding_tablet - 31;
+    padding-left: 19px;
+    padding-right: 19px;
   }
 }
 
@@ -113,9 +147,21 @@
 }
 
 .comments__review {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  min-height: 52px;
+
   @include for_tablet {
     order: -1;
     margin-left: auto;
+    margin-top: 3px;
     align-self: flex-start;
+    min-width: 175px;
+  }
+
+  @include for_desktop {
+    margin-top: 9px;
   }
 }

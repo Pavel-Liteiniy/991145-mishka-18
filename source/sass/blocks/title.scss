@@ -1,5 +1,8 @@
+// Локальные переменные для блока title
+$bgc_title: #f1f1f1;
+
 .title {
-  background-color: $background_footer;
+  background-color: $bgc_title;
 }
 
 .title__inner {
@@ -11,7 +14,7 @@
   min-height: 176px;
 
   @include for_tablet {
-    min-height: 225px;
+    min-height: 223px;
     padding-left: $padding_tablet;
     padding-right: $padding_tablet;
   }
@@ -21,22 +24,55 @@
   }
 }
 
+.title__inner--categories {
+  min-height: 488px;
+
+  @include for_tablet {
+    min-height: 745px;
+  }
+}
+
 .title__heading {
   @include font-character($font_size_title,
                           $line_height_title,
                           $font_weight_title,
                           $color_title);
   text-align: center;
-  margin: 0;
-  margin-top: 70px;
+  margin: auto;
+  padding-left: $padding_mobile;
+  padding-right: $padding_mobile;
+  padding-bottom: 7px;
+
+  &--index {
+    padding-top: 8px;
+    padding-bottom: 0;
+  }
 
   @include for_tablet {
-    @include font-character($font_size_title + 16,
-                            $line_height_title + 20,
-                            $font_weight_title,
-                            $color_title);
+    @include font-character($font_size_title_tablet,
+                            $line_height_title_tablet,
+                            $font_weight_title_tablet,
+                            $color_title_tablet);
 
-    margin-top: $padding_tablet - 12;
+    margin-top: 36px;
+
+    &--index {
+      margin-top: 86px;
+    }
+  }
+
+  @include for_desktop {
+    @include font-character($font_size_title_desktop,
+                            $line_height_title_desktop,
+                            $font_weight_title_desktop,
+                            $color_title_desktop);
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-top: 35px;
+
+    &--index {
+      margin-top: 87px;
+    }
   }
 }
 
@@ -60,12 +96,12 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: $half;
+    width: 50%;
     min-height: 58px;
     margin-left: auto;
   }
 
   @include for_desktop {
-    width: $half + $half;
+    width: 100%;
   }
 }

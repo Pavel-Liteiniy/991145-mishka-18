@@ -1,17 +1,17 @@
 .features__inner {
-  padding-top: $padding_mobile + 4;
-  padding-bottom: $padding_mobile;
+  padding-top: 27px;
+  padding-bottom: 25px;
 
   @include for_tablet {
-    padding-top: $padding_tablet + 10;
-    padding-bottom: $padding_tablet + 20;
+    padding-top: 49px;
+    padding-bottom: 75px;
   }
 
   @include for_desktop {
-    padding-top: $padding_desktop + 20;
-    padding-bottom: $padding_desktop + 30;
-    padding-left: $padding_desktop * 4 + 25px;
-    padding-right: $padding_desktop * 4 + 25px;
+    padding-top: 59px;
+    padding-bottom: 82px;
+    padding-left: 225px;
+    padding-right: 225px;
   }
 }
 
@@ -21,7 +21,24 @@
                           $font_weight_heading,
                           $color_heading);
   margin: 0;
-  margin-bottom: $padding_mobile - 27;
+  margin-left: -2px;
+  padding-bottom: 3px;
+
+  @include for_tablet {
+    @include font_character($font_size_features_heading_tablet,
+                            $line_height_features_heading_tablet,
+                            $font_weight_features_heading_tablet,
+                            $color_features_heading_tablet);
+    margin-left: -4px;
+  }
+
+  @include for_desktop {
+    @include font_character($font_size_features_heading_desktop,
+                            $line_height_features_heading_desktop,
+                            $font_weight_features_heading_desktop,
+                            $color_features_heading_desktop);
+    padding-bottom: 2px;
+  }
 }
 
 .features__list {
@@ -32,6 +49,11 @@
                           $color_features_list);
 
   @include for_tablet {
+    @include font_character($font_size_features_list_tablet,
+                            $line_height_features_list_tablet,
+                            $font_weight_features_list_tablet,
+                            $color_features_list_tablet);
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -39,13 +61,13 @@
 }
 
 .features__item {
-  padding-top: $padding_mobile + $padding_mobile + 25;
+  padding-top: 83px;
 
   @include for_tablet {
-    width: $half;
-    padding-top: $padding_tablet + $padding_tablet;
-    margin-bottom: $padding_tablet - 40;
-    padding-right: $padding_tablet - 40;
+    width: 50%;
+    padding-top: 100px;
+    margin-bottom: 10px;
+    padding-right: 10px;
 
     &--eco {
       order: 1;
@@ -73,8 +95,8 @@
   }
 
   @include for_desktop {
-    width: $half;
-    padding-right: $padding_desktop - 40;
+    width: 50%;
+    padding-right: 10px;
 
     &--eco {
       order: 1;

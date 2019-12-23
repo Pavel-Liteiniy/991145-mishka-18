@@ -1,3 +1,14 @@
+// Частные переменные блока nav
+// nav__link
+// mobile
+$link_mh_mobile: 79px; //mh - min-height
+//tablet
+$link_mh_tablet: 89px; //mh - min-height
+// nav__link:hover
+$link_clr_hover: #000000; //clr - color
+// nav__link:active
+$link_clr_active: #000000; //clr - color
+
 .nav {
   @include font_character($font_size_nav,
                           $line_height_nav,
@@ -34,13 +45,24 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  min-height: 79px;
-  padding-left: $padding_mobile + 46;
+  min-height: $link_mh_mobile;
+  padding-left: 75px;
+  padding-bottom: 2px;
   border-top: 1px solid $border_color;
+
+  &:hover,
+  &:focus {
+    color: rgba($color: $link_clr_hover, $alpha: $hover_opacity);
+  }
+
+  &:active {
+    color: rgba($color: $link_clr_active, $alpha: $active_opacity);
+  }
 
   @include for_tablet {
     justify-content: center;
-    min-height: 89px;
+    min-height: $link_mh_tablet;
+    padding-bottom: 4px;
     border-top: none;
     border-left: 1px solid $border_color;
   }
@@ -50,53 +72,64 @@
   .nav__item {
     &:not(:last-child) {
       @include for_desktop {
-        padding-right: $padding_desktop - 15;
+        padding-right: 35px;
       }
     }
 
     &:not(:first-child) {
       @include for_desktop {
-        padding-left: $padding_desktop - 15;
+        padding-left: 35px;
         border-left: 1px solid $border_color;
       }
     }
   }
 
   .nav__link {
+    &:hover:not(.nav__link--active),
+    &:focus:not(.nav__link--active) {
+      color: rgba($color: $link_clr_hover, $alpha: $hover_opacity);
+    }
+
+    &:active:not(.nav__link--active) {
+      color: rgba($color: $link_clr_active, $alpha: $active_opacity);
+    }
+
     @include for_tablet {
-      @include font_character($font_size_nav - 2,
-                              $line_height_nav,
-                              $font_weight_nav,
-                              $color_nav);
+      @include font_character($font_size_nav_tablet,
+                              $line_height_nav_tablet,
+                              $font_weight_nav_tablet,
+                              $color_nav_tablet);
       width: 167px;
       min-height: 58px;
       padding-left: 0;
+      padding-bottom: 0;
       border-left: none;
       justify-content: flex-start;
+    }
 
-      @include for_desktop {
-        @include font_character($font_size_nav,
-                              $line_height_nav,
-                              $font_weight_nav,
-                              $color_nav);
+    @include for_desktop {
+      @include font_character($font_size_nav,
+                            $line_height_nav,
+                            $font_weight_nav,
+                            $color_nav);
 
-        flex-wrap: wrap;
-        align-items: center;
-        min-height: 89px;
-        width: auto;
-        // padding-right: $padding_desktop - 35px;
-      }
+      padding-bottom: 4px;
+      flex-wrap: wrap;
+      align-items: center;
+      min-height: 89px;
+      width: auto;
     }
   }
 }
 
 .nav__list--user-menu .nav__link {
   @include for_tablet {
-    padding-left: $padding_tablet + 32;
+    padding-left: 83px;
   }
 
   @include for_desktop {
-    padding-left: $padding_tablet + 34;
+    padding-left: 82px;
+    padding-right: 2px;
   }
 }
 

@@ -1,17 +1,3 @@
-@font-face {
-  font-family: "Open Sans";
-  src: local("Open Sans"), local("OpenSans"), url("/fonts/opensans.woff2") format("woff2"), url("/fonts/opensans.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  src: local("OpenSans-Bold"), url("/fonts/opensansbold.woff2") format("woff2"), url("/fonts/opensansbold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
-
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -38,6 +24,8 @@ img {
 }
 
 body {
+  position: relative;
+
   font-family: $font_family;
   font-size: 17px;
   font-weight: 400;
@@ -46,6 +34,6 @@ body {
   margin: 0;
   padding: 0;
 
-  color: $body_grey;
-  background-color: $background_white;
+  color: $clr_body; // clr - color
+  background-color: $bgc_body; // bgc - background-color
 }

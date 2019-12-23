@@ -1,15 +1,18 @@
+// Локальные переменные для блока highlight
+$bgc_image-wrapper: #f1f1f1; // bgc - background-color
+
 .highlight__inner {
-  padding-top: $padding_mobile - 4;
-  padding-bottom: $padding_mobile + 12;
+  padding-top: 26px;
+  padding-bottom: 42px;
 
   @include for_tablet {
-    padding-top: $padding_tablet - 7;
-    padding-bottom: $padding_tablet + 18;
+    padding-top: 45px;
+    padding-bottom: 69px;
   }
 
   @include for_desktop {
-    padding-top: $padding_desktop + $padding_desktop + 17;
-    padding-bottom: $padding_desktop + 46;
+    padding-top: 123px;
+    padding-bottom: 96px;
   }
 
   display: flex;
@@ -20,13 +23,14 @@
   @include for_tablet {
     display: flex;
     justify-content: space-between;
-    padding-bottom: $padding_tablet + 5;
+    padding-bottom: 49px;
+    margin-left: -3px;
   }
 
   @include for_desktop {
     flex-direction: row-reverse;
     justify-content: flex-end;
-    padding-bottom: $padding_desktop + 2;
+    padding-bottom: 49px;
   }
 }
 
@@ -36,10 +40,22 @@
                           $font_weight_heading,
                           $color_heading);
   margin: 0;
-  padding-bottom: $padding_mobile - 25;
+  padding-bottom: 6px;
 
   @include for_tablet {
+    @include font_character($font_size_highlight_heading_tablet,
+                            $line_height_highlight_heading_tablet,
+                            $font_weight_highlight_heading_tablet,
+                            $color_highlight_heading_tablet);
+
     padding-bottom: 0;
+  }
+
+  @include for_desktop {
+    @include font_character($font_size_highlight_heading_desktop,
+                            $line_height_highlight_heading_desktop,
+                            $font_weight_highlight_heading_desktop,
+                            $color_highlight_heading_desktop);
   }
 }
 
@@ -49,11 +65,24 @@
                           $font_weight_highlight_naming,
                           $color_highlight_naming);
   margin: 0;
+  margin-left: -1px;
   text-transform: uppercase;
-  padding-bottom: $padding_mobile - 7;
+  padding-bottom: 26px;
 
   @include for_tablet {
+    width: 126px;
+    align-self: center;
+    text-align: center;
     padding-bottom: 0;
+    padding-top: 6px;
+    padding-right: 27px;
+    padding-left: 27px;
+  }
+
+  @include for_desktop {
+    width: 175px;
+    padding-right: 30px;
+    padding-top: 9px;
   }
 }
 
@@ -64,7 +93,7 @@
   }
 
   @include for_desktop {
-    padding-left: $padding_desktop + $padding_desktop + $padding_desktop + 25;
+    padding-left: 175px;
     padding-right: 583px;
   }
 }
@@ -75,14 +104,19 @@
                           $font_weight_highlight_description,
                           $color_highlight_description);
   margin: 0;
-  padding-bottom: $padding_mobile - 8;
+  padding-bottom: 18px;
 
   @include for_tablet {
-    padding-bottom: $padding_tablet + 5;
+    @include font_character($font_size_highlight_description_tablet,
+                            $line_height_highlight_description_tablet,
+                            $font_weight_highlight_description_tablet,
+                            $color_highlight_description_tablet);
+
+    padding-bottom: 36px;
   }
 
   @include for_desktop {
-    padding-bottom: $padding_desktop + 15;
+    padding-bottom: 50px;
   }
 }
 
@@ -91,14 +125,15 @@
                           $line_height_highlight_table,
                           $font_weight_highlight_table,
                           $color_highlight_table);
-  padding-bottom: $padding_mobile - 2;
+  width: 100%;
+  border-collapse: collapse;
 
   @include for_tablet {
-    padding-bottom: $padding_tablet + 10;
+    padding-bottom: 60px;
   }
 
   @include for_desktop {
-    padding-bottom: $padding_desktop + $padding_desktop + 10;
+    padding-bottom: 110px;
   }
 }
 
@@ -106,28 +141,94 @@
   border-bottom: 1px solid $border_color;
 }
 
+.highlight__cell {
+  padding: 0;
+  padding-top: 9px;
+  padding-bottom: 10px;
+
+  &:first-child {
+    width: 37.69%;
+
+    @include for_tablet {
+      width: 33.33%;
+    }
+  }
+
+  @include for_desktop {
+    padding-top: 7px;
+    padding-bottom: 12px;
+  }
+}
+
 .highlight__image-wrapper {
-  padding-bottom: $padding_mobile - 2;
+  background-color: $bgc_image-wrapper;
+  margin-top: 28px;
+  margin-bottom: 24px;
+
+  // временные стили
+  width: 260px;
+  height: 315px;
 
   @include for_tablet {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 8px;
+    right: 1px;
     padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    // временные стили
+    width: 333px;
+    height: 404px;
+  }
+
+  @include for_desktop {
+    z-index: -1;
+    top: -158px;
+    right: 0;
+
+    // временные стили
+    width: 525px;
+    height: 636px;
   }
 }
 
 .highlight__price {
   font-weight: bold;
   margin: 0;
-  padding-bottom: $padding_mobile - 2;
+  padding-right: 4px;
+  margin-bottom: 26px;
   text-align: center;
 
   @include for_tablet {
-    padding-bottom: $padding_tablet - 15;
+    @include font_character($font_size_highlight_price_tablet,
+                            $line_height_highlight_price_tablet,
+                            $font_weight_highlight_price_tablet,
+                            $color_highlight_price_tablet);
+
+    padding-top: 55px;
+    padding-bottom: 35px;
+    margin: 0;
   }
 
   @include for_desktop {
-    padding-bottom: $padding_desktop - 15;
+    padding-right: 0;
+    padding-top: 108px;
+    padding-bottom: 34px;
+  }
+}
+
+.highlight__button {
+  margin-right: 1px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  @include for_tablet {
+    margin-left: -2px;
+  }
+
+  @include for_desktop {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

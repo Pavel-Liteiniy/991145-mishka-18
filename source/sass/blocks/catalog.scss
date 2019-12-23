@@ -1,10 +1,10 @@
 .catalog__list {
   @include for_tablet {
-    padding-top: $padding_tablet - 21;
+    padding-top: 27px;
   }
 
   @include for_desktop {
-    padding-top: $padding_desktop + $padding_desktop + 30;
+    padding-top: 128px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -15,14 +15,13 @@
   margin-bottom: $padding_mobile;
 
   @include for_tablet {
-    margin-top: $padding_tablet + 4;
-    margin-bottom: $padding_tablet + 4;
+    margin-top: 54px;
+    margin-bottom: 54px;
   }
 
   @include for_desktop {
     margin-top: 0;
-    margin-bottom: $padding_desktop + 7;
-    width: 315px;
+    margin-bottom: 57px;
 
     &:not(:nth-child(3n)) {
       margin-right: $padding_desktop;

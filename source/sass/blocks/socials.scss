@@ -1,28 +1,60 @@
-.socials__inner {
-  width: $width_mobile - $padding_mobile - $padding_mobile;
-  padding-left: $padding_mobile + 7;
-  padding-right: $padding_mobile + 12;
-  padding-top: $padding_mobile - 5;
-  padding-bottom: $padding_mobile - 5;
+// Локальные переменные блока socials
+$clr_link: #000000; // clr - color
+$clr_link_hover: #46c1ae; // clr - color
 
-  @include for_desktop {
-    padding-left: $padding_desktop - 19;
-    padding-right: $padding_desktop - 2;
+.socials__inner {
+  width: 260px;
+
+  @include for_tablet {
+    width: 141px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 .socials__list {
   @include list_default_remove;
+  min-height: 80px;
+  padding-top: 8px;
+  padding-bottom: 4px;
+  padding-left: 7px;
+  padding-right: 11px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: baseline;
+  align-items: flex-end;
+
+  @include for_tablet {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: space-between;
+  }
+}
+
+.socials__item {
+  min-height: 28px;
+  padding-top: 15px;
+  padding-bottom: 23px;
+
+  @include for_tablet {
+    padding-bottom: 16px;
+  }
 }
 
 .socials__link {
-  color: $black;
   display: block;
+  outline: none;
+  color: $clr_link;
+
+  &:hover,
+  &:focus {
+    color: $clr_link_hover;
+  }
+
+  &:active {
+    opacity: $active_opacity;
+  }
 }
 
 .socials__svg {

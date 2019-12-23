@@ -1,14 +1,62 @@
-.modal__inner {
-  text-align: center;
-  border: 1px solid $border_color_modal;
+// Локальные переменные блока modal
+$bgc_overlay: #ffffff; // bgc - background-color
+$alpha_overlay: 0.9; // alpha - alpha from rgba
 
-  padding-top: $padding_mobile + 5;
-  padding-bottom: $padding_mobile + 15;
+$bxshdw_inner: 0 5px 10px 0 rgba($color: #000101, $alpha: 0.25); // bxshdw - box-shadow
+
+$brdr_clr_radio_checked: #ececec; // brdr_clr - border-color
+$alpha_radio_checked: 0.1; // alpha - alpha from rgba
+
+$brdr_clr_radio_hover: #ececec; // brdr_clr - border-color
+$alpha_radio_hover: 0.3; // alpha - alpha from rgba
+
+$brdr_clr_radio_active: #62d1ba; // brdr_clr - border-color
+$alpha_radio_active: 1; // alpha - alpha from rgba
+
+$bgc_button: #63d1bb; // bgc - background-color
+
+.modal {
+  display: none;
+}
+
+.modal--show {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.modal__overlay--show {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: $bgc_overlay, $alpha: $alpha_overlay);
+}
+
+.modal__inner {
+  position: fixed;
+  z-index: 20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid $border_color_modal;
+  box-shadow: $bxshdw_inner;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 46px;
+  padding-left: 29px;
+  padding-right: 29px;
+  background-color: #ffffff;
 
   @include for_tablet {
-    width: $width_tablet - 202;
-    padding-top: $padding_tablet;
-    padding-bottom: $padding_tablet - 5;
+    width: 568px;
+    padding-top: 33px;
+    padding-left: 106px;
+    padding-right: 106px;
   }
 }
 
@@ -18,16 +66,30 @@
                           $font_weight_heading,
                           $color_heading);
   margin: 0;
+  margin-left: 50px;
+  margin-right: 50px;
   text-transform: uppercase;
-  padding-bottom: $padding_mobile - 5;
+  padding-bottom: 12px;
 
   @include for_tablet {
-    padding-top: $padding_tablet - 20;
+    @include font_character($font_size_heading_modal_tablet,
+                            $line_height_heading_modal_tablet,
+                            $font_weight_heading_modal_tablet,
+                            $color_heading_modal_tablet);
+    margin: 0;
+    padding-bottom: 14px;
   }
 }
 
 .modal__fieldset {
   border: none;
+  padding: 0;
+  margin: 0;
+
+  @include for_tablet {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
 }
 
 .modal__query {
@@ -36,16 +98,22 @@
                           $font_weight_modal_query,
                           $color_modal_query);
   margin: 0;
-  padding-bottom: $padding_mobile - 5;
+  padding-bottom: 23px;
 
   @include for_tablet {
-    padding-top: $padding_tablet - 25;
+    @include font_character($font_size_modal_query_tablet,
+                            $line_height_modal_query_tablet,
+                            $font_weight_modal_query_tablet,
+                            $color_modal_query_tablet);
+    padding-top: 0;
+    padding-bottom: 21px;
   }
 }
 
 .modal__wrapper {
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 21px;
 }
 
 .modal__description {
@@ -54,20 +122,36 @@
                           $font_weight_modal_description,
                           $color_modal_description);
   border: 2px solid $border_color;
-  display: block;
-  width: 71px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 82px;
+  min-height: 52px;
+  margin-bottom: 10px;
 
-  &:not(:last-of-type) {
-    margin-right: $padding_mobile - 23;
+  &:not(:nth-of-type(3n)) {
+    margin-right: 7px;
   }
 
   @include for_tablet {
-    width: 140px;
+    width: 112px;
   }
 }
 
 .modal__radio {
-  display: none;
+  &:checked + .modal__description {
+    border: 2px solid rgba($color: $brdr_clr_radio_checked, $alpha: $alpha_radio_checked);
+  }
+
+  &:hover + .modal__description,
+  &:focus + .modal__description {
+    border: 2px solid rgba($color: $brdr_clr_radio_hover, $alpha: $alpha_radio_hover);
+  }
+
+  &:active + .modal__description,
+  &:checked + .modal__description {
+    border: 2px solid rgba($color: $brdr_clr_radio_active, $alpha: $alpha_radio_active);
+  }
 }
 
 .modal__button {
@@ -75,9 +159,9 @@
                           $line_height_modal_button,
                           $font_weight_modal_button,
                           $color_modal_button);
-  background-color: $turquoise;
-  margin-top: $padding_mobile;
-  width: $full;
+  background-color: $bgc_button;
+  width: 100%;
+  vertical-align: middle;
   border: none;
   text-transform: uppercase;
 }

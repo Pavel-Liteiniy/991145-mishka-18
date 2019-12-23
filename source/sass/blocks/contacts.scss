@@ -1,33 +1,48 @@
 .contacts__inner {
-  padding-top: $padding_mobile + 10;
-  padding-bottom: $padding_mobile + 9;
+  padding-top: 35px;
+  padding-bottom: 40px;
 
   @include for_tablet {
-    padding-top: $padding_tablet + 10;
-    padding-bottom: $padding_tablet + 7;
+    padding-top: 61px;
+    padding-bottom: 57px;
   }
 
   @include for_desktop {
     position: relative;
-    padding-top: $padding_desktop + $padding_desktop + 40;
-    padding-bottom: $padding_desktop + $padding_desktop + 5;
-    padding-left: $padding_desktop * 4 + 25px;
-    padding-right: $half;
+    padding-top: 141px;
+    padding-bottom: 105px;
+    padding-left: 225px;
+    padding-right: 50%;
   }
 }
 
 .contacts__heading {
-  @include font_character($font_size_heading,
-                          $line_height_heading,
-                          $font_weight_heading,
-                          $color_heading);
+  @include font_character($font_size_contacts_heading,
+                          $line_height_contacts_heading,
+                          $font_weight_contacts_heading,
+                          $color_contacts_heading);
   margin: 0;
-  font-size: $font_size_heading - 7;
-  padding-bottom: $padding_mobile + 10;
+  margin-left: -2px;
+  padding-bottom: 26px;
 
   @include for_tablet {
-    padding-right: $padding_tablet + $padding_tablet;
-    padding-bottom: $padding_tablet + 10;
+    @include font_character($font_size_heading_tablet,
+                            $line_height_heading_tablet,
+                            $font_weight_heading_tablet,
+                            $color_heading_tablet);
+
+    padding-right: 100px;
+    padding-bottom: 50px;
+    margin-left: -5px;
+  }
+
+  @include for_desktop {
+    @include font_character($font_size_heading_desktop,
+                            $line_height_heading_desktop,
+                            $font_weight_heading_desktop,
+                            $color_heading_desktop);
+    padding-bottom: 49px;
+    padding-right: 10px;
   }
 }
 
@@ -37,41 +52,56 @@
                           $line_height_contacts_list,
                           $font_weight_contacts_list,
                           $color_contacts_list);
+
+  @include for_tablet {
+    @include font_character($font_size_contacts_list_tablet,
+                            $line_height_contacts_list_tablet,
+                            $font_weight_contacts_list_tablet,
+                            $color_contacts_list_tablet);
+  }
 }
 
 .contacts__inner > .contacts__list {
-  padding-bottom: $padding_mobile + 10;
+  padding-bottom: 36px;
 
   @include for_tablet {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: $padding_tablet;
+    padding-bottom: 51px;
   }
 
   @include for_desktop {
-    padding-bottom: $padding_desktop + 30;
+    padding-bottom: 74px;
   }
 }
 
 .contacts__item--email {
   @include link_default_remove;
   border-bottom: 1px solid $border_color_email;
+  margin-left: -3px;
+
+  @include for_tablet {
+    margin-left: 0;
+  }
 }
 
 .contacts__item--list {
-  padding-bottom: $padding_mobile + 5;
+  &:not(:last-child) {
+    padding-bottom: $padding_mobile;
+  }
 
   @include for_tablet {
     width: $half;
-    padding-right: $padding_tablet - 40;
-    padding-bottom: $padding_tablet - 45;
+    padding-right: 10px;
+    padding-bottom: 5px;
   }
 
   @include for_desktop {
+    padding-right: 5px;
     width: auto;
 
     &:not(:last-child) {
-      padding-bottom: $padding_desktop - 15;
+      padding-bottom: 30px;
     }
   }
 }
@@ -80,30 +110,47 @@
   display: flex;
 }
 
-.contacts__item--list .contacts__item:first-child {
-  width: $padding_mobile + $padding_mobile + 7;
-  padding-right: $padding_mobile - 20;
+.contacts__item--list .contacts__item {
+  &:first-child {
+    width: 67px;
+    padding-right: 10px;
+  }
+
+  &:not(:first-child) {
+    padding-left: 13px;
+
+    @include for_tablet {
+      padding-left: 11px;
+    }
+  }
 }
 
 .contacts__map-wrapper {
-  padding-bottom: $padding_mobile + 9;
+  width: 320px;
+  height: 457px;
+  margin-left: -padding_mobile;
+  margin-bottom: 39px;
+  background-color: #dfdfdf;
 
   @include for_tablet {
-    padding-bottom: $padding_tablet + 5;
+    width: 768px;
+    height: 457px;
+    margin-left: -$padding_tablet;
+    margin-bottom: 55px;
   }
 
   @include for_desktop {
     position: absolute;
+    width: 526px;
     top: 71px;
-    right: 0;
-    width: $half;
+    right: 50px;
     padding: 0;
   }
 }
 
 .contacts__button {
   @include for_tablet {
-    width: $padding_tablet * 4 + 30;
+    width: 230px;
     margin-left: auto;
     margin-right: auto;
   }

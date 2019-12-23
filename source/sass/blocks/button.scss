@@ -1,13 +1,36 @@
+// Локальные переменные блока button
+$mh: 52px; //mh - min-height
+$clr_active: #ffffff; //clr - color
+$bgc: #ffffff; //bgc -  background-color
+// button:hover
+$clr_hover: #ffffff; //clr - color
+$bgc_hover: #444444; //bgc -  background-color
+
+
 .button {
   @include font_character($font_size_button,
                           $line_height_button,
                           $font_weight_button,
                           $color_button);
   @include link_default_remove;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: $mh;
   text-transform: uppercase;
   border: 2px solid $border_color_button;
-  background-color: $background_white;
+  background-color: $bgc;
   font-family: $font_family;
-  display: block;
-  text-align: center;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: $bgc_hover;
+    color: $clr_hover;
+  }
+
+  &:active {
+    color: rgba($color: $clr_active, $alpha: $active_opacity);
+  }
 }

@@ -1,10 +1,10 @@
 .videoblog__inner {
-  width: $width_mobile - $padding_mobile - $padding_mobile;
+  width: 260px;
   padding-left: 0;
   padding-right: 0;
-  padding-bottom: $padding_mobile + 2;
+  padding-bottom: 32px;
   border: 1px solid $border_color_product;
-  margin-bottom: $padding_mobile + $padding_mobile - 2;
+  margin-bottom: 58px;
 
   @include for_tablet {
     position: relative;
@@ -30,10 +30,10 @@
                           $font_weight_product_heading,
                           $color_product_heading);
   margin: 0;
-  padding-left: $padding_mobile + $padding_mobile + $padding_mobile;
-  padding-right: $padding_mobile - 15;
-  padding-top: $padding_mobile - 10;
-  padding-bottom: $padding_mobile - 10;
+  padding-left: 90px;
+  padding-right: 15px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 
   @include for_tablet {
     border: 1px solid $border_color_product;
@@ -59,9 +59,9 @@
                           $font_weight_videoblog_description,
                           $color_videoblog_description);
   margin: 0;
-  padding-left: $padding_mobile + 3;
-  padding-right: $padding_mobile + 3;
-  padding-bottom: $padding_mobile - 5;
+  padding-left: 33px;
+  padding-right: 33px;
+  padding-bottom: 25px;
 
   @include for_tablet {
     padding-left: $padding_tablet - 10;
@@ -76,8 +76,8 @@
 }
 
 .videoblog__content-wrapper {
-  margin-left: $padding_mobile - 31;
-  padding-bottom: $padding_mobile;
+  margin-left: -1px;
+  padding-bottom: 21px;
 
   @include for_tablet {
     position: absolute;
@@ -94,8 +94,9 @@
 }
 
 .videoblog__button {
-  margin-left: $padding_mobile + 3;
-  margin-right: $padding_mobile + 3;
+  min-height: 52px;
+  margin-left: 33px;
+  margin-right: 33px;
 
   @include for_tablet {
     margin-left: $padding_tablet - 9;

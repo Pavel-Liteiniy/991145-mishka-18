@@ -9,10 +9,10 @@
 
   @include for_desktop {
     position: relative;
-    padding-top: $padding_desktop + $padding_desktop + 40;
-    padding-bottom: $padding_desktop + $padding_desktop + 5;
-    padding-left: $padding_desktop * 4 + 25px;
-    padding-right: $half;
+    padding-top: 141px;
+    padding-bottom: 105px;
+    padding-left: 225px;
+    padding-right: 50%;
   }
 }
 
@@ -34,6 +34,15 @@
     padding-right: 100px;
     padding-bottom: 50px;
     margin-left: -5px;
+  }
+
+  @include for_desktop {
+    @include font_character($font_size_heading_desktop,
+                            $line_height_heading_desktop,
+                            $font_weight_heading_desktop,
+                            $color_heading_desktop);
+    padding-bottom: 49px;
+    padding-right: 10px;
   }
 }
 
@@ -62,7 +71,7 @@
   }
 
   @include for_desktop {
-    padding-bottom: $padding_desktop + 30;
+    padding-bottom: 74px;
   }
 }
 
@@ -83,15 +92,16 @@
 
   @include for_tablet {
     width: $half;
-    padding-right: $padding_tablet - 40;
-    padding-bottom: $padding_tablet - 45;
+    padding-right: 10px;
+    padding-bottom: 5px;
   }
 
   @include for_desktop {
+    padding-right: 5px;
     width: auto;
 
     &:not(:last-child) {
-      padding-bottom: $padding_desktop - 15;
+      padding-bottom: 30px;
     }
   }
 }
@@ -131,16 +141,16 @@
 
   @include for_desktop {
     position: absolute;
+    width: 526px;
     top: 71px;
-    right: 0;
-    width: $half;
+    right: 50px;
     padding: 0;
   }
 }
 
 .contacts__button {
   @include for_tablet {
-    width: $padding_tablet * 4 + 30;
+    width: 230px;
     margin-left: auto;
     margin-right: auto;
   }

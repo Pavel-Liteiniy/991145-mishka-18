@@ -1,13 +1,13 @@
 // Локальные переменные блока footer
-$bgc_footer: #f1f1f1; // bgc -background-color
-$clr_logo: #000000; // clr - color
-$clr_logo_hover: #46c1ae; // clr - color
-$brd-clr_copyright: #e5e5e5; // brd-clr - border-color
-$clr_copyright-link: #7ae7d1; // clr - color
-$clr_copyright-link_hover: #46c1ae; // clr - color
+$background_color_footer: #f1f1f1; // background_color -background-color
+$color_logo: #000000; // color - color
+$color_logo_hover: #46c1ae; // color - color
+$brd-color_copyright: #e5e5e5; // brd-color - border-color
+$color_copyright-link: #7ae7d1; // color - color
+$color_copyright-link_hover: #46c1ae; // color - color
 
 .footer {
-  background-color: $bgc_footer;
+  background-color: $background_color_footer;
 }
 
 .footer__inner {
@@ -29,7 +29,7 @@ $clr_copyright-link_hover: #46c1ae; // clr - color
 .footer__logo {
   display: none;
   outline: none;
-  color: $clr_logo;
+  color: $color_logo;
 
   @include for_tablet {
     display: block;
@@ -38,7 +38,7 @@ $clr_copyright-link_hover: #46c1ae; // clr - color
   @include for_desktop {
     &:hover:not(.footer__logo--current),
     &:focus:not(.footer__logo--current) {
-      color: $clr_logo_hover;
+      color: $color_logo_hover;
     }
 
     &:active:not(.footer__logo--current) {
@@ -65,7 +65,7 @@ $clr_copyright-link_hover: #46c1ae; // clr - color
                           $color_footer_copyright);
   margin: 0;
   margin-top: -4px;
-  border-top: 1px solid $brd-clr_copyright;
+  border-top: 1px solid $brd-color_copyright;
   padding-top: 15px;
   display: flex;
   flex-direction: row;
@@ -81,7 +81,7 @@ $clr_copyright-link_hover: #46c1ae; // clr - color
 }
 
 .footer__copyright-link {
-  color: $clr_copyright-link;
+  color: $color_copyright-link;
   margin-left: 29px;
   margin-top: 6px;
   outline: none;
@@ -89,7 +89,7 @@ $clr_copyright-link_hover: #46c1ae; // clr - color
   @include for_desktop {
     &:hover,
     &:focus {
-      color: $clr_copyright-link_hover;
+      color: $color_copyright-link_hover;
     }
 
     &:active {

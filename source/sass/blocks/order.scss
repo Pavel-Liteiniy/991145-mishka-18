@@ -1,6 +1,6 @@
 .order__inner {
-  padding-top: $padding_mobile - 15;
-  padding-bottom: $padding_mobile - 15;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
   @include for_tablet {
     padding-top: $padding_tablet;
@@ -15,28 +15,28 @@
     padding-bottom: 0;
 
     @include for_tablet {
-      padding-top: $padding_tablet + 25;
+      padding-top: 75px;
     }
 
     @include for_desktop {
-      padding-top: $padding_desktop + $padding_desktop + 20;
+      padding-top: 120px;
     }
   }
 
   &--button {
     padding-top: 0;
-    padding-bottom: $padding_mobile + 25;
+    padding-bottom: 55px;
 
     @include for_tablet {
-      padding-top: $padding_tablet - 47;
+      padding-top: 3px;
       padding-bottom: $padding_tablet;
       flex-direction: row-reverse;
       justify-content: space-between;
     }
 
     @include for_desktop {
-      padding-left: $padding_desktop + $padding_desktop + $padding_desktop + $padding_desktop + 25;
-      padding-right: $padding_desktop + $padding_desktop + $padding_desktop + $padding_desktop + 25;
+      padding-left: 225px;
+      padding-right: 225px;
     }
   }
 }
@@ -49,8 +49,8 @@
   margin: 0;
 
   @include for_desktop {
-    padding-left: $padding_desktop + $padding_desktop + $padding_desktop + 25;
-    padding-right: $padding_desktop + $padding_desktop + $padding_desktop + 25;
+    padding-left: 175px;
+    padding-right: 175px;
   }
 }
 
@@ -76,11 +76,11 @@
   padding-bottom: 30px;
 
   @include for_tablet {
-    width: $padding_tablet + $padding_tablet + $padding_tablet + 17;
+    width: 167px;
   }
 
   @include for_desktop {
-    width: $padding_desktop + $padding_desktop + $padding_desktop + 25;
+    width: 175px;
   }
 }
 
@@ -88,14 +88,14 @@
   @include list_default_remove;
 
   @include for_tablet {
-    width: $padding_tablet * 10 + 1;
+    width: 501px;
   }
 
   @include for_desktop {
-    width: $padding_tablet * 14;
+    width: 700px;
 
     &--color {
-      width: $padding_tablet * 17 + 25;
+      width: 875px;
     }
   }
 }
@@ -211,12 +211,12 @@
     background-color: inherit;
 
     @include for_tablet {
-      width: $padding_tablet * 10 + 1;
+      width: 101px;
     }
 
     @include for_desktop {
-      width: $padding_tablet * 14;
-      margin-right: $padding_tablet + $padding_tablet + $padding_tablet + 25;
+      width: 700px;
+      margin-right: 175px;
 
       &:hover,
       &:focus,
@@ -235,6 +235,19 @@
     }
   }
 
+  &--tel,
+  &--email {
+    padding-right: 40px;
+  }
+
+  &--tel {
+    background: url("../img/icon-phone.svg") no-repeat 96.4% 50%;
+  }
+
+  &--email {
+    background: url("../img/icon-mail.svg") no-repeat 98.1% 50%;
+  }
+
   &--add {
     @include font_character($font_size_order,
                             $line_height_order,
@@ -244,11 +257,11 @@
     width: 100%;
 
     @include for_tablet {
-      width: $padding_tablet * 10 + 1;
+      width: 101px;
     }
 
     @include for_desktop {
-      width: $padding_tablet * 14;
+      width: 700px;
 
       &:hover,
       &:focus,
@@ -268,21 +281,6 @@
   }
 }
 
-.order__input {
-  &--tel,
-  &--email {
-    padding-right: 40px;
-  }
-
-  &--tel {
-    background: url("../img/icon-phone.svg") no-repeat 96.4% 50%;
-  }
-
-  &--email {
-    background: url("../img/icon-mail.svg") no-repeat 98.1% 50%;
-  }
-}
-
 .order__footnote {
   @include font_character($font_size_order_footnote,
                           $line_height_order_footnote,
@@ -296,6 +294,6 @@
   width: 100%;
 
   @include for_tablet {
-    width: $padding_tablet * 4 + 29;
+    width: 229px;
   }
 }

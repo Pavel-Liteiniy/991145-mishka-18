@@ -1,3 +1,18 @@
+.comments {
+  background: url("../img/bg-zigzag-line.svg") repeat-x 9px 100.1%;
+  background-size: 320px 10px;
+
+  @include for_tablet {
+    background: url("../img/bg-zigzag-line.svg") repeat-x 22px 100.8%;
+    background-size: 770px 24px;
+  }
+
+  @include for_desktop {
+    background: url("../img/bg-zigzag-line.svg") repeat-x 16px 100%;
+    background-size: 1050px 23px;
+  }
+}
+
 .comments__inner {
   padding-top: 29px;
   padding-bottom: 51px;
@@ -7,12 +22,16 @@
     flex-wrap: wrap;
     padding-top: 76px;
     padding-bottom: 85px;
+
+    background: url("../img/review@1x.jpg") no-repeat 0 0;
   }
 
   @include for_desktop {
     padding-top: 70px;
     padding-left: 225px;
     padding-bottom: 85px;
+
+    background-position-x: 50px;
   }
 }
 
@@ -28,19 +47,19 @@
   @include for_tablet {
     @include font_character($font_size_heading_tablet,
                             $line_height_heading_tablet,
-                            $font_weight_heading_tablet,
-                            $color_heading_tablet);
+                            $font_weight_heading,
+                            $color_heading);
 
     order: -2;
     margin-left: -4px;
-    padding-bottom: 49px;
+    padding-bottom: 50px;
   }
 
   @include for_desktop {
     @include font_character($font_size_heading_desktop,
                             $line_height_heading_desktop,
-                            $font_weight_heading_desktop,
-                            $color_heading_desktop);
+                            $font_weight_heading,
+                            $color_heading);
   }
 }
 
@@ -54,9 +73,9 @@
 
   @include for_tablet {
     @include font_character($font_size_comments_content_tablet,
-                            $line_height_comments_content_tablet,
-                            $font_weight_comments_content_tablet,
-                            $color_comments_content_tablet);
+                            $line_height_comments_content,
+                            $font_weight_comments_content,
+                            $color_comments_content);
 
     padding-bottom: 57px;
   }
@@ -90,9 +109,9 @@
 
   @include for_tablet {
     @include font_character($font_size_comments_author_tablet,
-                          $line_height_comments_author_tablet,
-                          $font_weight_comments_author_tablet,
-                          $color_comments_author_tablet);
+                          $line_height_comments_author,
+                          $font_weight_comments_author,
+                          $color_comments_author);
 
     padding-bottom: 4px;
   }
@@ -127,14 +146,27 @@
   padding-right: 4px;
   padding-top: 2px;
   border: 1px solid $border_color;
-  background-color: $background_white;
+  background-color: $background_color_body;
   font-size: $font_size_button + 1;
-  color: $black;
+  color: $color_comments_author;
 
   @include for_tablet {
     border: none;
     padding-left: 19px;
     padding-right: 19px;
+  }
+
+  @include for_desktop {
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: $hover_opacity;
+    }
+
+    &:active {
+      outline: none;
+      opacity: $active_opacity;
+    }
   }
 }
 

@@ -25,18 +25,18 @@
   padding-bottom: 3px;
 
   @include for_tablet {
-    @include font_character($font_size_features_heading_tablet,
-                            $line_height_features_heading_tablet,
-                            $font_weight_features_heading_tablet,
-                            $color_features_heading_tablet);
+    @include font_character($font_size_heading_tablet,
+                            $line_height_heading_tablet,
+                            $font_weight_heading,
+                            $color_heading);
     margin-left: -4px;
   }
 
   @include for_desktop {
     @include font_character($font_size_features_heading_desktop,
                             $line_height_features_heading_desktop,
-                            $font_weight_features_heading_desktop,
-                            $color_features_heading_desktop);
+                            $font_weight_heading,
+                            $color_heading);
     padding-bottom: 2px;
   }
 }
@@ -51,8 +51,8 @@
   @include for_tablet {
     @include font_character($font_size_features_list_tablet,
                             $line_height_features_list_tablet,
-                            $font_weight_features_list_tablet,
-                            $color_features_list_tablet);
+                            $font_weight_features_list,
+                            $color_features_list);
 
     display: flex;
     flex-direction: row;
@@ -61,7 +61,113 @@
 }
 
 .features__item {
+  position: relative;
   padding-top: 83px;
+
+  &--eco {
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 29px;
+      left: 8px;
+      width: 32px;
+      height: 37px;
+      background: url("../img/icon-feature-flower.svg") 50% 50% no-repeat;
+
+      @include for_tablet {
+        top: 46px;
+        left: 9px;
+      }
+    }
+  }
+
+  &--handmade {
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 32px;
+      left: 3px;
+      width: 35px;
+      height: 34px;
+      background: url("../img/icon-feature-ball.svg") 50% 50% no-repeat;
+
+      @include for_tablet {
+        top: 49px;
+      }
+    }
+  }
+
+  &--price {
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 47px;
+        height: 27px;
+        background: url("../img/icon-feature-money.svg") 50% 50% no-repeat;
+
+        @include for_tablet {
+          top: 48px;
+          width: 49px;
+        }
+      }
+    }
+
+    &--patriot {
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 33px;
+        left: -6px;
+        width: 55px;
+        height: 23px;
+        background: url("../img/icon-feature-rocket.svg") 50% 50% no-repeat;
+
+        @include for_tablet {
+          top: 51px;
+        }
+      }
+    }
+
+    &--socials {
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 35px;
+        left: 7px;
+        width: 34px;
+        height: 27px;
+        background: url("../img/icon-feature-heart.svg") 50% 50% no-repeat;
+
+        @include for_tablet {
+          top: 53px;
+          left: 8px;
+        }
+      }
+    }
+
+    &--packing {
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: 2px;
+        width: 34px;
+        height: 32px;
+        background: url("../img/icon-feature-gift.svg") 50% 50% no-repeat;
+
+        @include for_tablet {
+          top: 50px;
+        }
+      }
+    }
 
   @include for_tablet {
     width: 50%;

@@ -1,6 +1,6 @@
 // Локальные переменные блока socials
-$clr_link: #000000; // clr - color
-$clr_link_hover: #46c1ae; // clr - color
+$color_link: #000000; // color - color
+$color_link_hover: #46c1ae; // color - color
 
 .socials__inner {
   width: 260px;
@@ -45,15 +45,17 @@ $clr_link_hover: #46c1ae; // clr - color
 .socials__link {
   display: block;
   outline: none;
-  color: $clr_link;
+  color: $color_link;
 
-  &:hover,
-  &:focus {
-    color: $clr_link_hover;
-  }
+  @include for_desktop {
+    &:hover,
+    &:focus {
+      color: $color_link_hover;
+    }
 
-  &:active {
-    opacity: $active_opacity;
+    &:active {
+      opacity: $active_opacity;
+    }
   }
 }
 

@@ -3,16 +3,16 @@
   padding-bottom: 40px;
 
   @include for_tablet {
-    padding-top: 61px;
+    padding-top: 11px;
     padding-bottom: 57px;
   }
 
   @include for_desktop {
     position: relative;
-    padding-top: 141px;
+    padding-top: 90px;
     padding-bottom: 105px;
     padding-left: 225px;
-    padding-right: 50%;
+    padding-right: 31%;
   }
 }
 
@@ -28,21 +28,38 @@
   @include for_tablet {
     @include font_character($font_size_heading_tablet,
                             $line_height_heading_tablet,
-                            $font_weight_heading_tablet,
-                            $color_heading_tablet);
+                            $font_weight_heading,
+                            $color_heading);
 
+    padding-top: 50px;
     padding-right: 100px;
     padding-bottom: 50px;
     margin-left: -5px;
+
+    background: url("../img/icon-flag.svg") no-repeat 99.4% 52%;
   }
 
   @include for_desktop {
     @include font_character($font_size_heading_desktop,
                             $line_height_heading_desktop,
-                            $font_weight_heading_desktop,
-                            $color_heading_desktop);
+                            $font_weight_heading,
+                            $color_heading);
+
     padding-bottom: 49px;
     padding-right: 10px;
+
+    position: relative;
+    background: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 33px;
+      left: -134px;
+      background: url("../img/icon-flag.svg") no-repeat 50% 50%;
+    }
   }
 }
 
@@ -55,9 +72,9 @@
 
   @include for_tablet {
     @include font_character($font_size_contacts_list_tablet,
-                            $line_height_contacts_list_tablet,
-                            $font_weight_contacts_list_tablet,
-                            $color_contacts_list_tablet);
+                            $line_height_contacts_list,
+                            $font_weight_contacts_list,
+                            $color_contacts_list);
   }
 }
 
@@ -83,6 +100,17 @@
   @include for_tablet {
     margin-left: 0;
   }
+
+  @include for_desktop {
+    &:hover,
+    &:focus {
+      color: #46c1ae;
+    }
+
+    &:active {
+      opacity: $active_opacity;
+    }
+  }
 }
 
 .contacts__item--list {
@@ -91,7 +119,7 @@
   }
 
   @include for_tablet {
-    width: $half;
+    width: 50%;
     padding-right: 10px;
     padding-bottom: 5px;
   }
@@ -128,7 +156,7 @@
 .contacts__map-wrapper {
   width: 320px;
   height: 457px;
-  margin-left: -padding_mobile;
+  margin-left: -$padding_mobile;
   margin-bottom: 39px;
   background-color: #dfdfdf;
 
@@ -146,6 +174,10 @@
     right: 50px;
     padding: 0;
   }
+}
+
+.contacts__image {
+  height: fit-content;
 }
 
 .contacts__button {

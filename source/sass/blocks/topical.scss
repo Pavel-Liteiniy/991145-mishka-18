@@ -1,6 +1,6 @@
 // Локальные переменные блока topical
-$clr_link_hover: #000000; // clr - color
-$clr_link_active: #000000; // clr - color
+$color_link_hover: #000000; // color - color
+$color_link_active: #000000; // color - color
 
 .topical {
   @include only_desktop;
@@ -25,12 +25,14 @@ $clr_link_active: #000000; // clr - color
 
   outline: none;
 
-  &:hover,
-  &:focus {
-    color: rgba($color: $clr_link_hover, $alpha: $hover_opacity);
-  }
+  @include for_desktop {
+    &:hover,
+    &:focus {
+      color: rgba($color: $color_link_hover, $alpha: $hover_opacity);
+    }
 
-  &:active {
-    color: rgba($color: $clr_link_active, $alpha: $active_opacity);
+    &:active {
+      color: rgba($color: $color_link_active, $alpha: $active_opacity);
+    }
   }
 }

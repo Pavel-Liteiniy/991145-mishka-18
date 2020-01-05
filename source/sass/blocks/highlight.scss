@@ -1,5 +1,20 @@
 // Локальные переменные для блока highlight
-$bgc_image-wrapper: #f1f1f1; // bgc - background-color
+$background_color_image-wrapper: #f1f1f1; // background_color - background-color
+
+.highlight {
+  background: url("../img/bg-zigzag-line.svg") repeat-x 9px 100.1%;
+  background-size: 320px 10px;
+
+  @include for_tablet {
+    background: url("../img/bg-zigzag-line.svg") repeat-x 22px 100.7%;
+    background-size: 770px 24px;
+  }
+
+  @include for_desktop {
+    background: url("../img/bg-zigzag-line.svg") repeat-x 16px 100%;
+    background-size: 1050px 23px;
+  }
+}
 
 .highlight__inner {
   padding-top: 26px;
@@ -43,19 +58,19 @@ $bgc_image-wrapper: #f1f1f1; // bgc - background-color
   padding-bottom: 6px;
 
   @include for_tablet {
-    @include font_character($font_size_highlight_heading_tablet,
-                            $line_height_highlight_heading_tablet,
-                            $font_weight_highlight_heading_tablet,
-                            $color_highlight_heading_tablet);
+    @include font_character($font_size_heading_tablet,
+                            $line_height_heading_tablet,
+                            $font_weight_heading,
+                            $color_heading);
 
     padding-bottom: 0;
   }
 
   @include for_desktop {
-    @include font_character($font_size_highlight_heading_desktop,
-                            $line_height_highlight_heading_desktop,
-                            $font_weight_highlight_heading_desktop,
-                            $color_highlight_heading_desktop);
+    @include font_character($font_size_heading_desktop,
+                            $line_height_heading_desktop,
+                            $font_weight_heading,
+                            $color_heading);
   }
 }
 
@@ -109,8 +124,8 @@ $bgc_image-wrapper: #f1f1f1; // bgc - background-color
   @include for_tablet {
     @include font_character($font_size_highlight_description_tablet,
                             $line_height_highlight_description_tablet,
-                            $font_weight_highlight_description_tablet,
-                            $color_highlight_description_tablet);
+                            $font_weight_highlight_description,
+                            $color_highlight_description);
 
     padding-bottom: 36px;
   }
@@ -161,7 +176,7 @@ $bgc_image-wrapper: #f1f1f1; // bgc - background-color
 }
 
 .highlight__image-wrapper {
-  background-color: $bgc_image-wrapper;
+  background-color: $background_color_image-wrapper;
   margin-top: 28px;
   margin-bottom: 24px;
 

@@ -31,17 +31,19 @@ $clr_copyright-link_hover: #46c1ae; // clr - color
   outline: none;
   color: $clr_logo;
 
-  &:hover,
-  &:focus {
-    color: $clr_logo_hover;
-  }
-
-  &:active {
-    opacity: $active_opacity;
-  }
-
   @include for_tablet {
     display: block;
+  }
+
+  @include for_desktop {
+    &:hover:not(.footer__logo--current),
+    &:focus:not(.footer__logo--current) {
+      color: $clr_logo_hover;
+    }
+
+    &:active:not(.footer__logo--current) {
+      opacity: $active_opacity;
+    }
   }
 }
 
@@ -84,13 +86,15 @@ $clr_copyright-link_hover: #46c1ae; // clr - color
   margin-top: 6px;
   outline: none;
 
-  &:hover,
-  &:focus {
-    color: $clr_copyright-link_hover;
-  }
+  @include for_desktop {
+    &:hover,
+    &:focus {
+      color: $clr_copyright-link_hover;
+    }
 
-  &:active {
-    opacity: $active_opacity;
+    &:active {
+      opacity: $active_opacity;
+    }
   }
 }
 

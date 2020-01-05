@@ -11,8 +11,8 @@
   }
 
   &--induction {
-    padding-top: $padding_mobile - 5;
-    padding-bottom: $padding_mobile - 20;
+    padding-top: 22px;
+    padding-bottom: 0;
 
     @include for_tablet {
       padding-top: $padding_tablet + 25;
@@ -72,6 +72,8 @@
                           $color_order_query);
   text-transform: uppercase;
   margin: 0;
+  padding-top: 10px;
+  padding-bottom: 30px;
 
   @include for_tablet {
     width: $padding_tablet + $padding_tablet + $padding_tablet + 17;
@@ -98,11 +100,101 @@
   }
 }
 
+.order__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 60px;
+}
+
+.order__list--username .order__item {
+  flex-wrap: wrap;
+}
+
 .order__description {
   @include font_character($font_size_order_description,
                             $line_height_order_description,
                             $font_weight_order_description,
                             $color_order_description);
+
+  display: block;
+
+  &--radio,
+  &--checkbox {
+    position: relative;
+    padding-left: 62px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+
+      border: 2px solid #b4b4b4;
+    }
+  }
+
+  &--radio {
+    &::before {
+      border-radius: 50%;
+      padding: 10px;
+    }
+  }
+}
+
+.order__input:checked + .order__description {
+  &--radio {
+    &::before {
+      background-color: #62d1ba;
+      background-clip: content-box;
+    }
+  }
+
+  &--checkbox {
+    &::before {
+      background: url("../img/icon-tick.svg") no-repeat 45% 55%;
+      background-size: 20px 20px;
+    }
+  }
+}
+
+.order__input:hover + .order__description,
+.order__input:focus + .order__description {
+  &--radio {
+    &::before {
+      @include for_desktop {
+        border: 2px solid #c0ede3;
+      }
+    }
+  }
+
+  &--checkbox {
+    &::before {
+      @include for_desktop {
+        border: 2px solid #c0ede3;
+      }
+    }
+  }
+}
+
+.order__input:active + .order__description {
+  &--radio {
+    &::before {
+      @include for_desktop {
+        border: 2px solid #e9e9e9;
+      }
+    }
+  }
+
+  &--checkbox {
+    &::before {
+      @include for_desktop {
+        border: 2px solid #e9e9e9;
+      }
+    }
+  }
 }
 
 .order__input {
@@ -125,6 +217,13 @@
     @include for_desktop {
       width: $padding_tablet * 14;
       margin-right: $padding_tablet + $padding_tablet + $padding_tablet + 25;
+
+      &:hover,
+      &:focus,
+      &:active {
+        outline: none;
+        border-bottom: 2px solid #c0ede3;
+      }
     }
 
     &::placeholder {
@@ -141,7 +240,7 @@
                             $line_height_order,
                             $font_weight_order,
                             $color_order);
-    border: 2px solid $border_color_textarea;
+    border: 2px solid $color_body;
     width: 100%;
 
     @include for_tablet {
@@ -150,6 +249,13 @@
 
     @include for_desktop {
       width: $padding_tablet * 14;
+
+      &:hover,
+      &:focus,
+      &:active {
+        outline: none;
+        border: 2px solid #c0ede3;
+      }
     }
 
     &::placeholder {
@@ -159,6 +265,21 @@
                               $color_order_placeholder);
       font-family: $font_family;
     }
+  }
+}
+
+.order__input {
+  &--tel,
+  &--email {
+    padding-right: 40px;
+  }
+
+  &--tel {
+    background: url("../img/icon-phone.svg") no-repeat 96.4% 50%;
+  }
+
+  &--email {
+    background: url("../img/icon-mail.svg") no-repeat 98.1% 50%;
   }
 }
 

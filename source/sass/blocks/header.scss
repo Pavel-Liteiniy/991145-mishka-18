@@ -1,19 +1,19 @@
 // Частные переменные блока header
 // header
 // tablet
-$header_h_tablet: 89px;  //h - height
+$header_height_tablet: 89px;
 // logo
-$clr_logo_hover: #000000; // clr - color
-$clr_logo_active: #000000; // clr - color
+$color_logo_hover: #000000;
+$color_logo_active: #000000;
 //nav--closed button::before
-$button_closed_bgc_before: #000000; //bgc - background-color
-$button_closed_bxshdw_before: 0 6px 0 0 #000000, 0 12px 0 0 #000000; // bxshdw - box-shadow
+$button_closed_background_color_before: #000000;
+$button_closed_box_shadow_before: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
 //nav--opened button::before button::after
-$button_opened_bgc_before_after: #000000; //bgc - background-color
+$button_opened_background_color_before_after: #000000;
 //nav--opened button::before
-$button_opened_rotate_before: 44deg; //transform: rotate($);
+$button_opened_rotate_before: 44deg;
 //nav--opened button::after
-$button_opened_rotate_after: -44deg; //transform: rotate($);
+$button_opened_rotate_after: -44deg;
 
 .header {
   border-top: 1px solid $border_color;
@@ -21,7 +21,7 @@ $button_opened_rotate_after: -44deg; //transform: rotate($);
 
   @include for_tablet {
     border-top: none;
-    height: $header_h_tablet;
+    height: $header_height_tablet;
   }
 
   @include for_desktop {
@@ -52,15 +52,6 @@ $button_opened_rotate_after: -44deg; //transform: rotate($);
   margin-right: 66px;
   outline: none;
 
-  &:hover:not(.header__logo--active),
-  &:focus:not(.header__logo--active) {
-    opacity: $hover_opacity;
-  }
-
-  &:active:not(.header__logo--active) {
-    opacity: $active_opacity;
-  }
-
   @include for_tablet {
     width: 113px;
     height: 46px;
@@ -75,6 +66,15 @@ $button_opened_rotate_after: -44deg; //transform: rotate($);
     margin-right: auto;
     margin-top: 9px;
     margin-bottom: 6px;
+
+    &:hover:not(.header__logo--active),
+    &:focus:not(.header__logo--active) {
+      opacity: $hover_opacity;
+    }
+
+    &:active:not(.header__logo--active) {
+      opacity: $active_opacity;
+    }
   }
 }
 
@@ -90,13 +90,15 @@ $button_opened_rotate_after: -44deg; //transform: rotate($);
   border: none;
   outline: none;
 
-  &:hover,
-  &:focus {
-    opacity: $hover_opacity;
-  }
+  @include for_desktop {
+    &:hover,
+    &:focus {
+      opacity: $hover_opacity;
+    }
 
-  &:active {
-    opacity: $active_opacity;
+    &:active {
+      opacity: $active_opacity;
+    }
   }
 }
 
@@ -106,6 +108,7 @@ $button_opened_rotate_after: -44deg; //transform: rotate($);
 
     @include for_tablet {
       display: flex;
+      z-index: 10;
     }
   }
 
@@ -117,8 +120,8 @@ $button_opened_rotate_after: -44deg; //transform: rotate($);
     left: 0;
     width: 21px;
     height: 2px;
-    background-color: $button_closed_bgc_before;
-    box-shadow: $button_closed_bxshdw_before;
+    background-color: $button_closed_background_color_before;
+    box-shadow: $button_closed_box_shadow_before;
   }
 }
 
@@ -140,7 +143,7 @@ $button_opened_rotate_after: -44deg; //transform: rotate($);
     left: -2px;
     width: 26px;
     height: 2px;
-    background-color: $button_opened_bgc_before_after;
+    background-color: $button_opened_background_color_before_after;
     box-shadow: none;
   }
 

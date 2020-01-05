@@ -15,7 +15,7 @@ button.addEventListener('click', function () {
 });
 
 // Отображает и скрывает модальное окно
-var link = document.querySelector(".button--modal");
+var link = document.querySelector(".button--modal"); // находит первый подходящий элемент в DOM и всё? На странице каталога скрипт срабатывает только на первом продукте.
 var modal = document.querySelector(".modal");
 var inputRadio = modal.querySelector("[id=choose-size-s]");
 var overlay = document.querySelector(".modal__overlay");

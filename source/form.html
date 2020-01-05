@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header class="header" id="header">
+  <header class="header">
     <div class="header__inner inner">
       <nav class="header__nav nav header__nav--closed header__nav--nojs">
         <a class="header__logo" href="index.html">
@@ -59,11 +59,11 @@
             <legend class="order__query">Тип</legend>
             <ul class="order__list">
               <li class="order__item">
-                <input class="order__input order__input--radio" type="radio" checked id="product-type-interior" name="product-type" value="interior" />
+                <input class="order__input order__input--radio visually-hidden" type="radio" checked id="product-type-interior" name="product-type" value="interior" />
                 <label class="order__description order__description--radio" for="product-type-interior">Аксессуар для интерьера</label>
               </li>
               <li class="order__item">
-                <input class="order__input order__input--radio" type="radio" id="product-type-toy" name="product-type" value="toy" />
+                <input class="order__input order__input--radio visually-hidden" type="radio" id="product-type-toy" name="product-type" value="toy" />
                 <label class="order__description order__description--radio" for="product-type-toy">Детская игрушка</label>
               </li>
             </ul>
@@ -74,27 +74,27 @@
             <legend class="order__query">Цвет</legend>
             <ul class="order__list order__list--color">
               <li class="order__item">
-                <input class="order__input order__input--checkbox" type="checkbox" checked name="color" id="color-white" value="white" />
+                <input class="order__input order__input--checkbox visually-hidden" type="checkbox" checked name="color" id="color-white" value="white" />
                 <label class="order__description order__description--checkbox" for="color-white">Белый</label>
               </li>
               <li class="order__item">
-                <input class="order__input order__input--checkbox" type="checkbox" checked name="color" id="color-gray" value="gray" />
+                <input class="order__input order__input--checkbox visually-hidden" type="checkbox" checked name="color" id="color-gray" value="gray" />
                 <label class="order__description order__description--checkbox" for="color-gray">Серый</label>
               </li>
               <li class="order__item">
-                <input class="order__input order__input--checkbox" type="checkbox" name="color" id="color-tiffany" value="tiffany" />
+                <input class="order__input order__input--checkbox visually-hidden" type="checkbox" name="color" id="color-tiffany" value="tiffany" />
                 <label class="order__description order__description--checkbox" for="color-tiffany">&laquo;Тиффани&raquo;</label>
               </li>
               <li class="order__item">
-                <input class="order__input order__input--checkbox" type="checkbox" name="color" id="color-black" value="black" />
+                <input class="order__input order__input--checkbox visually-hidden" type="checkbox" name="color" id="color-black" value="black" />
                 <label class="order__description order__description--checkbox" for="color-black">Черный</label>
               </li>
               <li class="order__item">
-                <input class="order__input order__input--checkbox" type="checkbox" name="color" id="color-pink" value="pink" />
+                <input class="order__input order__input--checkbox visually-hidden" type="checkbox" name="color" id="color-pink" value="pink" />
                 <label class="order__description order__description--checkbox" for="color-pink">Розовый</label>
               </li>
               <li class="order__item">
-                <input class="order__input order__input--checkbox" type="checkbox" name="color" id="color-orange" value="orange" />
+                <input class="order__input order__input--checkbox visually-hidden" type="checkbox" name="color" id="color-orange" value="orange" />
                 <label class="order__description order__description--checkbox" for="color-orange">Оранжевый</label>
               </li>
             </ul>
@@ -103,7 +103,7 @@
         <fieldset class="order__fieldset">
           <div class="order__inner inner">
             <legend class="order__query">ФИО</legend>
-            <ul class="order__list">
+            <ul class="order__list order__list--username">
               <li class="order__item">
                 <label class="order__description order__description--text" for="user-name">Имя:</label>
                 <input class="order__input order__input--text" type="text" placeholder="Введите ваше имя*" name="user-name" id="user-name" />
@@ -145,7 +145,7 @@
   </main>
   <footer class="footer">
     <div class="footer__inner inner">
-      <a class="footer__logo" href="#header">
+      <a class="footer__logo" href="index.html">
         <svg class="footer__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="101.615px" height="34.056px" viewBox="0 0 101.615 34.056" enable-background="new 0 0 101.615 34.056" xml:space="preserve">
           <g>
             <path

@@ -1,8 +1,54 @@
 // Локальные переменные для блока title
-$bgc_title: #f1f1f1;
+$background_color_title: #f1f1f1;
 
 .title {
-  background-color: $bgc_title;
+  position: relative;
+  background-color: $background_color_title;
+
+  &::before {
+    @include for_tablet {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      z-index: 100;
+      width: 100%;
+      height: 12px;
+      background: url("../img/bg-zigzag-fill.svg") repeat-x 13px 0;
+      background-size: 768px 27px;
+    }
+
+    @include for_desktop {
+      height: 18px;
+      bottom: -1px;
+      background: url("../img/bg-zigzag-fill.svg") repeat-x 24px 0;
+      background-size: auto 34px;
+    }
+  }
+
+  &--index {
+    background-color: #fafafa;
+
+    &::before {
+      @include for_tablet {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        z-index: 100;
+        width: 100%;
+        height: 12px;
+        background: url("../img/bg-zigzag-fill.svg") repeat-x 13px 0;
+        background-size: 768px 23px;
+      }
+
+      @include for_desktop {
+        height: 18px;
+        background: url("../img/bg-zigzag-fill.svg") repeat-x 31px 0;
+        background-size: auto 37px;
+      }
+    }
+  }
 }
 
 .title__inner {
@@ -13,10 +59,32 @@ $bgc_title: #f1f1f1;
   // временные стили
   min-height: 176px;
 
+  &--index {
+    background: url("../img/hero-mobile@1x.jpg") no-repeat 50% -19px;
+  }
+
   @include for_tablet {
     min-height: 223px;
     padding-left: $padding_tablet;
     padding-right: $padding_tablet;
+
+    &--index {
+      position: relative;
+      background: url("../img/hero-tablet@1x.jpg");
+      background-repeat:no-repeat;
+      background-position: 50% -1px;
+    }
+
+    // &--index::before {
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   content: "";
+    //   z-index: 100;
+    //   width: 100%;
+    //   height: 12px;
+    //   background: url("../img/bg-zigzag-fill.svg") round no-repeat 0 0;
+    // }
   }
 
   @include for_desktop {
@@ -34,9 +102,9 @@ $bgc_title: #f1f1f1;
 
 .title__heading {
   @include font-character($font_size_title,
-                          $line_height_title,
-                          $font_weight_title,
-                          $color_title);
+                          $line_height_heading,
+                          $font_weight_heading,
+                          $color_heading);
   text-align: center;
   margin: auto;
   padding-left: $padding_mobile;
@@ -49,10 +117,10 @@ $bgc_title: #f1f1f1;
   }
 
   @include for_tablet {
-    @include font-character($font_size_title_tablet,
-                            $line_height_title_tablet,
-                            $font_weight_title_tablet,
-                            $color_title_tablet);
+    @include font-character($font_size_heading_tablet,
+                            $line_height_heading_tablet,
+                            $font_weight_heading,
+                            $color_heading);
 
     margin-top: 36px;
 
@@ -62,10 +130,10 @@ $bgc_title: #f1f1f1;
   }
 
   @include for_desktop {
-    @include font-character($font_size_title_desktop,
-                            $line_height_title_desktop,
-                            $font_weight_title_desktop,
-                            $color_title_desktop);
+    @include font-character($font_size_heading_desktop,
+                            $line_height_heading_desktop,
+                            $font_weight_heading,
+                            $color_heading);
     padding-left: 60px;
     padding-right: 60px;
     margin-top: 35px;

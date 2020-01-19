@@ -1,13 +1,11 @@
 .order__inner {
-  padding-top: 15px;
-  padding-bottom: 15px;
-
   @include for_tablet {
     padding-top: $padding_tablet;
     padding-bottom: $padding_tablet;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: stretch;
   }
 
   &--induction {
@@ -23,13 +21,23 @@
     }
   }
 
+  &--wishes {
+    @include for_tablet {
+      flex-wrap: nowrap;
+    }
+
+    @include for_desktop {
+      padding-bottom: 46px;
+    }
+  }
+
   &--button {
     padding-top: 0;
     padding-bottom: 55px;
 
     @include for_tablet {
       padding-top: 3px;
-      padding-bottom: $padding_tablet;
+      padding-bottom: 33px;
       flex-direction: row-reverse;
       justify-content: space-between;
     }
@@ -42,11 +50,19 @@
 }
 
 .order__explanation {
-  @include font_character($font_size_videoblog_description,
-                          $line_height_videoblog_description,
-                          $font_weight_videoblog_description,
-                          $color_videoblog_description);
+  @include font_character($font_size_order_explanation,
+                          $line_height_order_explanation,
+                          $font_weight_order_explanation,
+                          $color_order_explanation);
   margin: 0;
+  padding-bottom: 15px;
+
+  @include for_tablet {
+    @include font_character($font_size_order_explanation_tablet,
+                            $line_height_order_explanation_tablet,
+                            $font_weight_videoblog_description,
+                            $color_videoblog_description);
+  }
 
   @include for_desktop {
     padding-left: 175px;
@@ -72,8 +88,8 @@
                           $color_order_query);
   text-transform: uppercase;
   margin: 0;
-  padding-top: 10px;
-  padding-bottom: 30px;
+  padding-top: 9px;
+  padding-bottom: 25px;
 
   @include for_tablet {
     width: 167px;
@@ -100,15 +116,47 @@
   }
 }
 
+.order__list--color {
+  @include for_tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .order__item {
+    @include for_tablet {
+      min-width: 220px;
+      margin-bottom: 15px;
+
+      &:nth-child(2n+1) {
+        margin-right: 42px;
+      }
+    }
+
+    @include for_desktop {
+      min-width: 262px;
+
+      &:nth-child(2n+1) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
 .order__item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  min-height: 60px;
 }
 
 .order__list--username .order__item {
   flex-wrap: wrap;
+  min-height: 70px;
+
+  @include for_desktop {
+    flex-wrap: nowrap;
+  }
 }
 
 .order__description {
@@ -118,10 +166,23 @@
                             $color_order_description);
 
   display: block;
+  min-height: 61px;
+
+  @include for_tablet {
+    @include font_character($font_size_order_description_tablet,
+                            $line_height_order_description,
+                            $font_weight_order_description,
+                            $color_order_description);
+  }
+
+  @include for_desktop {
+    cursor: pointer;
+  }
 
   &--radio,
   &--checkbox {
     position: relative;
+    padding-top: 9px;
     padding-left: 62px;
 
     &::before {
@@ -132,7 +193,12 @@
       width: 40px;
       height: 40px;
 
-      border: 2px solid #b4b4b4;
+      border: 2px solid #444444;
+
+      @include for_tablet {
+        width: 54px;
+        height: 52px;
+      }
     }
   }
 
@@ -140,7 +206,23 @@
     &::before {
       border-radius: 50%;
       padding: 10px;
+
+      @include for_tablet {
+        width: 52px;
+        height: 53px;
+        padding: 14px;
+      }
     }
+  }
+}
+
+.order__description--text {
+  min-height: 33px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+
+  @include for_tablet {
+    padding-right: 25px;
   }
 }
 
@@ -154,8 +236,14 @@
 
   &--checkbox {
     &::before {
-      background: url("../img/icon-tick.svg") no-repeat 45% 55%;
+      background-image: url("../img/icon-tick.svg");
       background-size: 20px 20px;
+      background-repeat: no-repeat;
+      background-position: 45% 55%;
+
+      @include for_tablet {
+        background-size: 33px 22px;
+      }
     }
   }
 }
@@ -217,6 +305,7 @@
     @include for_desktop {
       width: 700px;
       margin-right: 175px;
+      cursor: pointer;
 
       &:hover,
       &:focus,
@@ -235,17 +324,29 @@
     }
   }
 
+  &--text {
+    padding-bottom: 13px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+
+    @include for_tablet {
+      flex-grow: 1;
+    }
+
+    @include for_desktop {
+      margin-right: 0;
+    }
+  }
+
   &--tel,
   &--email {
     padding-right: 40px;
-  }
+    padding-bottom: 15px;
+    background-repeat: no-repeat;
 
-  &--tel {
-    background: url("../img/icon-phone.svg") no-repeat 96.4% 50%;
-  }
-
-  &--email {
-    background: url("../img/icon-mail.svg") no-repeat 98.1% 50%;
+    @include for_tablet {
+      flex-grow: 1;
+    }
   }
 
   &--add {
@@ -255,13 +356,19 @@
                             $color_order);
     border: 2px solid $color_body;
     width: 100%;
+    min-height: 142px;
+    padding: 14px;
 
     @include for_tablet {
-      width: 101px;
+      flex-grow: 1;
+      margin-left: 45px;
     }
 
     @include for_desktop {
+      flex-grow: 0;
+      margin-left: 0;
       width: 700px;
+      cursor: pointer;
 
       &:hover,
       &:focus,
@@ -281,6 +388,46 @@
   }
 }
 
+.order__wrapper-input {
+  position: relative;
+
+  @include for_tablet {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.order__wrapper-icon {
+  opacity: 0.2;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+
+  @include for_desktop {
+    right: 179px;
+  }
+}
+
+.order__icon {
+  fill: currentColor;
+}
+
+.order__input--tel:hover + .order__wrapper-icon,
+.order__input--email:hover + .order__wrapper-icon {
+  @include for_desktop {
+    color: #62d1ba;
+    opacity: 1;
+  }
+}
+
+.order__input--tel:focus + .order__wrapper-icon,
+.order__input--email:focus + .order__wrapper-icon {
+  color: #62d1ba;
+  opacity: 1;
+}
+
 .order__footnote {
   @include font_character($font_size_order_footnote,
                           $line_height_order_footnote,
@@ -288,6 +435,15 @@
                           $color_order_footnote);
   margin: 0;
   padding-bottom: $padding_mobile;
+
+  @include for_tablet {
+    @include font_character($font_size_order_footnote_tablet,
+                          $line_height_order_footnote_tablet,
+                          $font_weight_order_footnote,
+                          $color_order_footnote);
+
+    padding-top: 9px;
+  }
 }
 
 .order__button {

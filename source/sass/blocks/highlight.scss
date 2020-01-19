@@ -2,17 +2,33 @@
 $background_color_image-wrapper: #f1f1f1; // background_color - background-color
 
 .highlight {
-  background: url("../img/bg-zigzag-line.svg") repeat-x 9px 100.1%;
   background-size: 320px 10px;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: 9px 100.1%;
 
   @include for_tablet {
-    background: url("../img/bg-zigzag-line.svg") repeat-x 22px 100.7%;
     background-size: 770px 24px;
+    background-position: 22px 100.7%;
   }
 
   @include for_desktop {
-    background: url("../img/bg-zigzag-line.svg") repeat-x 16px 100%;
-    background-size: 1050px 23px;
+    background: none;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1050px;
+      height: 23px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url("../img/bg-zigzag-line.svg");
+      background-repeat: repeat-x;
+      background-size: 1050px 23px;
+      background-position: 26px 100%;
+    }
   }
 }
 
@@ -32,6 +48,8 @@ $background_color_image-wrapper: #f1f1f1; // background_color - background-color
 
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
 }
 
 .highlight__header {

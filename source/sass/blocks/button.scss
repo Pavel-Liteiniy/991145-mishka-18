@@ -13,9 +13,13 @@ $background_color_hover: #444444;
                           $color_button);
   @include link_default_remove;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   min-height: $min_height;
   text-transform: uppercase;
   border: 2px solid $color_body;
@@ -24,6 +28,8 @@ $background_color_hover: #444444;
   outline: none;
 
   @include for_desktop {
+    cursor: pointer;
+
     &:hover,
     &:focus {
       background-color: $background_color_hover;

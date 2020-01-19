@@ -1,17 +1,15 @@
 // Локальные переменные блока product
-$border_color_product: #ededed; // border_color - border-color
-
-$color_link-heading_hover: #000000; // color - color
-$color_link-heading_active: #000000; // color - color
-
-$background_color_link-image: #e5e5e5; // background_color - background-color
-
-$border_color_link-image: #ececec; // border_color - border-color
-
-$border_color_price: #ececec; // border_color - border-color
+$border_color_product: #ededed;
+$color_link-heading_hover: #000000;
+$color_link-heading_active: #000000;
+$background_color_link-image: #e5e5e5;
+$border_color_link-image: #ececec;
+$border_color_price: #ececec;
 
 .product {
   display: flex;
+  align-items: stretch;
+  justify-content: space-between;
   flex-direction: column;
   padding-left: 27px;
   padding-right: 27px;
@@ -143,6 +141,8 @@ $border_color_price: #ececec; // border_color - border-color
                           $font_weight_product_price,
                           $color_product_price);
   display: flex;
+  justify-content: space-between;
+  align-items: stretch;
   flex-wrap: wrap;
   margin: 0;
   padding-top: 21px;
@@ -170,11 +170,27 @@ $border_color_price: #ececec; // border_color - border-color
   width: 20px;
   height: 20px;
   margin-left: auto;
+}
 
-  background: url("../img/icon-cart.svg") no-repeat 50% 50%;
+.product__icon-cart {
+  fill: currentColor;
+}
 
-  @include for_tablet {
-    // width: 21px;
-    // height: 18px;
+.product__wrapper-icon {
+  color: #000000;
+  opacity: 0.2;
+}
+
+.product__cart:hover .product__wrapper-icon,
+.product__cart:focus .product__wrapper-icon {
+  @include for_desktop {
+    color: $color_icon_hover;
+    opacity: 1;
+  }
+}
+
+.product__cart:active .product__wrapper-icon {
+  @include for_desktop {
+    opacity: $active_opacity;
   }
 }

@@ -4,10 +4,8 @@
 $link_min_height_mobile: 79px;
 //tablet
 $link_min_height_tablet: 89px;
-// nav__link:hover
-$link_color_hover: #000000;
-// nav__link:active
-$link_color_active: #000000;
+// nav__link
+$nav_link_color: #000000;
 
 .nav {
   @include font_character($font_size_nav,
@@ -15,6 +13,8 @@ $link_color_active: #000000;
                           $font_weight_nav,
                           $color_nav);
   display: flex;
+  justify-content: stretch;
+  align-items: stretch;
   flex-wrap: wrap;
 }
 
@@ -25,7 +25,6 @@ $link_color_active: #000000;
 
   @include for_tablet {
     width: auto;
-    display: flex;
 
     &--categories {
       order: 1;
@@ -45,6 +44,7 @@ $link_color_active: #000000;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: stretch;
   min-height: $link_min_height_mobile;
   padding-left: 75px;
   padding-bottom: 2px;
@@ -61,11 +61,11 @@ $link_color_active: #000000;
   @include for_desktop {
     &:hover,
     &:focus {
-      color: rgba($color: $link_color_hover, $alpha: $hover_opacity);
+      color: rgba($color: $nav_link_color, $alpha: $hover_opacity);
     }
 
     &:active {
-      color: rgba($color: $link_color_active, $alpha: $active_opacity);
+      color: rgba($color: $nav_link_color, $alpha: $active_opacity);
     }
   }
 }
@@ -114,13 +114,27 @@ $link_color_active: #000000;
 
       &:hover:not(.nav__link--active),
       &:focus:not(.nav__link--active) {
-        color: rgba($color: $link_color_hover, $alpha: $hover_opacity);
+        color: rgba($color: $nav_link_color, $alpha: $hover_opacity);
       }
 
       &:active:not(.nav__link--active) {
-        color: rgba($color: $link_color_active, $alpha: $active_opacity);
+        color: rgba($color: $nav_link_color, $alpha: $active_opacity);
       }
     }
+  }
+}
+
+.nav__link:hover:not(.nav__link--active) .nav__wrapper-icon,
+.nav__link:focus:not(.nav__link--active) .nav__wrapper-icon {
+  @include for_desktop {
+    color: $color_icon_hover;
+    opacity: 1;
+  }
+}
+
+.nav__link:active:not(.nav__link--active) .nav__wrapper-icon {
+  @include for_desktop {
+    opacity: $active_opacity;
   }
 }
 
@@ -135,51 +149,37 @@ $link_color_active: #000000;
   }
 }
 
+.nav__wrapper-icon {
+  position: absolute;
+  opacity: 0.2;
+}
+
+.nav__icon {
+  fill: currentColor;
+}
+
 .nav__item--searching {
   @include for_tablet {
     font-size: 0;
   }
-}
 
-.nav__item--searching .nav__link {
-  position: relative;
+  .nav__wrapper-icon {
+    top: 41%;
+    left: 36px;
+  }
 
-  &::before {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 30px;
-    content: "";
-    width: 20px;
-    height: 20px;
-    color: #d3d2d2;
-
-    background: url("../img/icon-search.svg") 100% 100% no-repeat;
-
-    @include for_tablet {
-      left: 33px;
-    }
+  .nav__link {
+    position: relative;
   }
 }
 
-.nav__item--cart .nav__link {
-  position: relative;
+.nav__item--cart {
+  .nav__wrapper-icon {
+    top: 38%;
+    left: 33px;
+  }
 
-  &::before {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 30px;
-    content: "";
-    width: 21px;
-    height: 18px;
-    color: #d3d2d2;
-
-    background: url("../img/icon-cart.svg") 50% 50% no-repeat;
-
-    @include for_tablet {
-      top: 49%;
-      left: 32px;
-    }
+  .nav__link {
+    position: relative;
   }
 }

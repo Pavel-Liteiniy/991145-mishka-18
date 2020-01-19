@@ -37,6 +37,7 @@ $background_color_button: #63d1bb;
 }
 
 .modal__inner {
+  width: 100%;
   position: fixed;
   z-index: 20;
   top: 50%;
@@ -113,6 +114,8 @@ $background_color_button: #63d1bb;
 .modal__wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
   padding-bottom: 21px;
 }
 
@@ -123,6 +126,7 @@ $background_color_button: #63d1bb;
                           $color_modal_description);
   border: 2px solid $border_color;
   display: flex;
+  flex-grow: 1;
   justify-content: center;
   align-items: center;
   min-width: 82px;
@@ -135,6 +139,10 @@ $background_color_button: #63d1bb;
 
   @include for_tablet {
     width: 112px;
+  }
+
+  @include for_desktop {
+    cursor: pointer;
   }
 }
 
@@ -166,4 +174,8 @@ $background_color_button: #63d1bb;
   vertical-align: middle;
   border: none;
   text-transform: uppercase;
+
+  @include for_desktop {
+    cursor: pointer;
+  }
 }

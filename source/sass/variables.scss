@@ -2,20 +2,9 @@
 $font_family: "Open Sans", "Arial", sans-serif;
 // Переменные для H1
 $font_size_title: 27px;
-// $line_height_title: 30px;
-// $font_weight_title: bold;
-// $color_title: #000000;
 
 // Переменные для H1 в tablet
-// $font_size_title_tablet: 43px;
-// $line_height_title_tablet: 50px;
-// $font_weight_title_tablet: bold;
-// $color_title_tablet: #000000;
 // Переменные для H1 в desktop
-// $font_size_title_desktop: 53px;
-// $line_height_title_desktop: 57px;
-// $font_weight_title_desktop: bold;
-// $color_title_desktop: #000000;
 
 // Переменные для label
 $font_size_label: 15px;
@@ -45,8 +34,6 @@ $width_desktop: 1150px;
 $padding_desktop: 50px;
 
 // Относительные переменные
-// $half: 50%;
-// $full: 100%;
 
 // Переменные для заголовков блоков Н2
 // for_mobile
@@ -57,28 +44,19 @@ $color_heading: #000000;
 // for_tablet
 $font_size_heading_tablet: 43px;
 $line_height_heading_tablet: 50px;
-// $font_weight_heading_tablet: bold;
-// $color_heading_tablet: #000000;
 // for_desktop
 $font_size_heading_desktop: 53px;
 $line_height_heading_desktop: 57px;
-// $font_weight_heading_desktop: bold;
-// $color_heading_desktop: #000000;
 
 //Переменные для цветов
 $border_color: #ececec;
 $border_color_copyright: #e5e5e5;
 $border_color_product: #ededed;
 $border_color_input: #000000;
-// $border_color_textarea: #444444;
-// $border_color_button: #444444;
 $border_color_email: #62d1ba;
 $border_color_modal: #c6c6c6;
-// $background_white: #ffffff;
 $background_color_body: #ffffff;
 $color_body: #444444;
-// $turquoise: #63d1bb;
-// $black: #000000;
 $background_link_interior: #63d1bb;
 $background_link_toys: #56c3b2;
 $background_footer: #f1f1f1;
@@ -88,11 +66,9 @@ $font_size_nav: 17px;
 $line_height_nav: 24px;
 $font_weight_nav: bold;
 $color_nav: #000000;
+$color_icon_hover: #63d1bb;
 // tablet
 $font_size_nav_tablet: 15px;
-// $line_height_nav_tablet: 24px;
-// $font_weight_nav_tablet: bold;
-// $color_nav_tablet: #000000;
 // Переменные для Категорий CATEGORIES
 // мобильная версия
 $font_size_categories: 19px;
@@ -102,20 +78,10 @@ $color_categories: #ffffff;
 // планшетная версия
 $font_size_categories_tablet: 20px;
 $line_height_categories_tablet: 30px;
-// $font_weight_categories_tablet: bold;
-// $color_categories_tablet: #ffffff;
 
 // Переменные для Товара недели HIGHLIGHT
 // highlight_heading
-// $font_size_highlight_heading_tablet: 43px;
-// $line_height_highlight_heading_tablet: 50px;
-// $font_weight_highlight_heading_tablet: bold;
-// $color_highlight_heading_tablet: #000000;
 // highlight_heading_desktop
-// $font_size_highlight_heading_desktop: 53px;
-// $line_height_highlight_heading_desktop: 57px;
-// $font_weight_highlight_heading_desktop: bold;
-// $color_highlight_heading_desktop: #000000;
 // highlight_naming
 $font_size_highlight_naming: 17px;
 $line_height_highlight_naming: 17px;
@@ -129,8 +95,6 @@ $color_highlight_description: #444444;
 // highlight__description_tablet
 $font_size_highlight_description_tablet: 17px;
 $line_height_highlight_description_tablet: 30px;
-// $font_weight_highlight_description_tablet: normal;
-// $color_highlight_description_tablet: #444444;
 // highlight__table
 $font_size_highlight_table: 15px;
 $line_height_highlight_table: 20px;
@@ -150,15 +114,9 @@ $color_button: #000000;
 
 // Переменные для Преимуществ features
 // features_heading_tablet
-// $font_size_features_heading_tablet: 43px;
-// $line_height_features_heading_tablet: 50px;
-// $font_weight_features_heading_tablet: bold;
-// $color_features_heading_tablet: #000000;
 // features_heading_desktop
 $font_size_features_heading_desktop: 53px;
 $line_height_features_heading_desktop: 58px;
-// $font_weight_features_heading_desktop: bold;
-// $color_features_heading_desktop: #000000;
 // features__list
 $font_size_features_list: 17px;
 $line_height_features_list: 20px;
@@ -167,8 +125,6 @@ $color_features_list: #000000;
 // features_list_tablet
 $font_size_features_list_tablet: 20px;
 $line_height_features_list_tablet: 22px;
-// $font_weight_features_list_tablet: bold;
-// $color_features_list_tablet: #000000;
 
 // Переменные для FOOTER
 //footer__copyright
@@ -190,9 +146,6 @@ $font_weight_modal_query: normal;
 $color_modal_query: #444444;
 // query_tablet
 $font_size_modal_query_tablet: 17px;
-// $line_height_modal_query_tablet: 30px;
-// $font_weight_modal_query_tablet: normal;
-// $color_modal_query_tablet: #444444;
 // description
 $font_size_modal_description: 17px;
 $line_height_modal_description: 16px;
@@ -212,9 +165,6 @@ $font_weight_product_heading: bold;
 $color_product_heading: #000000;
 // product__heading_tablet
 $font_size_product_heading_tablet: 20px;
-// $line_height_product_heading_tablet: 24px;
-// $font_weight_product_heading_tablet: bold;
-// $color_product_heading_tablet: #000000;
 // product__profile
 $font_size_product_profile: 13px;
 $line_height_product_profile: 30px;
@@ -222,9 +172,6 @@ $font_weight_product_profile: normal;
 $color_product_profile: #444444;
 // product__profile_tablet
 $font_size_product_profile_tablet: 15px;
-// $line_height_product_profile_tablet: 30px;
-// $font_weight_product_profile_tablet: normal;
-// $color_product_profile_tablet: #444444;
 // product_price
 $font_size_product_price: 15px;
 $line_height_product_price: 24px;
@@ -232,9 +179,6 @@ $font_weight_product_price: bold;
 $color_product_price: #000000;
 // product_price_tablet
 $font_size_product_price_tablet: 17px;
-// $line_height_product_price_tablet: 24px;
-// $font_weight_product_price_tablet: bold;
-// $color_product_price_tablet: #000000;
 
 // Переменные для COMMENTS
 // comments__heading
@@ -244,9 +188,6 @@ $font_weight_comments_content: normal;
 $color_comments_content: #444444;
 // tablet
 $font_size_comments_content_tablet: 17px;
-// $line_height_comments_content_tablet: 30px;
-// $font_weight_comments_content_tablet: normal;
-// $color_comments_content_tablet: #444444;
 // Переменные для comments__author
 $font_size_comments_author: 17px;
 $line_height_comments_author: 24px;
@@ -254,9 +195,6 @@ $font_weight_comments_author: bold;
 $color_comments_author: #000000;
 // tablet
 $font_size_comments_author_tablet: 18px;
-// $line_height_comments_author_tablet: 24px;
-// $font_weight_comments_author_tablet: bold;
-// $color_comments_author_tablet: #000000;
 // Переменные для comments__heading
 $font_size_comments_login: 17px;
 $line_height_comments_login: 30px;
@@ -277,9 +215,6 @@ $font_weight_contacts_list: normal;
 $color_contacts_list: #444444;
 // tablet
 $font_size_contacts_list_tablet: 17px;
-// $line_height_contacts_list_tablet: 30px;
-// $font_weight_contacts_list_tablet: normal;
-// $color_contacts_list_tablet: #444444;
 
 // Переменные для VIDEOBLOG
 // videoblog__description
@@ -290,10 +225,16 @@ $color_videoblog_description: #444444;
 // tablet
 $font_size_videoblog_description_tablet: 15px;
 $line_height_videoblog_description_tablet: 30px;
-// $font_weight_videoblog_description_tablet: normal;
-// $color_videoblog_description_tablet: #444444;
 
 // Переменные для ORDER
+// order__explanation
+$font_size_order_explanation: 13px;
+$line_height_order_explanation: 24px;
+$font_weight_order_explanation: normal;
+$color_order_explanation: #444444;
+// tablet
+$font_size_order_explanation_tablet: 17px;
+$line_height_order_explanation_tablet: 30px;
 // order__query
 $font_size_order_query: 17px;
 $line_height_order_query: 16px;
@@ -304,6 +245,8 @@ $font_size_order_description: 17px;
 $line_height_order_description: 18px;
 $font_weight_order_description: bold;
 $color_order_description: #000000;
+// tablet
+$font_size_order_description_tablet: 19px;
 // order__input--text
 $font_size_order: 19px;
 $line_height_order: 18px;
@@ -319,6 +262,9 @@ $font_size_order_footnote: 14px;
 $line_height_order_footnote: 16px;
 $font_weight_order_footnote: normal;
 $color_order_footnote: #444444;
+// tablet
+$font_size_order_footnote_tablet: 17px;
+$line_height_order_footnote_tablet: 30px;
 
 // styleguide
 $hover_opacity: 0.6; // :hover

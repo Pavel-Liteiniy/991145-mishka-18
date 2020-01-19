@@ -11,6 +11,8 @@ $color_link_active: #000000;
   @include list_default_remove;
 
   display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
   flex-direction: column;
   margin-top: auto;
 
@@ -40,18 +42,23 @@ $color_link_active: #000000;
   padding-bottom: 25px;
   outline: none;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 22px;
+    width: 70px;
+    height: 70px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
   &--interior {
     background-color: $background_color_link_interior;
 
     &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 22px;
-      width: 70px;
-      height: 70px;
-      background: url("../img/icon-interior.svg") 50% 50% no-repeat;
+      background-image: url("../img/icon-interior.svg");
     }
   }
 
@@ -59,14 +66,7 @@ $color_link_active: #000000;
     background-color: $background_color_link_toys;
 
     &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 22px;
-      width: 70px;
-      height: 70px;
-      background: url("../img/icon-toy.svg") 50% 50% no-repeat;
+      background-image: url("../img/icon-toy.svg");
 
       @include for_tablet {
         top: 51%;

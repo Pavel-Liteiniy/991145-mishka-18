@@ -1,17 +1,15 @@
 // Локальные переменные блока product
-$brdr_clr_product: #ededed; // brdr_clr - border-color
-
-$clr_link-heading_hover: #000000; // clr - color
-$clr_link-heading_active: #000000; // clr - color
-
-$bgc_link-image: #e5e5e5; // bgc - background-color
-
-$brdr_clr_link-image: #ececec; // brdr_clr - border-color
-
-$brdr_clr_price: #ececec; // brdr_clr - border-color
+$border_color_product: #ededed;
+$color_link-heading_hover: #000000;
+$color_link-heading_active: #000000;
+$background_color_link-image: #e5e5e5;
+$border_color_link-image: #ececec;
+$border_color_price: #ececec;
 
 .product {
   display: flex;
+  align-items: stretch;
+  justify-content: space-between;
   flex-direction: column;
   padding-left: 27px;
   padding-right: 27px;
@@ -28,9 +26,17 @@ $brdr_clr_price: #ececec; // brdr_clr - border-color
     width: 316px;
     padding-left: 26px;
     padding-right: 33px;
+
+    &:hover {
+      box-shadow: 0 6px 10px 0 rgba($color: #000000, $alpha: 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 0 rgba($color: #000000, $alpha: 0.1);
+    }
   }
 
-  border: 1px solid $brdr_clr_product;
+  border: 1px solid $border_color_product;
 }
 
 .product__heading {
@@ -43,9 +49,9 @@ $brdr_clr_price: #ececec; // brdr_clr - border-color
 
   @include for_tablet {
     @include font_character($font_size_product_heading_tablet,
-                            $line_height_product_heading_tablet,
-                            $font_weight_product_heading_tablet,
-                            $color_product_heading_tablet);
+                            $line_height_product_heading,
+                            $font_weight_product_heading,
+                            $color_product_heading);
     margin-left: 26px;
     margin-top: 25px;
     margin-right: 44px;
@@ -63,13 +69,15 @@ $brdr_clr_price: #ececec; // brdr_clr - border-color
 
   outline: none;
 
-  &:hover,
-  &:focus {
-    color: rgba($color: $clr_link-heading_hover, $alpha: $hover_opacity);
-  }
+  @include for_desktop {
+    &:hover,
+    &:focus {
+      color: rgba($color: $color_link-heading_hover, $alpha: $hover_opacity);
+    }
 
-  &:active {
-    color: rgba($color: $clr_link-heading_active, $alpha: $active_opacity);
+    &:active {
+      color: rgba($color: $color_link-heading_active, $alpha: $active_opacity);
+    }
   }
 }
 
@@ -83,9 +91,9 @@ $brdr_clr_price: #ececec; // brdr_clr - border-color
 
   @include for_tablet {
     @include font_character($font_size_product_profile_tablet,
-                            $line_height_product_profile_tablet,
-                            $font_weight_product_profile_tablet,
-                            $color_product_profile_tablet);
+                            $line_height_product_profile,
+                            $font_weight_product_profile,
+                            $color_product_profile);
     margin-left: 26px;
   }
 
@@ -103,7 +111,7 @@ $brdr_clr_price: #ececec; // brdr_clr - border-color
   height: 195px;
   margin-left: -28px;
   margin-bottom: 26px;
-  background-color: $bgc_link-image;
+  background-color: $background_color_link-image;
 
   @include for_tablet {
     width: 334px;
@@ -123,7 +131,7 @@ $brdr_clr_price: #ececec; // brdr_clr - border-color
     width: 316px;
     height: 462px;
     margin-left: -27px;
-    border-bottom: 1px solid $brdr_clr_link-image;
+    border-bottom: 1px solid $border_color_link-image;
   }
 }
 
@@ -133,17 +141,19 @@ $brdr_clr_price: #ececec; // brdr_clr - border-color
                           $font_weight_product_price,
                           $color_product_price);
   display: flex;
+  justify-content: space-between;
+  align-items: stretch;
   flex-wrap: wrap;
   margin: 0;
   padding-top: 21px;
   padding-bottom: 27px;
-  border-top: 1px solid $brdr_clr_price;
+  border-top: 1px solid $border_color_price;
 
   @include for_tablet {
     @include font_character($font_size_product_price_tablet,
-                            $line_height_product_price_tablet,
-                            $font_weight_product_price_tablet,
-                            $color_product_price_tablet);
+                            $line_height_product_price,
+                            $font_weight_product_price,
+                            $color_product_price);
     margin-left: 31px;
     margin-top: auto;
     padding-top: 22px;
@@ -158,11 +168,29 @@ $brdr_clr_price: #ececec; // brdr_clr - border-color
 .product__cart {
   display: block;
   width: 20px;
-  height: 19px;
+  height: 20px;
   margin-left: auto;
+}
 
-  @include for_tablet {
-    width: 21px;
-    height: 18px;
+.product__icon-cart {
+  fill: currentColor;
+}
+
+.product__wrapper-icon {
+  color: #000000;
+  opacity: 0.2;
+}
+
+.product__cart:hover .product__wrapper-icon,
+.product__cart:focus .product__wrapper-icon {
+  @include for_desktop {
+    color: $color_icon_hover;
+    opacity: 1;
+  }
+}
+
+.product__cart:active .product__wrapper-icon {
+  @include for_desktop {
+    opacity: $active_opacity;
   }
 }

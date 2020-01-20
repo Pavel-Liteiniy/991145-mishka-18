@@ -1,18 +1,62 @@
+.comments {
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-size: 320px 10px;
+  background-position: 9px 100.1%;
+  background-repeat: repeat-x;
+
+  @include for_tablet {
+    background-image: url("../img/bg-zigzag-line.svg"), url("../img/review@1x.jpg");
+    background-size: 770px 24px, auto auto;
+    background-position: 22px 100.8%, 0 0;
+    background-repeat: repeat-x, no-repeat;
+  }
+
+  @include for_desktop {
+    background: none;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1050px;
+      height: 23px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url("../img/bg-zigzag-line.svg");
+      background-repeat: repeat-x;
+      background-size: 1050px 23px;
+      background-position: 26px 100%;
+    }
+  }
+}
+
 .comments__inner {
   padding-top: 29px;
   padding-bottom: 51px;
 
   @include for_tablet {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     padding-top: 76px;
     padding-bottom: 85px;
+
+    // background-image: url("../img/review@1x.jpg");
+    // background-position: 0 0;
+    // background-repeat: no-repeat;
   }
 
   @include for_desktop {
     padding-top: 70px;
     padding-left: 225px;
     padding-bottom: 85px;
+
+    background-image: url("../img/review@1x.jpg");
+    // background-position: 0 0;
+    background-repeat: no-repeat;
+    background-position: 50px 0;
   }
 }
 
@@ -28,19 +72,19 @@
   @include for_tablet {
     @include font_character($font_size_heading_tablet,
                             $line_height_heading_tablet,
-                            $font_weight_heading_tablet,
-                            $color_heading_tablet);
+                            $font_weight_heading,
+                            $color_heading);
 
     order: -2;
     margin-left: -4px;
-    padding-bottom: 49px;
+    padding-bottom: 50px;
   }
 
   @include for_desktop {
     @include font_character($font_size_heading_desktop,
                             $line_height_heading_desktop,
-                            $font_weight_heading_desktop,
-                            $color_heading_desktop);
+                            $font_weight_heading,
+                            $color_heading);
   }
 }
 
@@ -54,9 +98,9 @@
 
   @include for_tablet {
     @include font_character($font_size_comments_content_tablet,
-                            $line_height_comments_content_tablet,
-                            $font_weight_comments_content_tablet,
-                            $color_comments_content_tablet);
+                            $line_height_comments_content,
+                            $font_weight_comments_content,
+                            $color_comments_content);
 
     padding-bottom: 57px;
   }
@@ -76,7 +120,7 @@
   }
 
   @include for_desktop {
-    padding-bottom: $padding_desktop + $padding_desktop;
+    padding-bottom: 100px;
   }
 }
 
@@ -90,9 +134,9 @@
 
   @include for_tablet {
     @include font_character($font_size_comments_author_tablet,
-                          $line_height_comments_author_tablet,
-                          $font_weight_comments_author_tablet,
-                          $color_comments_author_tablet);
+                            $line_height_comments_author,
+                            $font_weight_comments_author,
+                            $color_comments_author);
 
     padding-bottom: 4px;
   }
@@ -108,6 +152,8 @@
 
 .comments__controls {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   padding-bottom: 38px;
 
@@ -127,14 +173,29 @@
   padding-right: 4px;
   padding-top: 2px;
   border: 1px solid $border_color;
-  background-color: $background_white;
-  font-size: $font_size_button + 1;
-  color: $black;
+  background-color: $background_color_body;
+  font-size: $font_size_comments_author_tablet;
+  color: $color_comments_author;
 
   @include for_tablet {
     border: none;
     padding-left: 19px;
     padding-right: 19px;
+  }
+
+  @include for_desktop {
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: $hover_opacity;
+    }
+
+    &:active {
+      outline: none;
+      opacity: $active_opacity;
+    }
   }
 }
 

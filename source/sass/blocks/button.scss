@@ -1,11 +1,10 @@
 // Локальные переменные блока button
-$mh: 52px; //mh - min-height
-$clr_active: #ffffff; //clr - color
-$bgc: #ffffff; //bgc -  background-color
+$min_height: 52px;
+$color_active: #ffffff;
+$background_color: #ffffff;
 // button:hover
-$clr_hover: #ffffff; //clr - color
-$bgc_hover: #444444; //bgc -  background-color
-
+$color_hover: #ffffff;
+$background_color_hover: #444444;
 
 .button {
   @include font_character($font_size_button,
@@ -14,23 +13,31 @@ $bgc_hover: #444444; //bgc -  background-color
                           $color_button);
   @include link_default_remove;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: $mh;
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: $min_height;
   text-transform: uppercase;
-  border: 2px solid $border_color_button;
-  background-color: $bgc;
+  border: 2px solid $color_body;
+  background-color: $background_color;
   font-family: $font_family;
   outline: none;
 
-  &:hover,
-  &:focus {
-    background-color: $bgc_hover;
-    color: $clr_hover;
-  }
+  @include for_desktop {
+    cursor: pointer;
 
-  &:active {
-    color: rgba($color: $clr_active, $alpha: $active_opacity);
+    &:hover,
+    &:focus {
+      background-color: $background_color_hover;
+      color: $color_hover;
+    }
+
+    &:active {
+      color: rgba($color: $color_active, $alpha: $active_opacity);
+    }
   }
 }

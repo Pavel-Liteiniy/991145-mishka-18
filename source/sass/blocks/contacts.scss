@@ -1,18 +1,22 @@
+.contacts {
+  position: relative;
+}
+
 .contacts__inner {
   padding-top: 35px;
   padding-bottom: 40px;
 
   @include for_tablet {
-    padding-top: 61px;
+    padding-top: 11px;
     padding-bottom: 57px;
   }
 
   @include for_desktop {
     position: relative;
-    padding-top: 141px;
+    padding-top: 90px;
     padding-bottom: 105px;
     padding-left: 225px;
-    padding-right: 50%;
+    padding-right: 31%;
   }
 }
 
@@ -28,21 +32,42 @@
   @include for_tablet {
     @include font_character($font_size_heading_tablet,
                             $line_height_heading_tablet,
-                            $font_weight_heading_tablet,
-                            $color_heading_tablet);
+                            $font_weight_heading,
+                            $color_heading);
 
+    padding-top: 50px;
     padding-right: 100px;
     padding-bottom: 50px;
     margin-left: -5px;
+
+    background-image: url("../img/icon-flag.svg");
+    background-repeat: no-repeat;
+    background-position: 99.4% 52%;
   }
 
   @include for_desktop {
     @include font_character($font_size_heading_desktop,
                             $line_height_heading_desktop,
-                            $font_weight_heading_desktop,
-                            $color_heading_desktop);
+                            $font_weight_heading,
+                            $color_heading);
+
     padding-bottom: 49px;
     padding-right: 10px;
+
+    position: relative;
+    background: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 33px;
+      left: -134px;
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
   }
 }
 
@@ -55,9 +80,9 @@
 
   @include for_tablet {
     @include font_character($font_size_contacts_list_tablet,
-                            $line_height_contacts_list_tablet,
-                            $font_weight_contacts_list_tablet,
-                            $color_contacts_list_tablet);
+                            $line_height_contacts_list,
+                            $font_weight_contacts_list,
+                            $color_contacts_list);
   }
 }
 
@@ -66,6 +91,8 @@
 
   @include for_tablet {
     display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
     flex-wrap: wrap;
     padding-bottom: 51px;
   }
@@ -83,6 +110,17 @@
   @include for_tablet {
     margin-left: 0;
   }
+
+  @include for_desktop {
+    &:hover,
+    &:focus {
+      color: #46c1ae;
+    }
+
+    &:active {
+      opacity: $active_opacity;
+    }
+  }
 }
 
 .contacts__item--list {
@@ -91,7 +129,7 @@
   }
 
   @include for_tablet {
-    width: $half;
+    width: 50%;
     padding-right: 10px;
     padding-bottom: 5px;
   }
@@ -108,6 +146,8 @@
 
 .contacts__item--list .contacts__list {
   display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 
 .contacts__item--list .contacts__item {
@@ -126,31 +166,43 @@
 }
 
 .contacts__map-wrapper {
-  width: 320px;
+  position: absolute;
+  bottom: 131px;
+  width: 100%;
   height: 457px;
-  margin-left: -padding_mobile;
-  margin-bottom: 39px;
+  // margin-left: -$padding_mobile;
+  // margin-bottom: 39px;
   background-color: #dfdfdf;
 
   @include for_tablet {
-    width: 768px;
-    height: 457px;
-    margin-left: -$padding_tablet;
+    // width: 768px;
+    // height: 457px;
+    // margin-left: -$padding_tablet;
+    bottom: 109px;
     margin-bottom: 55px;
   }
 
   @include for_desktop {
     position: absolute;
     width: 526px;
-    top: 71px;
-    right: 50px;
+    top: 70px;
+    left: 49.9%;
     padding: 0;
   }
 }
 
+.contacts__image {
+  display: block;
+  margin: 0 auto;
+  height: fit-content;
+}
+
 .contacts__button {
+  margin-top: 497px;
+
   @include for_tablet {
     width: 230px;
+    margin-top: 511px;
     margin-left: auto;
     margin-right: auto;
   }

@@ -15,17 +15,19 @@ button.addEventListener('click', function () {
 });
 
 // Отображает и скрывает модальное окно
-var link = document.querySelector(".button--modal");
+var links = document.querySelectorAll(".button--modal");
 var modal = document.querySelector(".modal");
 var inputRadio = modal.querySelector("[id=choose-size-s]");
 var overlay = document.querySelector(".modal__overlay");
 
-link.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  modal.classList.add("modal--show");
-  overlay.classList.add("modal__overlay--show");
-  inputRadio.focus();
-});
+for (var i = 0; i < links.length; ++i) {
+  links[i].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modal.classList.add("modal--show");
+    overlay.classList.add("modal__overlay--show");
+    inputRadio.focus();
+  });
+}
 
 overlay.addEventListener("click", function (evt) {
   modal.classList.remove("modal--show");

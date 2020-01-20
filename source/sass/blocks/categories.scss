@@ -1,7 +1,7 @@
 // Локальные переменные блока categories
-$bgc_link_interior: #63d1bb; // bgc - background-color
-$bgc_link_toys: #56c3b2; // bgc - background-color
-$clr_link_active: #000000; // clr - color
+$background_color_link_interior: #63d1bb;
+$background_color_link_toys: #56c3b2;
+$color_link_active: #000000;
 
 .categories {
   @include font_character($font_size_categories,
@@ -11,14 +11,16 @@ $clr_link_active: #000000; // clr - color
   @include list_default_remove;
 
   display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
   flex-direction: column;
   margin-top: auto;
 
   @include for_tablet {
     @include font_character($font_size_categories_tablet,
-                          $line_height_categories_tablet,
-                          $font_weight_categories_tablet,
-                          $color_categories_tablet);
+                            $line_height_categories_tablet,
+                            $font_weight_categories,
+                            $color_categories);
 
     flex-direction: row;
     flex-wrap: wrap;
@@ -40,22 +42,37 @@ $clr_link_active: #000000; // clr - color
   padding-bottom: 25px;
   outline: none;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 22px;
+    width: 70px;
+    height: 70px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
   &--interior {
-    background-color: $bgc_link_interior;
+    background-color: $background_color_link_interior;
+
+    &::before {
+      background-image: url("../img/icon-interior.svg");
+    }
   }
 
   &--toys {
-    background-color: $bgc_link_toys;
-  }
+    background-color: $background_color_link_toys;
 
-  &:hover,
-  &:focus {
-    position: relative;
-    top: -5px;
-  }
+    &::before {
+      background-image: url("../img/icon-toy.svg");
 
-  &:active {
-    color: rgba($color: $clr_link_active, $alpha: $active_opacity);
+      @include for_tablet {
+        top: 51%;
+        right: 29px;
+      }
+    }
   }
 
   @include for_tablet {
@@ -67,19 +84,31 @@ $clr_link_active: #000000; // clr - color
 
   @include for_desktop {
     padding-right: 66.67%;
+
+    &:hover,
+    &:focus {
+      position: relative;
+      top: -5px;
+    }
+
+    &:active {
+      color: rgba($color: $color_link_active, $alpha: $active_opacity);
+    }
   }
 }
 
 .categories__item {
+  position: relative;
+
   @include for_tablet {
     width: 50%;
   }
 }
 
 .categories__item--interior {
-  background-color: $bgc_link_interior;
+  background-color: $background_color_link_interior;
 }
 
 .categories__item--toys {
-  background-color: $bgc_link_toys;
+  background-color: $background_color_link_toys;
 }

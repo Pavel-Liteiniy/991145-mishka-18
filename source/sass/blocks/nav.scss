@@ -1,13 +1,11 @@
 // Частные переменные блока nav
 // nav__link
 // mobile
-$link_mh_mobile: 79px; //mh - min-height
+$link_min_height_mobile: 79px;
 //tablet
-$link_mh_tablet: 89px; //mh - min-height
-// nav__link:hover
-$link_clr_hover: #000000; //clr - color
-// nav__link:active
-$link_clr_active: #000000; //clr - color
+$link_min_height_tablet: 89px;
+// nav__link
+$nav_link_color: #000000;
 
 .nav {
   @include font_character($font_size_nav,
@@ -15,6 +13,8 @@ $link_clr_active: #000000; //clr - color
                           $font_weight_nav,
                           $color_nav);
   display: flex;
+  justify-content: stretch;
+  align-items: stretch;
   flex-wrap: wrap;
 }
 
@@ -25,7 +25,6 @@ $link_clr_active: #000000; //clr - color
 
   @include for_tablet {
     width: auto;
-    display: flex;
 
     &--categories {
       order: 1;
@@ -45,26 +44,29 @@ $link_clr_active: #000000; //clr - color
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  min-height: $link_mh_mobile;
+  justify-content: stretch;
+  min-height: $link_min_height_mobile;
   padding-left: 75px;
   padding-bottom: 2px;
   border-top: 1px solid $border_color;
 
-  &:hover,
-  &:focus {
-    color: rgba($color: $link_clr_hover, $alpha: $hover_opacity);
-  }
-
-  &:active {
-    color: rgba($color: $link_clr_active, $alpha: $active_opacity);
-  }
-
   @include for_tablet {
     justify-content: center;
-    min-height: $link_mh_tablet;
+    min-height: $link_min_height_tablet;
     padding-bottom: 4px;
     border-top: none;
     border-left: 1px solid $border_color;
+  }
+
+  @include for_desktop {
+    &:hover,
+    &:focus {
+      color: rgba($color: $nav_link_color, $alpha: $hover_opacity);
+    }
+
+    &:active {
+      color: rgba($color: $nav_link_color, $alpha: $active_opacity);
+    }
   }
 }
 
@@ -85,20 +87,11 @@ $link_clr_active: #000000; //clr - color
   }
 
   .nav__link {
-    &:hover:not(.nav__link--active),
-    &:focus:not(.nav__link--active) {
-      color: rgba($color: $link_clr_hover, $alpha: $hover_opacity);
-    }
-
-    &:active:not(.nav__link--active) {
-      color: rgba($color: $link_clr_active, $alpha: $active_opacity);
-    }
-
     @include for_tablet {
       @include font_character($font_size_nav_tablet,
-                              $line_height_nav_tablet,
-                              $font_weight_nav_tablet,
-                              $color_nav_tablet);
+                              $line_height_nav,
+                              $font_weight_nav,
+                              $color_nav);
       width: 167px;
       min-height: 58px;
       padding-left: 0;
@@ -118,7 +111,30 @@ $link_clr_active: #000000; //clr - color
       align-items: center;
       min-height: 89px;
       width: auto;
+
+      &:hover:not(.nav__link--active),
+      &:focus:not(.nav__link--active) {
+        color: rgba($color: $nav_link_color, $alpha: $hover_opacity);
+      }
+
+      &:active:not(.nav__link--active) {
+        color: rgba($color: $nav_link_color, $alpha: $active_opacity);
+      }
     }
+  }
+}
+
+.nav__link:hover:not(.nav__link--active) .nav__wrapper-icon,
+.nav__link:focus:not(.nav__link--active) .nav__wrapper-icon {
+  @include for_desktop {
+    color: $color_icon_hover;
+    opacity: 1;
+  }
+}
+
+.nav__link:active:not(.nav__link--active) .nav__wrapper-icon {
+  @include for_desktop {
+    opacity: $active_opacity;
   }
 }
 
@@ -133,8 +149,37 @@ $link_clr_active: #000000; //clr - color
   }
 }
 
+.nav__wrapper-icon {
+  position: absolute;
+  opacity: 0.2;
+}
+
+.nav__icon {
+  fill: currentColor;
+}
+
 .nav__item--searching {
   @include for_tablet {
     font-size: 0;
+  }
+
+  .nav__wrapper-icon {
+    top: 41%;
+    left: 36px;
+  }
+
+  .nav__link {
+    position: relative;
+  }
+}
+
+.nav__item--cart {
+  .nav__wrapper-icon {
+    top: 38%;
+    left: 33px;
+  }
+
+  .nav__link {
+    position: relative;
   }
 }

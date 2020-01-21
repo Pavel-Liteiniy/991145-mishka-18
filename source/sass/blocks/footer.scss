@@ -1,10 +1,10 @@
 // Локальные переменные блока footer
-$background_color_footer: #f1f1f1;
-$color_logo: #000000;
-$color_logo_hover: #46c1ae;
-$brd-color_copyright: #e5e5e5;
-$color_copyright-link: #7ae7d1;
-$color_copyright-link_hover: #46c1ae;
+$background_color_footer: $dirty_white_3;
+$color_logo: $black;
+$color_logo_hover: $turquoise_hover;
+$border_color_copyright: $dirty_white_4;
+$color_copyright-link: $turquoise_4;
+$color_copyright-link_hover: $turquoise_hover;
 
 .footer {
   background-color: $background_color_footer;
@@ -69,8 +69,7 @@ $color_copyright-link_hover: #46c1ae;
   min-height: 74px;
   margin: 0;
   margin-top: -4px;
-  border-top: 1px solid $brd-color_copyright;
-  // padding-top: 15px;
+  border-top: 1px solid $border_color_copyright;
   padding-left: 23px;
   padding-right: 23px;
   display: flex;
@@ -78,9 +77,6 @@ $color_copyright-link_hover: #46c1ae;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-
-  // margin-left: 29px;
-  // margin-top: 6px;
   outline: none;
 
   .footer__copyright-logo {
@@ -96,7 +92,6 @@ $color_copyright-link_hover: #46c1ae;
     min-width: 183px;
     border-top: none;
     padding-top: 6px;
-    // margin-top: 5px;
   }
 
   @include for_desktop {

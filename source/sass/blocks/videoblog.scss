@@ -23,11 +23,11 @@
     margin-bottom: 105px;
 
     &:hover {
-      box-shadow: 0 6px 10px 0 rgba($color: #000000, $alpha: 0.1);
+      box-shadow: 0 6px 10px 0 rgba($color: $black, $alpha: 0.1);
     }
 
     &:active {
-      box-shadow: 0 3px 5px 0 rgba($color: #000000, $alpha: 0.1);
+      box-shadow: 0 3px 5px 0 rgba($color: $black, $alpha: 0.1);
     }
   }
 }
@@ -68,7 +68,6 @@
     padding: 0;
     padding-top: 60px;
     padding-bottom: 33px;
-    // padding-right: 60px;
     background-position: 1px 6px;
   }
 }
@@ -108,7 +107,7 @@
   height: 150px;
   margin-left: -1px;
   margin-bottom: 27px;
-  background-color: #e5e5e5;
+  background-color: $dirty_white_4;
 
   @include for_tablet {
     position: absolute;

@@ -3,13 +3,13 @@
 // tablet
 $header_height_tablet: 89px;
 // logo
-$color_logo_hover: #000000;
-$color_logo_active: #000000;
+$color_logo_hover: $black;
+$color_logo_active: $black;
 //nav--closed button::before
-$button_closed_background_color_before: #000000;
-$button_closed_box_shadow_before: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
+$button_closed_background_color_before: $black;
+$button_closed_box_shadow_before: 0 6px 0 0 $black, 0 12px 0 0 $black;
 //nav--opened button::before button::after
-$button_opened_background_color_before_after: #000000;
+$button_opened_background_color_before_after: $black;
 //nav--opened button::before
 $button_opened_rotate_before: 44deg;
 //nav--opened button::after
@@ -29,7 +29,6 @@ $button_opened_rotate_after: -44deg;
   }
 }
 
-// .header__inner переопределяет отступы блока inner из-за особенностей мобильной версии
 .header__inner {
   padding-left: 0;
   padding-right: 0;

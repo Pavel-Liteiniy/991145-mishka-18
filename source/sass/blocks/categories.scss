@@ -1,7 +1,7 @@
 // Локальные переменные блока categories
-$background_color_link_interior: #63d1bb;
-$background_color_link_toys: #56c3b2;
-$color_link_active: #000000;
+$background_color_link_interior: $turquoise_2;
+$background_color_link_toys: $turquoise_3;
+$color_link_active: $black;
 
 .categories {
   @include font_character($font_size_categories,

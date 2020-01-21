@@ -5,7 +5,7 @@ $link_min_height_mobile: 79px;
 //tablet
 $link_min_height_tablet: 89px;
 // nav__link
-$nav_link_color: #000000;
+$nav_link_color: $black;
 
 .nav {
   @include font_character($font_size_nav,

@@ -1,19 +1,19 @@
 // Локальные переменные блока modal
-$background_color_overlay: #ffffff;
+$background_color_overlay: $white;
 $alpha_overlay: 0.9;
 
-$box_shadow_inner: 0 5px 10px 0 rgba($color: #000101, $alpha: 0.25);
+$box_shadow_inner: 0 5px 10px 0 rgba($color: $black_shadow, $alpha: 0.25);
 
-$border_color_radio_checked: #ececec;
+$border_color_radio_checked: $dirty_white_1;
 $alpha_radio_checked: 0.1;
 
-$border_color_radio_hover: #ececec;
+$border_color_radio_hover: $dirty_white_1;
 $alpha_radio_hover: 0.3;
 
-$border_color_radio_active: #62d1ba;
+$border_color_radio_active: $turquoise_1;
 $alpha_radio_active: 1;
 
-$background_color_button: #63d1bb;
+$background_color_button: $turquoise_2;
 
 .modal {
   display: none;
@@ -51,7 +51,7 @@ $background_color_button: #63d1bb;
   padding-bottom: 46px;
   padding-left: 29px;
   padding-right: 29px;
-  background-color: #ffffff;
+  background-color: $white;
 
   @include for_tablet {
     width: 568px;
@@ -148,9 +148,6 @@ $background_color_button: #63d1bb;
 
 .modal__radio {
   @include for_desktop {
-    // &:checked + .modal__description {
-    //   border: 2px solid rgba($color: $border_color_radio_checked, $alpha: $alpha_radio_checked);
-    // }
 
     &:hover + .modal__description,
     &:focus + .modal__description {

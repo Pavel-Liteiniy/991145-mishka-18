@@ -17,6 +17,12 @@
   }
 }
 
+@mixin for_retina {
+  @media (min-resolution: $retina_dppx) {
+    @content;
+  }
+}
+
 // базовые характеристики текста
 @mixin font_character($size, $height, $weight, $color) {
   font-size: $size;

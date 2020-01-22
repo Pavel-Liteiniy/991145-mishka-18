@@ -15,6 +15,10 @@ $alpha_radio_active: 1;
 
 $background_color_button: $turquoise_2;
 
+.body-hidden {
+  overflow: hidden;
+}
+
 .modal {
   display: none;
 }
@@ -148,7 +152,6 @@ $background_color_button: $turquoise_2;
 
 .modal__radio {
   @include for_desktop {
-
     &:hover + .modal__description,
     &:focus + .modal__description {
       border: 2px solid rgba($color: $border_color_radio_hover, $alpha: $alpha_radio_hover);

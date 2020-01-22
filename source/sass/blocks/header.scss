@@ -52,16 +52,12 @@ $button_opened_rotate_after: -44deg;
   outline: none;
 
   @include for_tablet {
-    width: 113px;
-    height: 46px;
     margin-left: -2px;
     margin-right: auto;
   }
 
   @include for_desktop {
-    width: 149px;
-    height: 72px;
-    margin-left: auto;
+    margin-left: 76px;
     margin-right: auto;
     margin-top: 9px;
     margin-bottom: 6px;
@@ -74,6 +70,16 @@ $button_opened_rotate_after: -44deg;
     &:active:not(.header__logo--active) {
       opacity: $active_opacity;
     }
+  }
+}
+
+.header__logo-image {
+  @include for_tablet {
+    width: 113px;
+  }
+
+  @include for_desktop {
+    width: 149px;
   }
 }
 

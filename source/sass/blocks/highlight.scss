@@ -1,5 +1,5 @@
 // Локальные переменные для блока highlight
-$background_color_image-wrapper: #f1f1f1; // background_color - background-color
+$background_color_image-wrapper: $dirty_white_3;
 
 .highlight {
   background-size: 320px 10px;
@@ -198,8 +198,6 @@ $background_color_image-wrapper: #f1f1f1; // background_color - background-color
   margin-top: 28px;
   margin-bottom: 24px;
 
-  // временные стили
-  width: 260px;
   height: 315px;
 
   @include for_tablet {
@@ -210,8 +208,6 @@ $background_color_image-wrapper: #f1f1f1; // background_color - background-color
     margin-top: 0;
     margin-bottom: 0;
 
-    // временные стили
-    width: 333px;
     height: 404px;
   }
 
@@ -220,9 +216,17 @@ $background_color_image-wrapper: #f1f1f1; // background_color - background-color
     top: -158px;
     right: 0;
 
-    // временные стили
-    width: 525px;
     height: 636px;
+  }
+}
+
+.highlight__image {
+  @include for_tablet {
+    width: 333px;
+  }
+
+  @include for_desktop {
+    width: 525px;
   }
 }
 

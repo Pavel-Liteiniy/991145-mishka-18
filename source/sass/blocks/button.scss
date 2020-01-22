@@ -1,10 +1,10 @@
 // Локальные переменные блока button
 $min_height: 52px;
-$color_active: #ffffff;
-$background_color: #ffffff;
+$color_active: $white;
+$background_color: $white;
 // button:hover
-$color_hover: #ffffff;
-$background_color_hover: #444444;
+$color_hover: $white;
+$background_color_hover: $gray;
 
 .button {
   @include font_character($font_size_button,

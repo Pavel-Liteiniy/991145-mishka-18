@@ -1,6 +1,6 @@
 // Локальные переменные блока topical
-$color_link_hover: #000000;
-$color_link_active: #000000;
+$color_link_hover: $black;
+$color_link_active: $black;
 
 .topical {
   @include only_desktop;

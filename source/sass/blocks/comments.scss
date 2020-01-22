@@ -6,7 +6,12 @@
 
   @include for_tablet {
     background-image: url("../img/bg-zigzag-line.svg"), url("../img/review@1x.jpg");
-    background-size: 770px 24px, auto auto;
+
+    @include for_retina {
+      background-image: url("../img/bg-zigzag-line.svg"), url("../img/review@2x.jpg");
+    }
+
+    background-size: 770px 24px, 350px 457px;
     background-position: 22px 100.8%, 0 0;
     background-repeat: repeat-x, no-repeat;
   }
@@ -42,10 +47,6 @@
     flex-wrap: wrap;
     padding-top: 76px;
     padding-bottom: 85px;
-
-    // background-image: url("../img/review@1x.jpg");
-    // background-position: 0 0;
-    // background-repeat: no-repeat;
   }
 
   @include for_desktop {
@@ -54,7 +55,12 @@
     padding-bottom: 85px;
 
     background-image: url("../img/review@1x.jpg");
-    // background-position: 0 0;
+    background-size: 350px 457px;
+
+    @include for_retina {
+      background-image: url("../img/review@2x.jpg");
+    }
+
     background-repeat: no-repeat;
     background-position: 50px 0;
   }

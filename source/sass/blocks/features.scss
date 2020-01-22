@@ -76,7 +76,7 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
 
-    @include for_tablet{
+    @include for_tablet {
       width: 100px;
       height: 100px;
     }

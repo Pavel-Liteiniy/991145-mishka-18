@@ -164,8 +164,13 @@ $nav_link_color: $black;
   }
 
   .nav__wrapper-icon {
-    top: 41%;
-    left: 36px;
+    top: 39%;
+    left: 33px;
+
+    @include for_tablet {
+      top: 41%;
+      left: 36px;
+    }
   }
 
   .nav__link {
@@ -175,8 +180,13 @@ $nav_link_color: $black;
 
 .nav__item--cart {
   .nav__wrapper-icon {
-    top: 38%;
-    left: 33px;
+    top: 37%;
+    left: 30px;
+
+    @include for_tablet {
+      top: 38%;
+      left: 33px;
+    }
   }
 
   .nav__link {

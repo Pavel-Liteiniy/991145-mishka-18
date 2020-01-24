@@ -1,7 +1,7 @@
 .order__inner {
   @include for_tablet {
-    padding-top: $padding_tablet;
-    padding-bottom: $padding_tablet;
+    padding-top: 31px;
+    padding-bottom: 36px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -21,9 +21,40 @@
     }
   }
 
+  &--color {
+    @include for_tablet {
+      padding-bottom: 25px;
+    }
+  }
+
+  &--username {
+    @include for_tablet {
+      padding-top: 41px;
+    }
+
+    @include for_desktop {
+      padding-top: 43px;
+    }
+  }
+
+  &--contacts {
+    min-height: 228px;
+
+    @include for_tablet {
+      padding-top: 50px;
+      padding-bottom: 27px;
+    }
+
+    @include for_desktop {
+      padding-right: 225px;
+    }
+  }
+
   &--wishes {
     @include for_tablet {
       flex-wrap: nowrap;
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
 
     @include for_desktop {
@@ -91,12 +122,81 @@
   padding-top: 9px;
   padding-bottom: 25px;
 
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+
   @include for_tablet {
+    display: block;
     width: 167px;
+    padding-top: 27px;
   }
 
   @include for_desktop {
     width: 175px;
+    text-align: center;
+    padding-top: 28px;
+    padding-right: 10px;
+  }
+
+  &--color {
+    padding-bottom: 26px;
+
+    @include for_tablet {
+      padding-top: 36px;
+      padding-bottom: 22px;
+    }
+
+    @include for_desktop {
+      padding-top: 37px;
+    }
+  }
+
+  &--tel {
+    padding-top: 13px;
+    padding-bottom: 15px;
+
+    @include for_tablet {
+      padding: 0;
+    }
+
+    @include for_desktop {
+      padding-right: 20px;
+    }
+  }
+
+  &--email {
+    padding-bottom: 16px;
+
+    @include for_tablet {
+      padding: 0;
+    }
+
+    @include for_desktop {
+      padding-left: 5px;
+      padding-top: 5px;
+    }
+  }
+
+  &--add {
+    padding-top: 0;
+    padding-bottom: 24px;
+
+    @include for_tablet {
+      padding-top: 17px;
+    }
+  }
+}
+
+.order__line {
+  flex-grow: 1;
+  height: 1px;
+  margin-left: 20px;
+  background-color: $turquoise_2;
+
+  @include for_tablet {
+    display: none;
   }
 }
 
@@ -109,10 +209,6 @@
 
   @include for_desktop {
     width: 700px;
-
-    &--color {
-      width: 875px;
-    }
   }
 }
 
@@ -122,6 +218,12 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
+    width: 500px;
+    padding-top: 19px;
+  }
+
+  @include for_desktop {
+    width: 800px;
   }
 
   .order__item {
@@ -153,6 +255,13 @@
 .order__list--username .order__item {
   flex-wrap: wrap;
   min-height: 70px;
+  margin-bottom: 13px;
+
+  @include for_tablet {
+    margin-bottom: 14px;
+    min-height: 57px;
+    align-items: flex-end;
+  }
 
   @include for_desktop {
     flex-wrap: nowrap;
@@ -188,10 +297,10 @@
     &::before {
       content: "";
       position: absolute;
-      top: 0;
+      top: -2px;
       left: 0;
       width: 40px;
-      height: 40px;
+      height: 39px;
 
       border: 2px solid $gray;
 
@@ -202,12 +311,26 @@
     }
   }
 
+  &--checkbox {
+    @include for_tablet {
+      padding-top: 15px;
+      padding-left: 80px;
+    }
+  }
+
   &--radio {
+    @include for_tablet {
+      margin-bottom: 15px;
+      padding-top: 25px;
+      padding-left: 81px;
+    }
+
     &::before {
       border-radius: 50%;
       padding: 10px;
 
       @include for_tablet {
+        top: 10px;
         width: 52px;
         height: 53px;
         padding: 14px;
@@ -218,11 +341,12 @@
 
 .order__description--text {
   min-height: 33px;
-  padding-top: 5px;
-  padding-bottom: 10px;
+  padding-top: 4px;
+  padding-bottom: 14px;
 
   @include for_tablet {
     padding-right: 25px;
+    padding-bottom: 19px;
   }
 }
 
@@ -236,13 +360,20 @@
 
   &--checkbox {
     &::before {
+      top: -2px;
+      width: 40px;
+      height: 39px;
       background-image: url("../img/icon-tick.svg");
-      background-size: 20px 20px;
+      background-size: 22px 22px;
       background-repeat: no-repeat;
-      background-position: 45% 55%;
+      background-position: 45% 58%;
 
       @include for_tablet {
+        width: 54px;
+        height: 52px;
         background-size: 33px 22px;
+        background-position: 50% 55%;
+        top: 0;
       }
     }
   }
@@ -321,15 +452,25 @@
                               $font_weight_order_placeholder,
                               $color_order_placeholder);
       font-family: $font_family;
+
+      @include for_tablet {
+        @include font_character($font_size_order_placeholder_tablet,
+                                $line_height_order_placeholder,
+                                $font_weight_order_placeholder,
+                                $color_order_placeholder);
+      }
     }
   }
 
   &--text {
-    padding-bottom: 13px;
+    padding-bottom: 14px;
     margin-top: -5px;
     margin-bottom: 5px;
 
     @include for_tablet {
+      margin: 0;
+      padding-top: 20px;
+      padding-left: 16px;
       flex-grow: 1;
     }
 
@@ -346,6 +487,19 @@
 
     @include for_tablet {
       flex-grow: 1;
+      padding: 0;
+      padding-left: 16px;
+      padding-right: 75px;
+      margin: 0;
+      min-height: 52px;
+    }
+  }
+
+  &--tel {
+    margin-bottom: 23px;
+
+    @include for_tablet {
+      margin: 0;
     }
   }
 
@@ -384,6 +538,13 @@
                               $font_weight_order_placeholder,
                               $color_order_placeholder);
       font-family: $font_family;
+
+      @include for_tablet {
+        @include font_character($font_size_order_placeholder_tablet,
+                                $line_height_order_placeholder,
+                                $font_weight_order_placeholder,
+                                $color_order_placeholder);
+      }
     }
   }
 }
@@ -395,18 +556,44 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
   }
 }
 
 .order__wrapper-icon {
   opacity: 0.2;
   position: absolute;
-  right: 5px;
-  bottom: 5px;
+
+  @include for_tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 52px;
+  }
 
   @include for_desktop {
-    right: 179px;
+    padding-left: 34px;
+  }
+
+  &--tel {
+    right: 8px;
+    bottom: 34px;
+
+    @include for_tablet {
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &--email {
+    right: 5px;
+    bottom: 5px;
+
+    @include for_tablet {
+      right: 0;
+      top: 0;
+    }
   }
 }
 
@@ -434,6 +621,7 @@
                           $font_weight_order_footnote,
                           $color_order_footnote);
   margin: 0;
+  padding-top: 10px;
   padding-bottom: $padding_mobile;
 
   @include for_tablet {

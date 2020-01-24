@@ -170,8 +170,8 @@
   bottom: 131px;
   width: 100%;
   height: 457px;
-  // background-color: $dirty_white_4;
   overflow: hidden;
+  background-color: $dirty_white_1;
 
   @include for_tablet {
     bottom: 109px;

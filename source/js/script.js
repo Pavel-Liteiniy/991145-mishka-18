@@ -34,7 +34,7 @@ for (var i = 0; i < links.length; ++i) {
 overlay.addEventListener("click", function (evt) {
   modal.classList.remove("modal--show");
   overlay.classList.remove("modal__overlay--show");
-  body.classList.remove("body-hidden");
+  body.classList.remove("body-hidden");git
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -70,7 +70,7 @@ ymaps.ready(function () {
       // Необходимо указать данный тип макета.
       iconLayout: 'default#image',
       // Своё изображение иконки метки.
-      iconImageHref: '../img/icon-map-pin.svg',
+      iconImageHref: 'img/icon-map-pin.svg',
       // Размеры метки.
       iconImageSize: [66, 101],
       // Смещение левого верхнего угла иконки относительно

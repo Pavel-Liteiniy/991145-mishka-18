@@ -30,6 +30,8 @@
   &--username {
     @include for_tablet {
       padding-top: 41px;
+      padding-bottom: 30px;
+      min-height: 305px;
     }
 
     @include for_desktop {
@@ -51,6 +53,8 @@
   }
 
   &--wishes {
+    min-height: 188px;
+
     @include for_tablet {
       flex-wrap: nowrap;
       padding-top: 50px;
@@ -155,7 +159,7 @@
 
   &--tel {
     padding-top: 13px;
-    padding-bottom: 15px;
+    padding-bottom: 7px;
 
     @include for_tablet {
       padding: 0;
@@ -167,7 +171,7 @@
   }
 
   &--email {
-    padding-bottom: 16px;
+    padding-bottom: 7px;
 
     @include for_tablet {
       padding: 0;
@@ -340,13 +344,13 @@
 }
 
 .order__description--text {
-  min-height: 33px;
+  min-height: 22px;
   padding-top: 4px;
-  padding-bottom: 14px;
 
   @include for_tablet {
     padding-right: 25px;
-    padding-bottom: 19px;
+
+    align-self: center;
   }
 }
 
@@ -427,6 +431,7 @@
     border: none;
     border-bottom: 2px solid $border_color_input;
     width: 100%;
+    min-height: 52px;
     background-color: inherit;
 
     @include for_tablet {
@@ -448,14 +453,14 @@
 
     &::placeholder {
       @include font_character($font_size_order_placeholder,
-                              $line_height_order_placeholder,
+                              $line_height_order_placeholder_align,
                               $font_weight_order_placeholder,
                               $color_order_placeholder);
       font-family: $font_family;
 
       @include for_tablet {
         @include font_character($font_size_order_placeholder_tablet,
-                                $line_height_order_placeholder,
+                                $line_height_order_placeholder_align,
                                 $font_weight_order_placeholder,
                                 $color_order_placeholder);
       }
@@ -463,13 +468,12 @@
   }
 
   &--text {
-    padding-bottom: 14px;
-    margin-top: -5px;
     margin-bottom: 5px;
 
     @include for_tablet {
       margin: 0;
-      padding-top: 20px;
+      margin-top: 10px;
+      padding-top: 0;
       padding-left: 16px;
       flex-grow: 1;
     }
@@ -482,7 +486,8 @@
   &--tel,
   &--email {
     padding-right: 40px;
-    padding-bottom: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
     background-repeat: no-repeat;
 
     @include for_tablet {
@@ -492,6 +497,8 @@
       padding-right: 75px;
       margin: 0;
       min-height: 52px;
+
+      background-color: $dirty_white_3;
     }
   }
 

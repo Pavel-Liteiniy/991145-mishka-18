@@ -173,6 +173,15 @@
   overflow: hidden;
   background-color: $dirty_white_1;
 
+  background-image: url("../img/map-mobile@1x.jpg");
+
+  @include for_retina {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
+
+  background-size: cover;
+  background-position: 50% 50%;
+
   @include for_tablet {
     bottom: 109px;
     margin-bottom: 55px;

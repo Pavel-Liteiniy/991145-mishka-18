@@ -23,10 +23,6 @@ $button_opened_rotate_after: -44deg;
     border-top: none;
     height: $header_height_tablet;
   }
-
-  @include for_desktop {
-    border-top: none;
-  }
 }
 
 .header__inner {

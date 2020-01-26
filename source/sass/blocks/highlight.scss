@@ -5,11 +5,11 @@ $background_color_image-wrapper: $dirty_white_3;
   background-size: 320px 10px;
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
-  background-position: 9px 100.1%;
+  background-position: 9px 100%;
 
   @include for_tablet {
     background-size: 770px 24px;
-    background-position: 22px 100.7%;
+    background-position: 22px 100%;
   }
 
   @include for_desktop {

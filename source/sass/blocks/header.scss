@@ -110,7 +110,7 @@ $button_opened_rotate_after: -44deg;
     @include for_tablet {
       display: flex;
       justify-content: flex-start;
-      align-items: stretch;
+      align-items: center;
       z-index: 10;
     }
   }

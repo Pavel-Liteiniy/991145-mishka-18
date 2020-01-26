@@ -107,11 +107,14 @@ $border_color_price: $dirty_white_1;
 .product__link-image {
   order: -1;
   display: block;
+  width: 260px;
+  height: 195px;
   margin-left: -28px;
   margin-bottom: 26px;
   background-color: $background_color_link-image;
 
   @include for_tablet {
+    width: 334px;
     height: 334px;
     margin-top: -1px;
     margin-left: -1px;

@@ -36,4 +36,16 @@ body {
 
   color: $color_body;
   background-color: $background_color_body;
+
+  @include for_mobile {
+    min-width: $breakpoint_mobile;
+  }
+
+  @include for_tablet {
+    min-width: $breakpoint_tablet;
+  }
+
+  @include for_desktop {
+    min-width: $breakpoint_desktop;
+  }
 }

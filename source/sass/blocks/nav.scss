@@ -47,13 +47,15 @@ $nav_link_color: $black;
   justify-content: stretch;
   min-height: $link_min_height_mobile;
   padding-left: 75px;
-  padding-bottom: 2px;
+  padding-top: 22px;
+  padding-bottom: 24px;
   border-top: 1px solid $border_color;
 
   @include for_tablet {
     justify-content: center;
     min-height: $link_min_height_tablet;
-    padding-bottom: 4px;
+    padding-top: 30px;
+    padding-bottom: 35px;
     border-top: none;
     border-left: 1px solid $border_color;
   }
@@ -94,8 +96,9 @@ $nav_link_color: $black;
                               $color_nav);
       width: 167px;
       min-height: 58px;
+      padding-top: 17px;
       padding-left: 0;
-      padding-bottom: 0;
+      padding-bottom: 25px;
       border-left: none;
       justify-content: flex-start;
     }
@@ -106,7 +109,8 @@ $nav_link_color: $black;
                             $font_weight_nav,
                             $color_nav);
 
-      padding-bottom: 4px;
+      padding-bottom: 38px;
+      padding-top: 30px;
       flex-wrap: wrap;
       align-items: center;
       min-height: 89px;
@@ -164,8 +168,13 @@ $nav_link_color: $black;
   }
 
   .nav__wrapper-icon {
-    top: 41%;
-    left: 36px;
+    top: 39%;
+    left: 33px;
+
+    @include for_tablet {
+      top: 41%;
+      left: 36px;
+    }
   }
 
   .nav__link {
@@ -175,8 +184,13 @@ $nav_link_color: $black;
 
 .nav__item--cart {
   .nav__wrapper-icon {
-    top: 38%;
-    left: 33px;
+    top: 37%;
+    left: 30px;
+
+    @include for_tablet {
+      top: 38%;
+      left: 33px;
+    }
   }
 
   .nav__link {

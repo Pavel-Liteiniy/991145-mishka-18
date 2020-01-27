@@ -29,11 +29,11 @@ $nav_link_color: $black;
     &--categories {
       order: 1;
     }
+  }
 
-    @include for_desktop {
-      &--categories {
-        order: -1;
-      }
+  @include for_desktop {
+    &--categories {
+      order: -1;
     }
   }
 }

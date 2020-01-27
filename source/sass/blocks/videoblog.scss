@@ -134,10 +134,26 @@
 }
 
 .videoblog__button-play {
+  background: none;
+  border: none;
+  outline: none;
+
   position: absolute;
   top: 51%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.videoblog__button-play:hover,
+.videoblog__button-play:focus {
+  @include for_desktop {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+.videoblog__button-play:active {
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: $active_opacity;
 }
 
 .videoblog__button {

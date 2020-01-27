@@ -139,7 +139,7 @@ $background_color_title: $dirty_white_3;
     margin-top: 36px;
 
     &--index {
-      margin-top: 86px;
+      margin-top: 145px;
     }
   }
 
@@ -158,33 +158,33 @@ $background_color_title: $dirty_white_3;
   }
 }
 
-.title__label {
-  @include font-character($font_size_label,
-                          $line_height_label,
-                          $font_weight_label,
-                          $color_label);
+// .title__label {
+//   @include font-character($font_size_label,
+//                           $line_height_label,
+//                           $font_weight_label,
+//                           $color_label);
 
-  display: none;
-  margin: 0;
+//   display: none;
+//   margin: 0;
 
-  @include for_tablet {
-    display: block;
-    margin-left: auto;
-  }
-}
+//   @include for_tablet {
+//     display: block;
+//     margin-left: auto;
+//   }
+// }
 
-.title__extra {
-  @include for_tablet {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    width: 50%;
-    min-height: 58px;
-    margin-left: auto;
-  }
+// .title__extra {
+//   @include for_tablet {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: flex-start;
+//     align-items: center;
+//     width: 50%;
+//     min-height: 58px;
+//     margin-left: auto;
+//   }
 
-  @include for_desktop {
-    width: 100%;
-  }
-}
+//   @include for_desktop {
+//     width: 100%;
+//   }
+// }

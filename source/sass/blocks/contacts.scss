@@ -102,7 +102,7 @@
   }
 }
 
-.contacts__item--email {
+.contacts__link-email {
   @include link_default_remove;
   border-bottom: 1px solid $border_color_email;
   margin-left: -3px;

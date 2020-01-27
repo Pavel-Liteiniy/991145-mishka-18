@@ -174,3 +174,34 @@ $button_opened_rotate_after: -44deg;
     margin-right: 118px;
   }
 }
+
+.header__label {
+  @include font-character($font_size_label,
+                          $line_height_label,
+                          $font_weight_label,
+                          $color_label);
+
+  display: none;
+  margin: 0;
+
+  @include for_tablet {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.header__extra {
+  @include for_tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    min-height: 58px;
+    margin-left: auto;
+  }
+
+  @include for_desktop {
+    width: 100%;
+  }
+}

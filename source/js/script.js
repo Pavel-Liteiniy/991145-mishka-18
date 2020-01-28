@@ -15,7 +15,7 @@ button.addEventListener('click', function () {
 });
 
 // Отображает и скрывает модальное окно
-var links = document.querySelectorAll(".button--modal");
+var links = document.querySelectorAll(".button-modal");
 var modal = document.querySelector(".modal");
 var body = document.querySelector("body");
 var inputRadio = modal.querySelector("[id=choose-size-s]");

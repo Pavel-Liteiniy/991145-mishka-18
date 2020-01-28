@@ -12,7 +12,6 @@ var csso = require("gulp-csso"); // оптимизация CSS
 var imagemin = require("gulp-imagemin"); // оптимизация изображений
 var webp = require("gulp-webp"); // конвертация растровых изображений в формат WebP
 var svgstore = require("gulp-svgstore"); // создает svg спрайт
-var posthtml = require("gulp"); // переносит html файлы в папку build и что-то еще с ними делает перед этим
 var del = require("del");
 var server = require("browser-sync").create();
 
@@ -44,6 +43,11 @@ gulp.task("sprite", function () {
 gulp.task("html", function () {
   return gulp.src("source/*.html")
     .pipe(gulp.dest("build"));
+});
+
+gulp.task("js", function () {
+  return gulp.src("source/js/**/*.js")
+    .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("copy", function () {
@@ -85,7 +89,7 @@ gulp.task("server", function () {
     // cors: true,
     // ui: false
   });
-
+  gulp.watch("source/js/**/*.js", gulp.series("js", "refresh"));
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css", "refresh"));
   gulp.watch("source/img/**/*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));

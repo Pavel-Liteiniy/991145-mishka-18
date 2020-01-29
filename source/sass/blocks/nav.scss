@@ -152,6 +152,8 @@ $nav_link_color: $black;
   @include for_desktop {
     padding-left: 82px;
     padding-right: 2px;
+    padding-bottom: 31px;
+    padding-top: 27px;
   }
 }
 
@@ -201,9 +203,5 @@ $nav_link_color: $black;
 
   .nav__link {
     position: relative;
-
-    @include for_desktop {
-      padding-bottom: 4px;
-    }
   }
 }

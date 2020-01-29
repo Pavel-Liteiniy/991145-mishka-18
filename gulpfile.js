@@ -8,10 +8,12 @@ var rename = require("gulp-rename");
 var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-var csso = require("gulp-csso"); // оптимизация CSS
-var imagemin = require("gulp-imagemin"); // оптимизация изображений
-var webp = require("gulp-webp"); // конвертация растровых изображений в формат WebP
-var svgstore = require("gulp-svgstore"); // создает svg спрайт
+var csso = require("gulp-csso");
+var imagemin = require("gulp-imagemin");
+var webp = require("gulp-webp");
+var svgstore = require("gulp-svgstore");
+var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include");
 var del = require("del");
 var server = require("browser-sync").create();
 
@@ -42,6 +44,9 @@ gulp.task("sprite", function () {
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
     .pipe(gulp.dest("build"));
 });
 
@@ -77,17 +82,11 @@ gulp.task("css", function () {
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"));
-  // .pipe(gulp.dest("source/css"))
-  // .pipe(server.stream());
 });
 
 gulp.task("server", function () {
   server.init({
     server: "build/"
-    // notify: false,
-    // open: true,
-    // cors: true,
-    // ui: false
   });
   gulp.watch("source/js/**/*.js", gulp.series("js", "refresh"));
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css", "refresh"));

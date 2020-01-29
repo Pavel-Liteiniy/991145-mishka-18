@@ -12,6 +12,9 @@
 </head>
 
 <body>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="header">
     <div class="header__inner inner">
       <nav class="header__nav nav header__nav--closed header__nav--nojs">
@@ -32,7 +35,7 @@
             <a class="nav__link" href="" aria-label="Выполнить поиск по сайту">Поиск по сайту
               <span class="nav__wrapper-icon">
                 <svg class="nav__icon" width="17.6" height="17.6" role="img">
-                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                  <use xlink:href="#icon-search"></use>
                 </svg>
               </span>
             </a>
@@ -41,7 +44,7 @@
             <a class="nav__link" href="" aria-label="Перейти в корзину с покупками">Корзина: пока пуста
               <span class="nav__wrapper-icon">
                 <svg class="nav__icon" width="20.294" height="18.849" role="img">
-                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
               </span>
             </a>
@@ -62,15 +65,6 @@
   <main>
     <section class="title title--index">
       <div class="title__inner title__inner--categories title__inner--index inner">
-        <!-- <div class="title__extra">
-          <ul class="title__topical topical">
-            <li class="topical__item"><a class="topical__link" href="">Новые поступления</a></li>
-            <li class="topical__item"><a class="topical__link" href="">Распродажа</a></li>
-          </ul>
-          <p class="title__label">
-            Бесплатная доставка по России
-          </p>
-        </div> -->
         <h1 class="title__heading title__heading--index">
           Милые штуки ручной работы&nbsp;для дома
         </h1>
@@ -194,7 +188,7 @@
     <div class="footer__inner inner">
       <a class="footer__logo footer__logo--current">
         <svg class="footer__svg" width="101.615" height="34.056" aria-hidden="true" focusable="false">
-          <use xlink:href="img/sprite.svg#logo-footer"></use>
+          <use xlink:href="#logo-footer"></use>
         </svg>
       </a>
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
@@ -204,21 +198,21 @@
             <li class="socials__item">
               <a class="socials__link socials__link--in" href="" target="_blank" aria-label="Перейти в Инстаграм магазина">
                 <svg class="socials__svg socials__svg--in" width="21.769" height="21.334" role="img">
-                  <use xlink:href="img/sprite.svg#icon-insta"></use>
+                  <use xlink:href="#icon-insta"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link socials__link--fb" href="" target="_blank" aria-label="Перейти в Фейcбук магазина">
                 <svg class="socials__svg socials__svg--fb" width="14.962" height="27.718" role="img">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  <use xlink:href="#icon-fb"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link socials__link--tw" href="" target="_blank" aria-label="Перейти в Твиттер магазина">
                 <svg class="socials__svg socials__svg--tw" width="23.494" height="20.168" role="img">
-                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                  <use xlink:href="#icon-twitter"></use>
                 </svg>
               </a>
             </li>
@@ -230,7 +224,7 @@
           Разработано
         </span>
         <svg class="footer__copyright-logo" width="26.943" height="34.09">
-          <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+          <use xlink:href="#logo-htmlacademy"></use>
         </svg>
       </a>
     </div>

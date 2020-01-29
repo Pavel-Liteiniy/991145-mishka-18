@@ -30,6 +30,7 @@ $button_opened_rotate_after: -44deg;
   padding-right: 0;
 
   @include for_tablet {
+    // height: 89px;
     padding-left: $padding_tablet;
     padding-right: $padding_tablet;
   }
@@ -48,15 +49,14 @@ $button_opened_rotate_after: -44deg;
   outline: none;
 
   @include for_tablet {
-    margin-left: -2px;
-    margin-right: auto;
+    margin: auto auto 15px -2px;
   }
 
+
   @include for_desktop {
-    margin-left: 76px;
-    margin-right: auto;
-    margin-top: 9px;
-    margin-bottom: 6px;
+    margin: auto;
+    padding-top: 6px;
+    padding-right: 22px;
 
     &:hover:not(.header__logo--active),
     &:focus:not(.header__logo--active) {
@@ -100,6 +100,12 @@ $button_opened_rotate_after: -44deg;
     &:active {
       opacity: $active_opacity;
     }
+  }
+}
+
+.header__nav {
+  @include for_tablet {
+    height: 89px;
   }
 }
 
@@ -168,9 +174,49 @@ $button_opened_rotate_after: -44deg;
 
   .nav__list {
     display: block;
+
+    @include for_desktop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 
   .header__logo {
-    margin-right: 118px;
+    margin-right: auto;
+  }
+}
+
+.header__label {
+  @include font-character($font_size_label,
+                          $line_height_label,
+                          $font_weight_label,
+                          $color_label);
+
+  display: none;
+  margin: 0;
+
+  @include for_tablet {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.header__extra {
+  @include for_tablet {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    min-height: 58px;
+    padding: 17px 0;
+    margin-left: auto;
+  }
+
+  @include for_desktop {
+    width: 100%;
   }
 }

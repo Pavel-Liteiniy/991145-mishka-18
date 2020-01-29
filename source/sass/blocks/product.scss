@@ -15,17 +15,24 @@ $border_color_price: $dirty_white_1;
   padding-right: 27px;
 
   @include for_tablet {
-    min-height: 334px;
+    min-height: 333px;
     position: relative;
-    padding-left: 50%;
-    padding-right: 32px;
+    padding-left: 0;
+    padding-right: 30px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
   }
 
   @include for_desktop {
     position: static;
+    flex-direction: column;
     width: 316px;
     padding-left: 26px;
-    padding-right: 33px;
+    padding-right: 0;
 
     &:hover {
       box-shadow: 0 6px 10px 0 rgba($color: $black, $alpha: 0.1);
@@ -37,6 +44,22 @@ $border_color_price: $dirty_white_1;
   }
 
   border: 1px solid $border_color_product;
+}
+
+.product__description {
+  @include for_tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-grow: 1;
+    max-width: 47.5%;
+  }
+
+  @include for_desktop {
+    max-width: 89%;
+    margin-top: 25px;
+  }
 }
 
 .product__heading {
@@ -60,7 +83,7 @@ $border_color_price: $dirty_white_1;
   @include for_desktop {
     margin-left: 0;
     margin-right: 15px;
-    margin-top: 26px;
+    margin-top: 0;
   }
 }
 
@@ -115,14 +138,10 @@ $border_color_price: $dirty_white_1;
 
   @include for_tablet {
     width: 334px;
-    height: 334px;
+    height: 333px;
     margin-top: -1px;
     margin-left: -1px;
     margin-bottom: 0;
-    position: absolute;
-    max-width: 50%;
-    top: 0;
-    left: 0;
   }
 
   @include for_desktop {

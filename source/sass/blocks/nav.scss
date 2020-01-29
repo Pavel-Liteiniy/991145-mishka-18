@@ -29,11 +29,11 @@ $nav_link_color: $black;
     &--categories {
       order: 1;
     }
+  }
 
-    @include for_desktop {
-      &--categories {
-        order: -1;
-      }
+  @include for_desktop {
+    &--categories {
+      order: -1;
     }
   }
 }
@@ -61,6 +61,8 @@ $nav_link_color: $black;
   }
 
   @include for_desktop {
+    padding: 0;
+
     &:hover,
     &:focus {
       color: rgba($color: $nav_link_color, $alpha: $hover_opacity);
@@ -109,8 +111,8 @@ $nav_link_color: $black;
                             $font_weight_nav,
                             $color_nav);
 
-      padding-bottom: 38px;
-      padding-top: 30px;
+      padding-bottom: 31px;
+      padding-top: 27px;
       flex-wrap: wrap;
       align-items: center;
       min-height: 89px;
@@ -150,6 +152,8 @@ $nav_link_color: $black;
   @include for_desktop {
     padding-left: 82px;
     padding-right: 2px;
+    padding-bottom: 31px;
+    padding-top: 27px;
   }
 }
 
@@ -174,6 +178,10 @@ $nav_link_color: $black;
     @include for_tablet {
       top: 41%;
       left: 36px;
+    }
+
+    @include for_desktop {
+      left: 34px;
     }
   }
 

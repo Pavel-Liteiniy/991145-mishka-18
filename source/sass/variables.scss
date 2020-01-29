@@ -26,7 +26,7 @@ $gray: #444444;
 $font_size_label: 15px;
 $line_height_label: 24px;
 $font_weight_label: normal;
-$color_label: $black;
+$color_label: $gray;
 
 // Переменные для topical
 $font_size_topical: 15px;
@@ -41,6 +41,7 @@ $breakpoint_desktop: 1150px;
 
 // Переменные для ретинового медиавыражения
 $retina_dppx: 1.5dppx;
+$retina_dpi: 144dpi;
 
 // переменные для сетки mobile версии
 $width_mobile: 320px;

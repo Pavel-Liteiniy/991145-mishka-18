@@ -18,7 +18,7 @@
 }
 
 @mixin for_retina {
-  @media (min-resolution: $retina_dppx) {
+  @media (min-resolution: $retina_dppx), (min-resolution: $retina_dpi) {
     @content;
   }
 }

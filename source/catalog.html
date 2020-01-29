@@ -6,10 +6,13 @@
   <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="header" id="header">
     <div class="header__inner inner">
       <nav class="header__nav nav header__nav--closed header__nav--nojs">
@@ -29,8 +32,8 @@
           <li class="nav__item nav__item--searching">
             <a class="nav__link" href="" aria-label="Выполнить поиск по сайту">Поиск по сайту
               <span class="nav__wrapper-icon">
-                <svg class="nav__icon" width="17.6px" height="17.6px" role="img">
-                  <use xlink:href="img/sprite.svg#search_icon"></use>
+                <svg class="nav__icon" width="17.6" height="17.6" role="img">
+                  <use xlink:href="#icon-search"></use>
                 </svg>
               </span>
             </a>
@@ -38,28 +41,28 @@
           <li class="nav__item nav__item--cart">
             <a class="nav__link" href="" aria-label="Перейти в корзину с покупками">Корзина: пока пуста
               <span class="nav__wrapper-icon">
-                <svg class="nav__icon" width="20.294px" height="18.849px" role="img">
-                  <use xlink:href="img/sprite.svg#cart_icon"></use>
+                <svg class="nav__icon" width="20.294" height="18.849" role="img">
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
               </span>
             </a>
           </li>
         </ul>
       </nav>
+      <div class="header__extra">
+        <ul class="header__topical topical">
+          <li class="topical__item"><a class="topical__link" href="">Новые поступления</a></li>
+          <li class="topical__item"><a class="topical__link" href="">Распродажа</a></li>
+        </ul>
+        <p class="header__label">
+          Бесплатная доставка по России
+        </p>
+      </div>
     </div>
   </header>
   <main>
     <section class="title">
       <div class="title__inner inner">
-        <div class="title__extra">
-          <ul class="title__topical topical">
-            <li class="topical__item"><a class="topical__link" href="">Новые поступления</a></li>
-            <li class="topical__item"><a class="topical__link" href="">Распродажа</a></li>
-          </ul>
-          <p class="title__label">
-            Бесплатная доставка по России
-          </p>
-        </div>
         <h1 class="title__heading">
           Каталог товаров
         </h1>
@@ -69,7 +72,6 @@
       <div class="catalog__inner inner">
         <div class="catalog__list">
           <article class="catalog__item product">
-            <h2 class="product__heading"><a class="product__link-heading" href="" aria-label="открыть подробное описание товара">Зайчик-попрыгайчик</a></h2>
             <a class="product__link-image" href="" aria-label="открыть подробное описание товара">
               <picture>
                 <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@2x.webp 2x, img/photo-hare-desktop@1x.webp 1x">
@@ -81,20 +83,22 @@
                 <img class="product__image" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" width="260" height="195" alt="Вязанная игрушка в виде зайца" />
               </picture>
             </a>
-            <p class="product__profile">Рост 30 см, вес 200 г</p>
-            <p class="product__price">
-              1 200 руб.
-              <a class="product__cart button--modal" href="" aria-label="добавить товар в корзину">
-                <span class="product__wrapper-icon">
-                  <svg class="product__icon-cart" width="20.294px" height="18.849px" role="img">
-                    <use xlink:href="img/sprite.svg#cart_icon"></use>
-                  </svg>
-                </span>
-              </a>
-            </p>
+            <div class="product__description">
+              <h2 class="product__heading"><a class="product__link-heading" href="" aria-label="открыть подробное описание товара">Зайчик-попрыгайчик</a></h2>
+              <p class="product__profile">Рост 30 см, вес 200 г</p>
+              <p class="product__price">
+                1 200 руб.
+                <a class="product__cart button-modal " href="" aria-label="добавить товар в корзину">
+                  <span class="product__wrapper-icon">
+                    <svg class="product__icon-cart" width="20.294" height="18.849" role="img">
+                      <use xlink:href="#icon-cart"></use>
+                    </svg>
+                  </span>
+                </a>
+              </p>
+            </div>
           </article>
           <article class="catalog__item product">
-            <h2 class="product__heading"><a class="product__link-heading" href="" aria-label="открыть подробное описание товара">Корзинка для белья</a></h2>
             <a class="product__link-image" href="" aria-label="открыть подробное описание товара">
               <picture>
                 <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@2x.webp 2x, img/photo-bowl-desktop@1x.webp 1x">
@@ -106,20 +110,22 @@
                 <img class="product__image" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" width="260" height="195" alt="Вязанная корзинка для белья" />
               </picture>
             </a>
-            <p class="product__profile">Диаметр 15 см, высота 10 см</p>
-            <p class="product__price">
-              690 руб.
-              <a class="product__cart button--modal" href="" aria-label="добавить товар в корзину">
-                <span class="product__wrapper-icon">
-                  <svg class="product__icon-cart" width="20.294px" height="18.849px" role="img">
-                    <use xlink:href="img/sprite.svg#cart_icon"></use>
-                  </svg>
-                </span>
-              </a>
-            </p>
+            <div class="product__description">
+              <h2 class="product__heading"><a class="product__link-heading" href="" aria-label="открыть подробное описание товара">Корзинка для белья</a></h2>
+              <p class="product__profile">Диаметр 15 см, высота 10 см</p>
+              <p class="product__price">
+                690 руб.
+                <a class="product__cart button-modal " href="" aria-label="добавить товар в корзину">
+                  <span class="product__wrapper-icon">
+                    <svg class="product__icon-cart" width="20.294" height="18.849" role="img">
+                      <use xlink:href="#icon-cart"></use>
+                    </svg>
+                  </span>
+                </a>
+              </p>
+            </div>
           </article>
           <article class="catalog__item product">
-            <h2 class="product__heading"><a class="product__link-heading" href="" aria-label="открыть подробное описание товара">Большая корзинка для игрушек</a></h2>
             <a class="product__link-image" href="" aria-label="открыть подробное описание товара">
               <picture>
                 <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@2x.webp 2x, img/photo-toys-desktop@1x.webp 1x">
@@ -131,17 +137,20 @@
                 <img class="product__image" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" width="260" height="195" alt="Вязанная большая корзина наполненная игрушками" />
               </picture>
             </a>
-            <p class="product__profile">Диаметр 30 см, высота 30 см</p>
-            <p class="product__price">
-              1 500 руб.
-              <a class="product__cart button--modal" href="" aria-label="добавить товар в корзину">
-                <span class="product__wrapper-icon">
-                  <svg class="product__icon-cart" width="20.294px" height="18.849px" role="img">
-                    <use xlink:href="img/sprite.svg#cart_icon"></use>
-                  </svg>
-                </span>
-              </a>
-            </p>
+            <div class="product__description">
+              <h2 class="product__heading"><a class="product__link-heading" href="" aria-label="открыть подробное описание товара">Большая корзинка для игрушек</a></h2>
+              <p class="product__profile">Диаметр 30 см, высота 30 см</p>
+              <p class="product__price">
+                1 500 руб.
+                <a class="product__cart button-modal " href="" aria-label="добавить товар в корзину">
+                  <span class="product__wrapper-icon">
+                    <svg class="product__icon-cart" width="20.294" height="18.849" role="img">
+                      <use xlink:href="#icon-cart"></use>
+                    </svg>
+                  </span>
+                </a>
+              </p>
+            </div>
           </article>
         </div>
       </div>
@@ -159,11 +168,11 @@
             <source media="(min-width: 768px)" srcset="img/video-tablet@2x.jpg 2x, img/video-tablet@1x.jpg 1x">
             <img class="videoblog__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Вязанная большая корзина наполненная игрушками" />
           </picture>
-          <div class="videoblog__button-play" aria-label="запустить видео" role="button">
-            <svg width="100.678px" height="76.891px" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#play_button"></use>
+          <button class="videoblog__button-play" type="button" aria-label="запустить видео">
+            <svg width="100.678" height="76.891" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-play"></use>
             </svg>
-          </div>
+          </button>
         </div>
         <p class="videoblog__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="videoblog__button button" href="">Сделать заказ</a>
@@ -173,8 +182,8 @@
   <footer class="footer">
     <div class="footer__inner inner">
       <a class="footer__logo" href="index.html" aria-label="Перейти на главную страницу">
-        <svg class="footer__svg" width="101.615px" height="34.056px" role="img">
-          <use xlink:href="img/sprite.svg#logo_footer"></use>
+        <svg class="footer__svg" width="101.615" height="34.056" role="img">
+          <use xlink:href="#logo-footer"></use>
         </svg>
       </a>
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
@@ -183,22 +192,22 @@
           <ul class="socials__list">
             <li class="socials__item">
               <a class="socials__link socials__link--in" href="" target="_blank" aria-label="Перейти в Инстаграм магазина">
-                <svg class="socials__svg socials__svg--in" width="21.769px" height="21.334px" role="img">
-                  <use xlink:href="img/sprite.svg#insta_icon"></use>
+                <svg class="socials__svg socials__svg--in" width="21.769" height="21.334" role="img">
+                  <use xlink:href="#icon-insta"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link socials__link--fb" href="" target="_blank" aria-label="Перейти в Фейcбук магазина">
-                <svg class="socials__svg socials__svg--fb" width="14.962px" height="27.718px" role="img">
-                  <use xlink:href="img/sprite.svg#fb_icon"></use>
+                <svg class="socials__svg socials__svg--fb" width="14.962" height="27.718" role="img">
+                  <use xlink:href="#icon-fb"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link socials__link--tw" href="" target="_blank" aria-label="Перейти в Твиттер магазина">
-                <svg class="socials__svg socials__svg--tw" width="23.494px" height="20.168px" role="img">
-                  <use xlink:href="img/sprite.svg#twit_icon"></use>
+                <svg class="socials__svg socials__svg--tw" width="23.494" height="20.168" role="img">
+                  <use xlink:href="#icon-twitter"></use>
                 </svg>
               </a>
             </li>
@@ -209,8 +218,8 @@
         <span class="footer__copyright-text">
           Разработано
         </span>
-        <svg class="footer__copyright-logo" width="26.943px" height="34.09px" role="img">
-          <use xlink:href="img/sprite.svg#academy_icon"></use>
+        <svg class="footer__copyright-logo" width="26.943" height="34.09">
+          <use xlink:href="#logo-htmlacademy"></use>
         </svg>
       </a>
     </div>
@@ -222,11 +231,11 @@
         <fieldset class="modal__fieldset">
           <legend class="modal__query">Выберите размер:</legend>
           <div class="modal__wrapper">
-            <input class="modal__radio visually-hidden" checked type="radio" name="choose-size" value="S" id="choose-size-s" arial-label="выбрать размер S" />
+            <input class="modal__radio visually-hidden" checked type="radio" name="choose-size" value="S" id="choose-size-s" />
             <label class="modal__description" for="choose-size-s">S</label>
-            <input class="modal__radio visually-hidden" type="radio" name="choose-size" value="M" id="choose-size-m" arial-label="выбрать размер M" />
+            <input class="modal__radio visually-hidden" type="radio" name="choose-size" value="M" id="choose-size-m" />
             <label class="modal__description" for="choose-size-m">M</label>
-            <input class="modal__radio visually-hidden" type="radio" name="choose-size" value="L" id="choose-size-l" arial-label="выбрать размер L" />
+            <input class="modal__radio visually-hidden" type="radio" name="choose-size" value="L" id="choose-size-l" />
             <label class="modal__description" for="choose-size-l">L</label>
           </div>
           <button class="modal__button button" type="submit">Добавить</button>

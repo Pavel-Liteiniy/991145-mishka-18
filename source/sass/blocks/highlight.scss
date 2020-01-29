@@ -1,18 +1,26 @@
 // Локальные переменные для блока highlight
 $background_color_image-wrapper: $dirty_white_3;
 
-.highlight {
-  background-size: 320px 10px;
+.highlight__inner {
+  padding-top: 26px;
+  padding-bottom: 42px;
+
+  background-size: 320px 7px;
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
-  background-position: 9px 100%;
+  background-position: 8px 100%;
 
   @include for_tablet {
-    background-size: 770px 24px;
-    background-position: 22px 100%;
+    padding-top: 45px;
+    padding-bottom: 69px;
+
+    background-size: 770px 17px;
+    background-position: 18px 100%;
   }
 
   @include for_desktop {
+    padding-top: 123px;
+    padding-bottom: 96px;
     background: none;
     position: relative;
 
@@ -29,21 +37,6 @@ $background_color_image-wrapper: $dirty_white_3;
       background-size: 1050px 23px;
       background-position: 26px 100%;
     }
-  }
-}
-
-.highlight__inner {
-  padding-top: 26px;
-  padding-bottom: 42px;
-
-  @include for_tablet {
-    padding-top: 45px;
-    padding-bottom: 69px;
-  }
-
-  @include for_desktop {
-    padding-top: 123px;
-    padding-bottom: 96px;
   }
 
   display: flex;

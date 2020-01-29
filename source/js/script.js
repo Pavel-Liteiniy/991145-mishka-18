@@ -15,7 +15,7 @@ button.addEventListener('click', function () {
 });
 
 // Отображает и скрывает модальное окно
-var links = document.querySelectorAll(".button--modal");
+var links = document.querySelectorAll(".button-modal");
 var modal = document.querySelector(".modal");
 var body = document.querySelector("body");
 var inputRadio = modal.querySelector("[id=choose-size-s]");
@@ -26,7 +26,7 @@ for (var i = 0; i < links.length; ++i) {
     evt.preventDefault();
     modal.classList.add("modal--show");
     overlay.classList.add("modal__overlay--show");
-    body.classList.add("body-hidden");
+    body.classList.add("modal-hidden");
     inputRadio.focus();
   });
 }
@@ -34,7 +34,7 @@ for (var i = 0; i < links.length; ++i) {
 overlay.addEventListener("click", function (evt) {
   modal.classList.remove("modal--show");
   overlay.classList.remove("modal__overlay--show");
-  body.classList.remove("body-hidden");git
+  body.classList.remove("modal-hidden"); git
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -43,7 +43,7 @@ window.addEventListener("keydown", function (evt) {
     if (modal.classList.contains("modal--show")) {
       modal.classList.remove("modal--show");
       overlay.classList.remove("modal__overlay--show");
-      body.classList.remove("body-hidden");
+      body.classList.remove("modal-hidden");
     }
   }
 });

@@ -85,6 +85,10 @@ $color_copyright-link_hover: $turquoise_hover;
     fill: currentColor;
   }
 
+  .footer__copyright-text {
+    color: $black;
+  }
+
   @include for_tablet {
     justify-content: space-between;
     padding-left: 0;

@@ -428,6 +428,7 @@
                             $line_height_order,
                             $font_weight_order,
                             $color_order);
+    font-family: $font_family;
     border: none;
     border-bottom: 2px solid $border_color_input;
     width: 100%;
@@ -515,6 +516,7 @@
                             $line_height_order,
                             $font_weight_order,
                             $color_order);
+    font-family: $font_family;
     border: 2px solid $color_body;
     width: 100%;
     min-height: 142px;
